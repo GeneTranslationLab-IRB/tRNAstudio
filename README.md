@@ -46,7 +46,7 @@ You don't have to worry about downloading the required dependencies one by one y
 
 It first installs conda (open source package management system and environment management system) automatically, that requires downloading the install file from internet and when it is done the user can read the Anaconda User License Agreement (or skip it) pressing ENTER. When it finished the user must type yes in response of "Do you accept the license terms? [yes|no], and press ENTER to confirm the location of the downloaded files. To the question "Do you wish the installer to initialize Anaconda3 by running conda init? [yes|no]" answer no. Please enter the password and type "y" when the terminal ask for it.
 
-Then the script will create an enviroment inside conda with all the required software and packages (python, R , bowtie2 ....). It is necesary to be aware because it is possible that the software asks for user password and user confirmation in order to install the modules. Then, if there aren't any problems with the python packages you are ready to use the GUI!
+Then the script will create an enviroment inside conda with all the required software and packages (python, R , bowtie2 ....). It is necesary to be aware because it is possible that the software asks for user password and user confirmation in order to install the modules. Then, if there aren't any problems with the python packages you are ready to use the GUI!  
 
 
 **Use the GUI**
