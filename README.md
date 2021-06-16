@@ -49,8 +49,8 @@ It first installs conda (open source package management system and environment m
 Then the script will create an enviroment inside conda with all the required software and packages (python, R , bowtie2 ....). It is necesary to be aware because it is possible that the software asks for user password and user confirmation in order to install the modules. Then, if there aren't any problems with the python packages you are ready to use the GUI!  
 
 
-**Use the GUI**
-In order to use the GUI you need to first activate the conda enviroment (it contains all the software and programs needed in order to run the pipeline). Copy the next command on the terminal:
+**Use the GUI**  
+Each time that you want to use the GUI you need to first activate the conda enviroment (it contains all the software and programs needed in order to run the tRNA pipeline). Copy the next command on the terminal:
 
 `source activate tRNA-PipelineEnv`
 
