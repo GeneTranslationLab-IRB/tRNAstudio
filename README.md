@@ -7,17 +7,17 @@ The pipeline is integrated into a freely-available graphical user interface (GUI
 ## REQUIREMENTS
 
 **Operative system:** Mac (OS X El Capitan or higher) or Linux.
-**Depencencies**:
+**Depencencies**:  
     Python 3.x  
     R 4.1.0  
     Conda  
-    bowtie2
-    samtools
-    bedtools
-    gedit/TextEdit
-    picard
-    wget
-    Python packages: pysamstats, pysam, tkinter, pandas , biopython
+    bowtie2  
+    samtools  
+    bedtools  
+    gedit/TextEdit  
+    picard  
+    wget  
+    Python packages: pysamstats, pysam, tkinter, pandas , biopython  
 
 ## EXPLANATION OF THE GUI
 
