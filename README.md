@@ -1,10 +1,12 @@
-#IP-tRNA-dat
+# New Document
+
+# IP-tRNA-dat
 
 IP-tRNA is a tool designed to analyze small RNA-seq datasets (Illumina single-end) in order to characterize tRNAs. Includes a specific mapping workflow and provides a report that contains information about tRNA quantification, classification (pre-tRNAs and processed tRNAs), sequence coverage, post-transcriptional tRNA modification levels and differentially expressed genes between two conditions/groups (DESeq2 and Iso-tRNA-cp).
 
 The pipeline is integrated into a freely-available graphical user interface (GUI)
 
-##REQUIREMENTS
+## REQUIREMENTS
 
 **Operative system:** Mac (OS X El Capitan or higher) or Linux.
 **Depencencies**:
@@ -19,17 +21,17 @@ The pipeline is integrated into a freely-available graphical user interface (GUI
     wget
     Python packages: pysamstats, pysam, tkinter, pandas , biopython
 
-##EXPLANATION OF THE GUI
+## EXPLANATION OF THE GUI
 
-**Download Genome. ** Downloads human genome Hg38 from USCS, unzip and index it. This process takes some time, but when it's done the user will be notified.
+**Download Genome.** Downloads human genome Hg38 from USCS, unzip and index it. This process takes some time, but when it's done the user will be notified.
 
 **Download sample.** This button download the .fastq file from the European Bioinformatic Institute (EBI) from its Run Accession ID. Run Accession ID examples: SRR7216347 or ERR705691. First it is necessary enter the ID and then press the button. Once the sample is downloaded and unzipped a popped message will notify it and it is possible to download more samples. In the case that you have the .fastq files in your computer you don't need to download them from the EBI, just copy paste them in the "Fastq_downloaded" folder.
 
-** Indicate sample information. **  Indicate sample information. This button opens a .txt file with a text editor that contains the sample's ID and a column (Condition) in blank that MUST be filled by the user indicating the group in which each sample belongs. In each row the information of the 2 columns must be separated by 1 tabulator (\t) and without blank spaces.
+**Indicate sample information.**  Indicate sample information. This button opens a .txt file with a text editor that contains the sample's ID and a column (Condition) in blank that MUST be filled by the user indicating the group in which each sample belongs. In each row the information of the 2 columns must be separated by 1 tabulator (\t) and without blank spaces.
 
   **Run aligment.** Pressing this button it is perfomed the several rounds of alignment for each sample against the whole human genome, the mature tRNA genome and the precursor tRNA genome. This process needs a lot of computational power so the user is asked not to do another important thing with the computer while this process is running. This process can last several hours and will notify the user when it is finished.
   
-**Results Report** Perform the counts analysis, modification analysis for each group and the differential gene expression analysis between the groups. Finally it generates a report per group and a report with the comparison between groups summarizing the most important information.
+**Results Report.** Perform the counts analysis, modification analysis for each group and the differential gene expression analysis between the groups. Finally it generates a report per group and a report with the comparison between groups summarizing the most important information.
 
 ## HOW TO USE IT.
 
@@ -38,7 +40,7 @@ The pipeline is integrated into a freely-available graphical user interface (GUI
 2. Unzip the downloaded folder and open the main file. 
 3. Open a terminal inside the Scripts folder (right button of the mouse --> open in a terminal). You need to always run the pipeline from the Scripts folder !
 
-**Download dependencies: **
+**Download dependencies:**
 You don't have to worry about downloading the required dependences by hand you can run this comand on the terminal in order to install all the dependencies .
 
 ` bash requirements.sh`
@@ -61,7 +63,7 @@ This button performs the several rounds of alignent of each sample agains the wh
 **Results Report:** 
 Once all the alignments are done press this button to compute the analysis of counts, modification ratio and differential gene expression. This step takes time too, and the user it's informed when it finished.
 
-##RESULTS
+## RESULTS
 
 In the results folder are generated the following folders:
 Counts Plots.
@@ -96,5 +98,3 @@ If you have any questions or issues, please use Issues Section
 References.
 
     Galili, Tal, O'Callaghan, Alan, Sidi, Jonathan, Sievert, Carson (2017). “heatmaply: an R package for creating interactive cluster heatmaps for online publishing.” Bioinformatics.
-
-
