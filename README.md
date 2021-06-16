@@ -8,9 +8,9 @@ The pipeline is integrated into a freely-available graphical user interface (GUI
 
 **Operative system:** Mac (OS X El Capitan or higher) or Linux.
 **Depencencies**:
-    Python 3.x
-    R 4.1.0
-    Conda
+    Python 3.x  
+    R 4.1.0  
+    Conda  
     bowtie2
     samtools
     bedtools
