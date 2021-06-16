@@ -39,12 +39,26 @@ The pipeline is integrated into a freely-available graphical user interface (GUI
 3. Open a terminal inside the Scripts folder (right button of the mouse --> open in a terminal). You need to always run the pipeline from the Scripts folder !
 
 **Download dependencies:**
-You don't have to worry about downloading the required dependences by hand you can run this comand on the terminal in order to install all the dependencies .
+Info: You have to do this step only once. 
+You don't have to worry about downloading the required dependencies one by one you can run this command on the terminal in order to install all the dependencies.
 
 ` bash requirements.sh`
 
-It first installs conda, that requires downloading the install file from internet and when it is done the user can read the Anaconda User License Agreement (or skip it) pressing ENTER. When it finished the user must type yes in response of "Do you accept the license terms? [yes|no], and press ENTER to confirm the location of the downloaded files. To the question "Do you wish the installer to initialize Anaconda3 by running conda init? [yes|no]" answer no. Please enter the password and type "y" when the terminal ask for it.
+It first installs conda (open source package management system and environment management system) automatically, that requires downloading the install file from internet and when it is done the user can read the Anaconda User License Agreement (or skip it) pressing ENTER. When it finished the user must type yes in response of "Do you accept the license terms? [yes|no], and press ENTER to confirm the location of the downloaded files. To the question "Do you wish the installer to initialize Anaconda3 by running conda init? [yes|no]" answer no. Please enter the password and type "y" when the terminal ask for it.
+
 Then the script will create an enviroment inside conda with all the required software and packages (python, R , bowtie2 ....). It is necesary to be aware because it is possible that the software asks for user password and user confirmation in order to install the modules. Then, if there aren't any problems with the python packages you are ready to use the GUI!
+
+
+**Use the GUI**
+In order to use the GUI you need to first activate the conda enviroment (it contains all the software and programs needed in order to run the pipeline). Copy the next command on the terminal:
+
+`source activate tRNA-PipelineEnv`
+
+Then run the GUI:
+
+`python3 GUI.py`
+
+Once the GUI is working you will have the next options:
 
 **Download Genome:**
 With this button the Human Genome 38 will be downloaded, unziped and indexed in the Reference_Genomes folder. Not user interaction needed.
