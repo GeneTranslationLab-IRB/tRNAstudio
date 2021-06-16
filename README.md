@@ -1,5 +1,3 @@
-# New Document
-
 # IP-tRNA-dat
 
 IP-tRNA is a tool designed to analyze small RNA-seq datasets (Illumina single-end) in order to characterize tRNAs. Includes a specific mapping workflow and provides a report that contains information about tRNA quantification, classification (pre-tRNAs and processed tRNAs), sequence coverage, post-transcriptional tRNA modification levels and differentially expressed genes between two conditions/groups (DESeq2 and Iso-tRNA-cp).
