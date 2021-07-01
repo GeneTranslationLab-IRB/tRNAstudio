@@ -52,7 +52,7 @@ Then the script will create an enviroment inside conda with all the required sof
 **Use the GUI**  
 Each time that you want to use the GUI you need to first activate the conda enviroment (it contains all the software and programs needed in order to run the tRNA pipeline). Copy the next command on the terminal:
 
-`source activate tRNA-PipelineEnv`
+`conda activate tRNA-PipelineEnv`
 
 Then run the GUI:
 
