@@ -65,7 +65,7 @@ Once the GUI is working you will have the next options:
 **Run Data Analysis** Once all the alignments are done the used has to press this button to compute the counts analysis, modification analysis for each group and the differential gene expression analysis between the groups. Finally it generates a report per group and a report with the comparison between groups summarizing the most important information. This step takes time too, and the user it's informed when it finished.
 
 <p align="center">
-  <img src="https://github.com/GeneTranslationLab-IRB/tRNAstudio/blob/main/tRNAstudioGUI.jpg" width="700" height="800"/>
+  <img src="https://github.com/GeneTranslationLab-IRB/tRNAstudio/blob/main/tRNAstudioGUI.jpg" width="700" height="700"/>
 </p>
 
 ## RESULTS
