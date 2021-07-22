@@ -41,7 +41,7 @@ It first installs Conda that requires downloading the install file from internet
 Then the script will create an enviroment inside Conda with all the required software and packages (python, R , bowtie2 ....). It is necesary to be aware because it is possible that the software asks for user password and user confirmation in order to install the modules. Then, if there aren't any problems with the python packages you are ready to use the GUI!  
 
 
-**Use the GUI**  
+**Use the GUI:**  
 Each time that you want to use the GUI you need to first activate the conda enviroment (it contains all the software and programs needed in order to run the tRNA pipeline). Copy the next command on the terminal:
 
 `conda activate tRNAstudioEnv` or `source activate tRNAstudioEnv`
@@ -63,6 +63,8 @@ Once the GUI is working you will have the next options:
 **Select samples for data analysis** This button opens the previously saved .txt file with the samples information, allowing the user to edit the file and select which samples to analyze. 
   
 **Run Data Analysis** Once all the alignments are done the used has to press this button to compute the counts analysis, modification analysis for each group and the differential gene expression analysis between the groups. Finally it generates a report per group and a report with the comparison between groups summarizing the most important information. This step takes time too, and the user it's informed when it finished.
+
+![alt text](https://github.com/GeneTranslationLab-IRB/tRNAstudio/blob/main/Figure10.PDF)
 
 
 ## RESULTS
