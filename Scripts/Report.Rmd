@@ -1,0 +1,508 @@
+---
+title: "Report"
+output:
+  html_document
+params:
+  group: group
+---
+
+
+```{r packages, echo=FALSE, include =FALSE}
+library(heatmaply)
+library(ggplot2)
+library(RColorBrewer)
+library(dplyr)
+library(htmltools)
+options(tinytex.verbose = TRUE)
+```
+
+
+# General information.
+
+## Mapping quality.
+
+```{r mapping quality, echo=FALSE,out.width = '100%', message=FALSE}
+file = paste0("../Results/Plots/Quality_barplot_", params$group, ".jpeg")
+knitr::include_graphics(file) 
+```
+
+## Reads per sample.
+
+```{r reads per sample, echo=FALSE, out.width = '66%', message=FALSE}
+file = paste0("../Results/Plots/Barplot_reads_", params$group, ".jpeg")
+knitr::include_graphics(file) 
+```
+
+
+## Counts per tRNA isoacceptor.
+
+```{r isoacceptor, echo=FALSE, out.width = '100%', message=FALSE}
+file = paste0("../Results/Counts_plots/Total/", params$group, "_by_Isoacceptor.jpeg")
+knitr::include_graphics(file) 
+```
+
+## Counts per tRNA isodecoder.
+
+```{r isodecoder, echo=FALSE, out.width = '100%'}
+file = paste0("../Results/Counts_plots/Total/", params$group, "_by_Isodecoder.jpeg")
+knitr::include_graphics(file) 
+```
+
+
+
+# Alanine.
+
+```{r counts, echo=FALSE, out.width = '100%'}
+aa = "Ala"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+# Arginine.
+
+```{r counts2, echo=FALSE, out.width = '100%'}
+aa = "Arg"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+# Asparagine.
+
+```{r counts4, echo=FALSE, out.width = '100%'}
+aa = "Asn"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+# Aspartic acid.
+
+```{r counts3, echo=FALSE, out.width = '100%'}
+aa = "Asp"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+
+
+# Cysteine
+
+```{r counts5, echo=FALSE, out.width = '100%'}
+aa = "Cys"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+
+# Glutamine
+
+```{r counts6, echo=FALSE, out.width = '100%'}
+aa = "Gln"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+# Glutamic acid
+
+```{r counts7, echo=FALSE, out.width = '100%'}
+aa = "Glu"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+# Glycine
+
+```{r counts8, echo=FALSE, out.width = '100%'}
+aa = "Gly"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+# Histidine
+
+```{r counts9, echo=FALSE, out.width = '100%'}
+aa = "His"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+# Isoleucine
+
+```{r counts10, echo=FALSE, out.width = '100%'}
+aa = "Ile"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+# Leucine
+
+```{r counts12, echo=FALSE, out.width = '100%'}
+aa = "Leu"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+
+
+# Lysine
+
+```{r counts13, echo=FALSE, out.width = '100%'}
+aa = "Lys"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+# Methionine
+
+```{r counts14, echo=FALSE, out.width = '100%'}
+aa = "Met"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+# iMethionine
+
+```{r counts11, echo=FALSE, out.width = '100%'}
+aa = "iMet"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+
+
+# Phenylalanine
+
+```{r counts15, echo=FALSE, out.width = '100%'}
+aa = "Phe"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+
+# Proline
+
+```{r counts16, echo=FALSE, out.width = '100%'}
+aa = "Pro"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+
+# Selenocysteine
+
+```{r counts17, echo=FALSE, out.width = '100%'}
+aa = "SeC"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+
+
+# Serine
+
+```{r counts18, echo=FALSE, out.width = '100%'}
+aa = "Ser"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+
+# Threonine
+
+```{r counts19, echo=FALSE, out.width = '100%'}
+aa = "Thr"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+
+# Tryptophan
+
+```{r counts20, echo=FALSE, out.width = '100%'}
+aa = "Trp"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+
+# Tyrosine
+
+```{r counts21, echo=FALSE, out.width = '100%'}
+aa = "Tyr"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
+
+
+# Valine
+
+```{r counts22, echo=FALSE, out.width = '100%'}
+aa = "Val"
+file = paste0("../Results/Counts_plots/Total/By_tRNA_family/", params$group, "_", aa, "_by_family.jpeg")
+knitr::include_graphics(file) 
+
+file2 = paste0("../Results/Counts_plots/Mature_vs_Precursor/By_tRNA_family/", params$group,"_", aa, "_by_family.jpeg")
+knitr::include_graphics(file2) 
+heatmap_url = paste0("../Heatmaps/", params$group, "_heatmap_", aa, ".html")
+heatmap_url_high_coverage = paste0("../Heatmaps/", params$group, "_heatmap_", aa, "_high_coverage.html")
+
+file3 = paste0("../Results/Modification_ratio_plots/By_family/", params$group,"_Coverage_", aa, ".jpeg")
+knitr::include_graphics(file3) 
+```
+
+## [Modification analysis](`r heatmap_url`)
+
+### [Filter low coverage](`r heatmap_url_high_coverage`)
