@@ -48,7 +48,7 @@ Each time that you want to use the GUI you need to first activate the conda envi
 
 Then run the GUI:
 
-`python tRNAstudioGUI.py`
+`python3 tRNAstudioGUI.py`
 
 Once the GUI is working you will have the next options:
 
