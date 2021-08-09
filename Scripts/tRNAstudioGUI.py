@@ -2,7 +2,7 @@
 
 
 '''
-GUI Interface Integrated pipeline for the analisis of tRNA-Seq Datasets (tRNA-Studio)
+GUI Interface Integrated pipeline for the analisis of tRNA-Seq Datasets (IP-tRNA-dat)
 '''
 
 
@@ -63,7 +63,7 @@ def download_Genome():
 
     if 'Linux' in o_sys or 'Darwin' in o_sys:
         os.system('bash download_genome_index.sh')
-
+        
     if "genome.4.bt2" and "precursor_tRNA_refgenome.4.bt2" and "families_tRNA_refgenome.4.bt2" in os.listdir(app.sourceFolder+"Reference_Genomes/"):
         mb.showinfo("Message", "The genome was downloaded correctly.")
     else:
@@ -145,7 +145,7 @@ def create_text2():
     scriptsFolder=app.scriptsFolder       
     os.chdir(scriptsFolder)
 
-    
+
 def run_alignment():
     '''
     This function reads the file with the samples in order to perform the tRNA 
@@ -304,6 +304,7 @@ def r_preparation(sample):
 
 
 
+
 def r_analysis():
     '''
     This function call the count and modification analysis Rscripts. And launches an Rscript 
@@ -327,7 +328,6 @@ def r_analysis():
     #Modification analysis.
     subprocess.call(["Rscript", "--vanilla", "PLOTS_Modifications_Analisis.r"])
     
-    subprocess.call(["Rscript", "--vanilla", "Modification_comparison_test.r"])
     
     subprocess.call(["Rscript", "--vanilla", "General_plots.r"])
     subprocess.call(["Rscript", "--vanilla", "Heatmaps.r"])
@@ -435,15 +435,15 @@ if "Darwin" in o_sys:
 
 if "Linux" in o_sys:
 	text1=tkinter.Label(text="Set Up", width=10,height=1, bg="#F7F7F7")
-	text1.place(x=80, y=45)
+	text1.place(x=60, y=45)
 	text1.config(font='Calibri 11 bold')
 
 	genome_Button=tkinter.Button(tab1, text='Download'+'\n' +'Human Genome (hg38)', width=17, height=2, command=download_Genome, highlightbackground='#a9dbd2',highlightthickness= 3)
-	genome_Button.place(x=100, y=50)
+	genome_Button.place(x=80, y=50)
 	genome_Button.config(font=myFont5)
 	
 	genome_Button=tkinter.Button(tab1, text='Download Sample', width=13, height=2, command=retrieve_SRR, highlightbackground='#a9dbd2',highlightthickness= 3)
-	genome_Button.place(x=350, y=50)
+	genome_Button.place(x=360, y=50)
 	genome_Button.config(font=myFont5)
 
 
@@ -460,10 +460,10 @@ if "Linux" in o_sys:
 
 	text_Widget.bind("<FocusIn>", default)
 	text_Widget.bind("<FocusOut>", default)
-	text_Widget.place(x=360, y=135)
+	text_Widget.place(x=370, y=135)
 
 	text2=tkinter.Label(text='Sample Run Accesion ID', width=23, height=1,bg="#F7F7F7")
-	text2.place(x=340, y=120)
+	text2.place(x=350, y=120)
 	text2.config(font='Calibri 10')
 
 
