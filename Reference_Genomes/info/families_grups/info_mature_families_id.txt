@@ -1,0 +1,1203 @@
+
+FAMILY:1: tRNA-Ala-AGC-20-1
+tRNA-Ala-AGC-20-1(-)
+
+FAMILY:2: tRNA-Arg-TCT-1-1
+tRNA-Arg-TCT-1-1(+)
+
+FAMILY:3: tRNA-Arg-TCT-4-1
+tRNA-Arg-TCT-4-1(-)
+
+FAMILY:5: tRNA-Asn-GTT-1-1
+tRNA-Asn-GTT-1-1(+)
+
+FAMILY:6: tRNA-Asn-GTT-10-1
+tRNA-Asn-GTT-10-1(+)
+
+FAMILY:7: tRNA-Asn-GTT-11
+tRNA-Asn-GTT-11-1(-)
+tRNA-Asn-GTT-11-2(-)
+
+FAMILY:8: tRNA-Asn-GTT-12-1
+tRNA-Asn-GTT-12-1(-)
+
+FAMILY:9: tRNA-Asn-GTT-13-1
+tRNA-Asn-GTT-13-1(+)
+
+FAMILY:10: tRNA-Asn-GTT-15
+tRNA-Asn-GTT-15-1(-)
+tRNA-Asn-GTT-15-2(+)
+tRNA-Asn-GTT-15-3(-)
+
+FAMILY:11: tRNA-Asn-GTT-16
+tRNA-Asn-GTT-16-1(+)
+tRNA-Asn-GTT-16-3(+)
+
+FAMILY:12: tRNA-Asn-GTT-16-1
+tRNA-Asn-GTT-16-5(+)
+
+FAMILY:13: tRNA-Asn-GTT-17-1
+tRNA-Asn-GTT-17-1(+)
+
+FAMILY:14: tRNA-Asn-GTT-18-1
+tRNA-Asn-GTT-18-1(-)
+
+FAMILY:15: tRNA-Asn-GTT-19-1
+tRNA-Asn-GTT-19-1(-)
+
+FAMILY:16: tRNA-Asn-GTT-2
+tRNA-Asn-GTT-2-1(+)
+tRNA-Asn-GTT-2-2(-)
+tRNA-Asn-GTT-2-7(+)
+tRNA-Asn-GTT-2-8(-)
+tRNA-Asn-GTT-2-3(-)
+tRNA-Asn-GTT-2-4(-)
+tRNA-Asn-GTT-2-5(-)
+tRNA-Asn-GTT-2-6(+)
+
+FAMILY:17: tRNA-Asn-GTT-20-1
+tRNA-Asn-GTT-20-1(-)
+
+FAMILY:18: tRNA-Asn-GTT-21-1
+tRNA-Asn-GTT-21-1(-)
+
+FAMILY:19: tRNA-Asn-GTT-22-1
+tRNA-Asn-GTT-22-1(-)
+
+FAMILY:20: tRNA-Asn-GTT-24-1
+tRNA-Asn-GTT-24-1(+)
+
+FAMILY:21: tRNA-Asn-GTT-25-1
+tRNA-Asn-GTT-25-1(-)
+
+FAMILY:22: tRNA-Asn-GTT-27-1
+tRNA-Asn-GTT-27-1(-)
+
+FAMILY:23: tRNA-Asn-GTT-3-1
+tRNA-Asn-GTT-3-1(+)
+
+FAMILY:24: tRNA-Asn-GTT-4-1
+tRNA-Asn-GTT-4-1(+)
+
+FAMILY:25: tRNA-Asn-GTT-5-1
+tRNA-Asn-GTT-5-1(-)
+
+FAMILY:26: tRNA-Asn-GTT-6-1
+tRNA-Asn-GTT-6-1(-)
+
+FAMILY:27: tRNA-Asn-GTT-7-1
+tRNA-Asn-GTT-7-1(-)
+
+FAMILY:28: tRNA-Asn-GTT-8-1
+tRNA-Asn-GTT-8-1(-)
+
+FAMILY:29: tRNA-Asn-GTT-9-1
+tRNA-Asn-GTT-9-1(-)
+
+FAMILY:30: tRNA-Asn-GTT-9-2
+tRNA-Asn-GTT-9-2(-)
+
+FAMILY:31: tRNA-Asp-GTC-10-1
+tRNA-Asp-GTC-10-1(+)
+
+FAMILY:32: tRNA-Asp-GTC-2
+tRNA-Asp-GTC-2-1(-)
+tRNA-Asp-GTC-2-2(-)
+tRNA-Asp-GTC-2-3(-)
+tRNA-Asp-GTC-2-4(-)
+tRNA-Asp-GTC-2-5(-)
+tRNA-Asp-GTC-2-10(-)
+tRNA-Asp-GTC-2-8(+)
+tRNA-Asp-GTC-2-9(-)
+tRNA-Asp-GTC-2-11(-)
+tRNA-Asp-GTC-2-6(+)
+tRNA-Asp-GTC-2-7(+)
+
+FAMILY:33: tRNA-Asp-GTC-9-1
+tRNA-Asp-GTC-9-1(+)
+
+FAMILY:34: tRNA-Cys-GCA-7-1
+tRNA-Cys-GCA-7-1(-)
+
+FAMILY:35: tRNA-Gln-CTG-10-1
+tRNA-Gln-CTG-10-1(-)
+
+FAMILY:36: tRNA-Gln-CTG-11-1
+tRNA-Gln-CTG-11-1(+)
+
+FAMILY:37: tRNA-Gln-CTG-3
+tRNA-Gln-CTG-3-1(+)
+tRNA-Gln-CTG-3-2(+)
+
+FAMILY:38: tRNA-Gln-CTG-4
+tRNA-Gln-CTG-4-1(-)
+tRNA-Gln-CTG-4-2(+)
+
+FAMILY:39: tRNA-Gln-CTG-7-1
+tRNA-Gln-CTG-7-1(+)
+
+FAMILY:40: tRNA-Gln-CTG-8
+tRNA-Gln-CTG-8-1(+)
+tRNA-Gln-CTG-8-2(+)
+tRNA-Gln-CTG-8-3(-)
+
+FAMILY:41: tRNA-Gln-CTG-9-1
+tRNA-Gln-CTG-9-1(+)
+
+FAMILY:42: tRNA-Glu-CTC-1
+tRNA-Glu-CTC-1-1(+)
+tRNA-Glu-CTC-1-2(-)
+tRNA-Glu-CTC-1-3(-)
+tRNA-Glu-CTC-1-4(-)
+tRNA-Glu-CTC-1-5(-)
+tRNA-Glu-CTC-1-6(+)
+tRNA-Glu-CTC-1-7(-)
+
+FAMILY:43: tRNA-Glu-CTC-2-1
+tRNA-Glu-CTC-2-1(+)
+
+FAMILY:44: tRNA-Glu-TTC-10
+tRNA-Glu-TTC-10-1(-)
+tRNA-Glu-TTC-10-2(+)
+
+FAMILY:45: tRNA-Glu-TTC-3-1
+tRNA-Glu-TTC-3-1(+)
+
+FAMILY:46: tRNA-Glu-TTC-4
+tRNA-Glu-TTC-4-1(-)
+tRNA-Glu-TTC-4-2(-)
+
+FAMILY:47: tRNA-Glu-TTC-6-1
+tRNA-Glu-TTC-6-1(-)
+
+FAMILY:48: tRNA-Glu-TTC-7-1
+tRNA-Glu-TTC-7-1(-)
+
+FAMILY:49: tRNA-Glu-TTC-8-1
+tRNA-Glu-TTC-8-1(-)
+
+FAMILY:50: tRNA-Gly-CCC-1
+tRNA-Gly-CCC-1-1(-)
+tRNA-Gly-CCC-1-2(+)
+
+FAMILY:51: tRNA-Gly-CCC-4-1
+tRNA-Gly-CCC-4-1(-)
+
+FAMILY:52: tRNA-Gly-CCC-5-1
+tRNA-Gly-CCC-5-1(+)
+
+FAMILY:53: tRNA-Gly-CCC-6-1
+tRNA-Gly-CCC-6-1(-)
+
+FAMILY:54: tRNA-Gly-CCC-8-1
+tRNA-Gly-CCC-8-1(+)
+
+FAMILY:55: tRNA-Gly-GCC-1
+tRNA-Gly-GCC-1-1(+)
+tRNA-Gly-GCC-1-2(+)
+tRNA-Gly-GCC-1-3(+)
+tRNA-Gly-GCC-1-4(+)
+tRNA-Gly-GCC-1-5(-)
+
+FAMILY:56: tRNA-Gly-GCC-2
+tRNA-Gly-GCC-2-1(-)
+tRNA-Gly-GCC-2-4(-)
+tRNA-Gly-GCC-2-5(+)
+tRNA-Gly-GCC-2-6(+)
+tRNA-Gly-GCC-2-2(-)
+tRNA-Gly-GCC-2-3(-)
+
+FAMILY:57: tRNA-Gly-GCC-4-1
+tRNA-Gly-GCC-4-1(+)
+
+FAMILY:58: tRNA-Gly-TCC-2
+tRNA-Gly-TCC-2-1(+)
+tRNA-Gly-TCC-2-2(-)
+tRNA-Gly-TCC-2-3(-)
+tRNA-Gly-TCC-2-4(-)
+tRNA-Gly-TCC-2-5(-)
+tRNA-Gly-TCC-2-6(+)
+
+FAMILY:59: tRNA-Gly-TCC-4-1
+tRNA-Gly-TCC-4-1(-)
+
+FAMILY:60: tRNA-His-GTG-1
+tRNA-His-GTG-1-1(+)
+tRNA-His-GTG-1-2(+)
+tRNA-His-GTG-1-3(+)
+tRNA-His-GTG-1-4(-)
+tRNA-His-GTG-1-7(-)
+tRNA-His-GTG-1-8(-)
+tRNA-His-GTG-1-9(+)
+tRNA-His-GTG-1-5(+)
+tRNA-His-GTG-1-6(-)
+
+FAMILY:61: tRNA-His-GTG-2-1
+tRNA-His-GTG-2-1(-)
+
+FAMILY:62: tRNA-iMet-CAT-1
+tRNA-iMet-CAT-1-1(+)
+tRNA-iMet-CAT-1-8(-)
+tRNA-iMet-CAT-1-2(+)
+tRNA-iMet-CAT-1-3(-)
+tRNA-iMet-CAT-1-4(-)
+tRNA-iMet-CAT-1-5(-)
+tRNA-iMet-CAT-1-6(-)
+tRNA-iMet-CAT-1-7(-)
+
+FAMILY:63: tRNA-Leu-CAA-4-1
+tRNA-Leu-CAA-4-1(+)
+
+FAMILY:64: tRNA-Leu-CAA-6-1
+tRNA-Leu-CAA-6-1(-)
+
+FAMILY:65: tRNA-Leu-CAG-1
+tRNA-Leu-CAG-1-1(+)
+tRNA-Leu-CAG-1-2(+)
+tRNA-Leu-CAG-1-3(+)
+tRNA-Leu-CAG-1-4(+)
+tRNA-Leu-CAG-1-5(+)
+tRNA-Leu-CAG-1-6(-)
+tRNA-Leu-CAG-1-7(+)
+
+FAMILY:66: tRNA-Lys-CTT-12-1
+tRNA-Lys-CTT-12-1(+)
+
+FAMILY:67: tRNA-Lys-CTT-13-1
+tRNA-Lys-CTT-13-1(+)
+
+FAMILY:68: tRNA-Lys-CTT-2
+tRNA-Lys-CTT-2-1(+)
+tRNA-Lys-CTT-2-5(+)
+tRNA-Lys-CTT-2-2(+)
+tRNA-Lys-CTT-2-3(-)
+tRNA-Lys-CTT-2-4(+)
+
+FAMILY:69: tRNA-Lys-CTT-7-1
+tRNA-Lys-CTT-7-1(-)
+
+FAMILY:70: tRNA-Lys-TTT-3
+tRNA-Lys-TTT-3-1(+)
+tRNA-Lys-TTT-3-2(-)
+tRNA-Lys-TTT-3-4(-)
+tRNA-Lys-TTT-3-5(+)
+tRNA-Lys-TTT-3-3(+)
+
+FAMILY:71: tRNA-Lys-TTT-8-1
+tRNA-Lys-TTT-8-1(+)
+
+FAMILY:72: tRNA-Pro-AGG-2
+tRNA-Pro-AGG-2-1(-)
+tRNA-Pro-AGG-2-4(+)
+tRNA-Pro-AGG-2-5(-)
+tRNA-Pro-AGG-2-6(-)
+tRNA-Pro-AGG-2-7(-)
+tRNA-Pro-AGG-2-8(+)
+tRNA-Pro-AGG-2-2(+)
+tRNA-Pro-AGG-2-3(+)
+
+FAMILY:73: tRNA-Pro-CGG-1
+tRNA-Pro-CGG-1-1(+)
+tRNA-Pro-CGG-1-2(+)
+tRNA-Pro-CGG-1-3(-)
+
+FAMILY:74: tRNA-Thr-TGT-2-1
+tRNA-Thr-TGT-2-1(+)
+
+FAMILY:75: tRNA-Val-AAC-7-1
+tRNA-Val-AAC-7-1(-)
+
+FAMILY:76: tRNA-Val-CAC-1
+tRNA-Val-CAC-1-1(-)
+tRNA-Val-CAC-1-7(-)
+tRNA-Val-CAC-5-1(-)
+tRNA-Val-CAC-1-2(+)
+tRNA-Val-CAC-1-3(-)
+tRNA-Val-CAC-1-4(+)
+tRNA-Val-CAC-1-5(-)
+tRNA-Val-CAC-1-6(+)
+
+FAMILY:77: tRNA-Val-CAC-10-1
+tRNA-Val-CAC-10-1(-)
+
+FAMILY:78: tRNA-Val-CAC-11
+tRNA-Val-CAC-11-1(-)
+tRNA-Val-CAC-11-2(+)
+
+FAMILY:79: tRNA-Val-CAC-13-1
+tRNA-Val-CAC-13-1(+)
+
+FAMILY:80: tRNA-Val-CAC-14-1
+tRNA-Val-CAC-14-1(+)
+
+FAMILY:81: tRNA-Val-CAC-4-1
+tRNA-Val-CAC-4-1(-)
+
+FAMILY:82: tRNA-Asn-GTT-26-1
+tRNA-Asn-GTT-26-1(-)
+
+FAMILY:83: tRNA-Glu-TTC-14-1
+tRNA-Glu-TTC-14-1(-)
+
+FAMILY:84: tRNA-Ser-TGA-1-1
+tRNA-Ser-TGA-1-1(+)
+
+FAMILY:85: tRNA-Val-TAC-3-1
+tRNA-Val-TAC-3-1(-)
+
+FAMILY:86: tRNA-Ala-TGC-8-1
+tRNA-Ala-TGC-8-1(-)
+
+FAMILY:87: tRNA-Arg-TCT-3
+tRNA-Arg-TCT-3-2(+)
+tRNA-Arg-TCT-3-1(-)
+
+FAMILY:88: tRNA-Leu-TAA-3-1
+tRNA-Leu-TAA-3-1(+)
+
+FAMILY:89: tRNA-Lys-CTT-15-1
+tRNA-Lys-CTT-15-1(-)
+
+FAMILY:90: tRNA-Lys-TTT-2-1
+tRNA-Lys-TTT-2-1(+)
+
+FAMILY:91: tRNA-Lys-TTT-5-1
+tRNA-Lys-TTT-5-1(+)
+
+FAMILY:92: tRNA-Phe-GAA-1
+tRNA-Phe-GAA-1-3(-)
+tRNA-Phe-GAA-1-4(-)
+tRNA-Phe-GAA-1-5(-)
+tRNA-Phe-GAA-1-6(-)
+tRNA-Phe-GAA-1-1(-)
+tRNA-Phe-GAA-1-2(-)
+
+FAMILY:93: tRNA-Phe-GAA-2-1
+tRNA-Phe-GAA-2-1(-)
+
+FAMILY:94: tRNA-Pro-TGG-2-1
+tRNA-Pro-TGG-2-1(-)
+
+FAMILY:95: tRNA-Ser-AGA-6-1
+tRNA-Ser-AGA-6-1(+)
+
+FAMILY:96: tRNA-Ser-GCT-3-1
+tRNA-Ser-GCT-3-1(+)
+
+FAMILY:97: tRNA-Val-TAC-1
+tRNA-Val-TAC-1-1(-)
+tRNA-Val-TAC-1-2(-)
+
+FAMILY:98: tRNA-Val-TAC-2-1
+tRNA-Val-TAC-2-1(-)
+
+FAMILY:99: tRNA-Ala-TGC-3
+tRNA-Ala-TGC-3-2(-)
+tRNA-Ala-TGC-3-1(+)
+
+FAMILY:100: tRNA-Ala-TGC-4-1
+tRNA-Ala-TGC-4-1(+)
+
+FAMILY:101: tRNA-Asp-GTC-1-1
+tRNA-Asp-GTC-1-1(+)
+
+FAMILY:102: tRNA-Asp-GTC-8-1
+tRNA-Asp-GTC-8-1(+)
+
+FAMILY:103: tRNA-Gln-CTG-12-1
+tRNA-Gln-CTG-12-1(+)
+
+FAMILY:104: tRNA-Ile-AAT-11-1
+tRNA-Ile-AAT-11-1(+)
+
+FAMILY:105: tRNA-Lys-TTT-11-1
+tRNA-Lys-TTT-11-1(+)
+
+FAMILY:106: tRNA-Ser-CGA-4-1
+tRNA-Ser-CGA-4-1(+)
+
+FAMILY:107: tRNA-Trp-CCA-4-1
+tRNA-Trp-CCA-4-1(+)
+
+FAMILY:108: tRNA-Glu-CTC-3-1
+tRNA-Glu-CTC-3-1(-)
+
+FAMILY:109: tRNA-Glu-TTC-1
+tRNA-Glu-TTC-1-2(-)
+tRNA-Glu-TTC-1-1(-)
+
+FAMILY:110: tRNA-Glu-TTC-2
+tRNA-Glu-TTC-2-1(-)
+tRNA-Glu-TTC-2-2(-)
+
+FAMILY:111: tRNA-Ala-AGC-15-1
+tRNA-Ala-AGC-15-1(+)
+
+FAMILY:112: tRNA-Arg-ACG-1
+tRNA-Arg-ACG-1-3(+)
+tRNA-Arg-ACG-1-1(+)
+tRNA-Arg-ACG-1-2(+)
+
+FAMILY:113: tRNA-Cys-GCA-8-1
+tRNA-Cys-GCA-8-1(+)
+
+FAMILY:114: tRNA-Glu-TTC-11-1
+tRNA-Glu-TTC-11-1(-)
+
+FAMILY:115: tRNA-Ile-AAT-5
+tRNA-Ile-AAT-5-4(+)
+tRNA-Ile-AAT-5-5(+)
+tRNA-Ile-AAT-5-1(+)
+tRNA-Ile-AAT-5-2(-)
+tRNA-Ile-AAT-5-3(-)
+
+FAMILY:116: tRNA-Leu-AAG-2
+tRNA-Leu-AAG-2-3(+)
+tRNA-Leu-AAG-2-4(+)
+tRNA-Leu-AAG-2-1(+)
+tRNA-Leu-AAG-2-2(-)
+
+FAMILY:117: tRNA-Leu-TAG-2-1
+tRNA-Leu-TAG-2-1(+)
+
+FAMILY:118: tRNA-Leu-TAG-4-1
+tRNA-Leu-TAG-4-1(-)
+
+FAMILY:119: tRNA-Lys-CTT-1
+tRNA-Lys-CTT-1-1(-)
+tRNA-Lys-CTT-1-2(+)
+
+FAMILY:120: tRNA-Lys-TTT-14-1
+tRNA-Lys-TTT-14-1(-)
+
+FAMILY:121: tRNA-Pro-TGG-1-1
+tRNA-Pro-TGG-1-1(+)
+
+FAMILY:122: tRNA-Pro-TGG-3
+tRNA-Pro-TGG-3-2(+)
+tRNA-Pro-TGG-3-3(+)
+tRNA-Pro-TGG-3-4(-)
+tRNA-Pro-TGG-3-5(+)
+tRNA-Pro-TGG-3-1(-)
+
+FAMILY:123: tRNA-Thr-TGT-3-1
+tRNA-Thr-TGT-3-1(-)
+
+FAMILY:124: tRNA-Thr-TGT-4-1
+tRNA-Thr-TGT-4-1(-)
+
+FAMILY:125: tRNA-Thr-TGT-5-1
+tRNA-Thr-TGT-5-1(+)
+
+FAMILY:126: tRNA-Tyr-GTA-4-1
+tRNA-Tyr-GTA-4-1(-)
+
+FAMILY:127: tRNA-Tyr-GTA-5
+tRNA-Tyr-GTA-5-3(-)
+tRNA-Tyr-GTA-5-4(-)
+tRNA-Tyr-GTA-5-5(+)
+tRNA-Tyr-GTA-5-1(+)
+tRNA-Tyr-GTA-5-2(+)
+
+FAMILY:128: tRNA-Tyr-GTA-7-1
+tRNA-Tyr-GTA-7-1(-)
+
+FAMILY:129: tRNA-Arg-TCG-1-1
+tRNA-Arg-TCG-1-1(+)
+
+FAMILY:130: tRNA-Cys-GCA-5-1
+tRNA-Cys-GCA-5-1(+)
+
+FAMILY:131: tRNA-Gln-CTG-1
+tRNA-Gln-CTG-1-4(-)
+tRNA-Gln-CTG-1-5(+)
+tRNA-Gln-CTG-1-1(+)
+tRNA-Gln-CTG-1-2(+)
+tRNA-Gln-CTG-1-3(-)
+
+FAMILY:132: tRNA-Lys-CTT-16-1
+tRNA-Lys-CTT-16-1(-)
+
+FAMILY:133: tRNA-Ser-GCT-4
+tRNA-Ser-GCT-4-2(-)
+tRNA-Ser-GCT-4-3(+)
+tRNA-Ser-GCT-4-1(-)
+
+FAMILY:134: tRNA-Arg-CCG-1
+tRNA-Arg-CCG-1-3(+)
+tRNA-Arg-CCG-1-1(-)
+tRNA-Arg-CCG-1-2(+)
+
+FAMILY:135: tRNA-Arg-CCT-3-1
+tRNA-Arg-CCT-3-1(+)
+
+FAMILY:136: tRNA-Arg-CCT-5-1
+tRNA-Arg-CCT-5-1(+)
+
+FAMILY:137: tRNA-Gly-CCC-2
+tRNA-Gly-CCC-2-2(-)
+tRNA-Gly-CCC-2-1(-)
+
+FAMILY:138: tRNA-Gly-GCC-3-1
+tRNA-Gly-GCC-3-1(-)
+
+FAMILY:139: tRNA-Gly-GCC-5-1
+tRNA-Gly-GCC-5-1(+)
+
+FAMILY:140: tRNA-Leu-CAG-2
+tRNA-Leu-CAG-2-1(+)
+tRNA-Leu-CAG-2-2(-)
+
+FAMILY:141: tRNA-Leu-TAG-3-1
+tRNA-Leu-TAG-3-1(-)
+
+FAMILY:142: tRNA-Lys-CTT-14-1
+tRNA-Lys-CTT-14-1(+)
+
+FAMILY:143: tRNA-Lys-CTT-3-1
+tRNA-Lys-CTT-3-1(-)
+
+FAMILY:144: tRNA-Lys-CTT-4-1
+tRNA-Lys-CTT-4-1(+)
+
+FAMILY:145: tRNA-Lys-CTT-5-1
+tRNA-Lys-CTT-5-1(-)
+
+FAMILY:146: tRNA-Lys-CTT-8-1
+tRNA-Lys-CTT-8-1(+)
+
+FAMILY:147: tRNA-Lys-TTT-1-1
+tRNA-Lys-TTT-1-1(-)
+
+FAMILY:148: tRNA-Met-CAT-2-1
+tRNA-Met-CAT-2-1(+)
+
+FAMILY:149: tRNA-Met-CAT-6-1
+tRNA-Met-CAT-6-1(-)
+
+FAMILY:150: tRNA-Pro-AGG-1-1
+tRNA-Pro-AGG-1-1(+)
+
+FAMILY:151: tRNA-Pro-TGG-4-1
+tRNA-Pro-TGG-4-1(-)
+
+FAMILY:152: tRNA-Thr-CGT-2-1
+tRNA-Thr-CGT-2-1(+)
+
+FAMILY:153: tRNA-Arg-CCG-2-1
+tRNA-Arg-CCG-2-1(-)
+
+FAMILY:154: tRNA-Arg-CCT-1-1
+tRNA-Arg-CCT-1-1(+)
+
+FAMILY:155: tRNA-Arg-CCT-2-1
+tRNA-Arg-CCT-2-1(-)
+
+FAMILY:156: tRNA-Arg-TCG-3-1
+tRNA-Arg-TCG-3-1(+)
+
+FAMILY:157: tRNA-Arg-TCT-2-1
+tRNA-Arg-TCT-2-1(+)
+
+FAMILY:158: tRNA-Cys-GCA-14-1
+tRNA-Cys-GCA-14-1(-)
+
+FAMILY:159: tRNA-Cys-GCA-2
+tRNA-Cys-GCA-2-2(+)
+tRNA-Cys-GCA-2-3(-)
+tRNA-Cys-GCA-2-4(-)
+tRNA-Cys-GCA-2-1(-)
+
+FAMILY:160: tRNA-Cys-GCA-24-1
+tRNA-Cys-GCA-24-1(-)
+
+FAMILY:161: tRNA-Cys-GCA-4-1
+tRNA-Cys-GCA-4-1(-)
+
+FAMILY:162: tRNA-Gln-TTG-1-1
+tRNA-Gln-TTG-1-1(+)
+
+FAMILY:163: tRNA-Gly-CCC-3-1
+tRNA-Gly-CCC-3-1(+)
+
+FAMILY:164: tRNA-Gly-TCC-3-1
+tRNA-Gly-TCC-3-1(+)
+
+FAMILY:165: tRNA-Ile-AAT-4-1
+tRNA-Ile-AAT-4-1(-)
+
+FAMILY:166: tRNA-Leu-TAG-1-1
+tRNA-Leu-TAG-1-1(-)
+
+FAMILY:167: tRNA-Ser-AGA-2
+tRNA-Ser-AGA-2-6(-)
+tRNA-Ser-AGA-2-1(+)
+tRNA-Ser-AGA-2-2(+)
+tRNA-Ser-AGA-2-3(+)
+tRNA-Ser-AGA-2-4(+)
+tRNA-Ser-AGA-2-5(-)
+
+FAMILY:168: tRNA-Ser-CGA-1-1
+tRNA-Ser-CGA-1-1(-)
+
+FAMILY:169: tRNA-Thr-AGT-1
+tRNA-Thr-AGT-1-1(+)
+tRNA-Thr-AGT-1-2(-)
+tRNA-Thr-AGT-1-3(+)
+
+FAMILY:170: tRNA-Thr-AGT-5-1
+tRNA-Thr-AGT-5-1(-)
+
+FAMILY:171: tRNA-Thr-AGT-7-1
+tRNA-Thr-AGT-7-1(-)
+
+FAMILY:172: tRNA-Thr-CGT-4-1
+tRNA-Thr-CGT-4-1(+)
+
+FAMILY:173: tRNA-Trp-CCA-1-1
+tRNA-Trp-CCA-1-1(-)
+
+FAMILY:174: tRNA-Trp-CCA-2-1
+tRNA-Trp-CCA-2-1(+)
+
+FAMILY:175: tRNA-Trp-CCA-3
+tRNA-Trp-CCA-3-3(+)
+tRNA-Trp-CCA-3-1(-)
+tRNA-Trp-CCA-3-2(-)
+
+FAMILY:176: tRNA-Gly-TCC-5-1
+tRNA-Gly-TCC-5-1(+)
+
+FAMILY:177: tRNA-Gly-TCC-6-1
+tRNA-Gly-TCC-6-1(+)
+
+FAMILY:178: tRNA-Lys-CTT-6-1
+tRNA-Lys-CTT-6-1(-)
+
+FAMILY:179: tRNA-Gly-TCC-1-1
+tRNA-Gly-TCC-1-1(+)
+
+FAMILY:180: tRNA-Ile-TAT-1-1
+tRNA-Ile-TAT-1-1(-)
+
+FAMILY:181: tRNA-Lys-CTT-10-1
+tRNA-Lys-CTT-10-1(+)
+
+FAMILY:182: tRNA-Lys-CTT-11-1
+tRNA-Lys-CTT-11-1(-)
+
+FAMILY:183: tRNA-Lys-TTT-10-1
+tRNA-Lys-TTT-10-1(-)
+
+FAMILY:184: tRNA-Lys-TTT-12-1
+tRNA-Lys-TTT-12-1(-)
+
+FAMILY:185: tRNA-SeC-TCA-1-1
+tRNA-SeC-TCA-1-1(-)
+
+FAMILY:186: tRNA-Val-CAC-3-1
+tRNA-Val-CAC-3-1(-)
+
+FAMILY:187: tRNA-Ala-AGC-8
+tRNA-Ala-AGC-8-1(+)
+tRNA-Ala-AGC-8-2(+)
+
+FAMILY:188: tRNA-Ala-CGC-3-1
+tRNA-Ala-CGC-3-1(+)
+
+FAMILY:189: tRNA-Gln-TTG-5-1
+tRNA-Gln-TTG-5-1(-)
+
+FAMILY:190: tRNA-Glu-CTC-7-1
+tRNA-Glu-CTC-7-1(-)
+
+FAMILY:191: tRNA-Ile-TAT-2
+tRNA-Ile-TAT-2-1(+)
+tRNA-Ile-TAT-2-2(+)
+tRNA-Ile-TAT-2-3(+)
+
+FAMILY:192: tRNA-Lys-TTT-15-1
+tRNA-Lys-TTT-15-1(-)
+
+FAMILY:194: tRNA-Tyr-GTA-2-1
+tRNA-Tyr-GTA-2-1(+)
+
+FAMILY:195: tRNA-Leu-AAG-6-1
+tRNA-Leu-AAG-6-1(-)
+
+FAMILY:196: tRNA-SeC-TCA-2-1
+tRNA-SeC-TCA-2-1(+)
+
+FAMILY:197: tRNA-Arg-ACG-2
+tRNA-Arg-ACG-2-1(-)
+tRNA-Arg-ACG-2-2(-)
+tRNA-Arg-ACG-2-3(+)
+tRNA-Arg-ACG-2-4(-)
+
+FAMILY:198: tRNA-Asp-GTC-6-1
+tRNA-Asp-GTC-6-1(-)
+
+FAMILY:199: tRNA-Cys-GCA-25-1
+tRNA-Cys-GCA-25-1(-)
+
+FAMILY:200: tRNA-Cys-GCA-6-1
+tRNA-Cys-GCA-6-1(-)
+
+FAMILY:201: tRNA-Cys-GCA-9
+tRNA-Cys-GCA-9-1(-)
+tRNA-Cys-GCA-9-2(+)
+tRNA-Cys-GCA-9-3(+)
+tRNA-Cys-GCA-9-4(+)
+
+FAMILY:202: tRNA-Leu-AAG-8-1
+tRNA-Leu-AAG-8-1(-)
+
+FAMILY:203: tRNA-Val-AAC-1
+tRNA-Val-AAC-1-1(+)
+tRNA-Val-AAC-1-2(+)
+tRNA-Val-AAC-1-3(+)
+tRNA-Val-AAC-1-4(-)
+tRNA-Val-AAC-1-5(-)
+
+FAMILY:204: tRNA-Asp-GTC-5-1
+tRNA-Asp-GTC-5-1(-)
+
+FAMILY:206: tRNA-Leu-AAG-1
+tRNA-Leu-AAG-1-1(-)
+tRNA-Leu-AAG-1-2(+)
+tRNA-Leu-AAG-1-3(-)
+
+FAMILY:207: tRNA-Leu-AAG-7-1
+tRNA-Leu-AAG-7-1(-)
+
+FAMILY:208: tRNA-Lys-CTT-9-1
+tRNA-Lys-CTT-9-1(-)
+
+FAMILY:209: tRNA-Thr-TGT-6-1
+tRNA-Thr-TGT-6-1(-)
+
+FAMILY:210: tRNA-Val-AAC-2-1
+tRNA-Val-AAC-2-1(-)
+
+FAMILY:211: tRNA-Ala-AGC-1-1
+tRNA-Ala-AGC-1-1(-)
+
+FAMILY:212: tRNA-Ala-AGC-10
+tRNA-Ala-AGC-10-1(+)
+tRNA-Ala-AGC-10-2(-)
+
+FAMILY:213: tRNA-Ala-AGC-11-1
+tRNA-Ala-AGC-11-1(-)
+
+FAMILY:214: tRNA-Ala-AGC-12
+tRNA-Ala-AGC-12-1(+)
+tRNA-Ala-AGC-12-2(-)
+tRNA-Ala-AGC-12-3(-)
+
+FAMILY:215: tRNA-Ala-AGC-13
+tRNA-Ala-AGC-13-1(+)
+tRNA-Ala-AGC-13-2(-)
+tRNA-Ala-AGC-13-3(-)
+
+FAMILY:216: tRNA-Ala-AGC-14
+tRNA-Ala-AGC-14-1(+)
+tRNA-Ala-AGC-14-2(-)
+
+FAMILY:217: tRNA-Ala-AGC-16-1
+tRNA-Ala-AGC-16-1(-)
+
+FAMILY:218: tRNA-Ala-AGC-17-1
+tRNA-Ala-AGC-17-1(-)
+
+FAMILY:219: tRNA-Ala-AGC-18
+tRNA-Ala-AGC-18-1(+)
+tRNA-Ala-AGC-18-2(-)
+
+FAMILY:220: tRNA-Ala-AGC-19-1
+tRNA-Ala-AGC-19-1(-)
+
+FAMILY:221: tRNA-Ala-AGC-2
+tRNA-Ala-AGC-2-1(-)
+tRNA-Ala-AGC-2-2(-)
+tRNA-Ala-AGC-7-1(+)
+
+FAMILY:222: tRNA-Ala-AGC-21-1
+tRNA-Ala-AGC-21-1(-)
+
+FAMILY:223: tRNA-Ala-AGC-23-1
+tRNA-Ala-AGC-23-1(-)
+
+FAMILY:224: tRNA-Ala-AGC-24-1
+tRNA-Ala-AGC-24-1(-)
+
+FAMILY:225: tRNA-Ala-AGC-3-1
+tRNA-Ala-AGC-3-1(+)
+
+FAMILY:226: tRNA-Ala-AGC-4-1
+tRNA-Ala-AGC-4-1(-)
+
+FAMILY:227: tRNA-Ala-AGC-5-1
+tRNA-Ala-AGC-5-1(+)
+
+FAMILY:228: tRNA-Ala-AGC-6-1
+tRNA-Ala-AGC-6-1(-)
+
+FAMILY:229: tRNA-Ala-AGC-9
+tRNA-Ala-AGC-9-1(+)
+tRNA-Ala-AGC-9-2(-)
+
+FAMILY:230: tRNA-Ala-CGC-1-1
+tRNA-Ala-CGC-1-1(+)
+
+FAMILY:231: tRNA-Ala-CGC-2-1
+tRNA-Ala-CGC-2-1(-)
+
+FAMILY:232: tRNA-Ala-CGC-4-1
+tRNA-Ala-CGC-4-1(+)
+
+FAMILY:233: tRNA-Ala-CGC-5-1
+tRNA-Ala-CGC-5-1(-)
+
+FAMILY:234: tRNA-Ala-TGC-1-1
+tRNA-Ala-TGC-1-1(-)
+
+FAMILY:235: tRNA-Ala-TGC-2-1
+tRNA-Ala-TGC-2-1(+)
+
+FAMILY:236: tRNA-Ala-TGC-5-1
+tRNA-Ala-TGC-5-1(-)
+
+FAMILY:237: tRNA-Ala-TGC-6-1
+tRNA-Ala-TGC-6-1(-)
+
+FAMILY:238: tRNA-Ala-TGC-7-1
+tRNA-Ala-TGC-7-1(-)
+
+FAMILY:239: tRNA-Ala-TGC-9-1
+tRNA-Ala-TGC-9-1(-)
+
+FAMILY:240: tRNA-Arg-TCG-2-1
+tRNA-Arg-TCG-2-1(+)
+
+FAMILY:241: tRNA-Arg-TCG-4-1
+tRNA-Arg-TCG-4-1(+)
+
+FAMILY:242: tRNA-Arg-TCG-5-1
+tRNA-Arg-TCG-5-1(-)
+
+FAMILY:243: tRNA-Arg-TCT-5-1
+tRNA-Arg-TCT-5-1(+)
+
+FAMILY:244: tRNA-Asp-GTC-3-1
+tRNA-Asp-GTC-3-1(-)
+
+FAMILY:245: tRNA-Gln-CTG-2-1
+tRNA-Gln-CTG-2-1(-)
+
+FAMILY:246: tRNA-Gln-CTG-5-1
+tRNA-Gln-CTG-5-1(+)
+
+FAMILY:247: tRNA-Gln-CTG-6-1
+tRNA-Gln-CTG-6-1(-)
+
+FAMILY:248: tRNA-Gln-TTG-2-1
+tRNA-Gln-TTG-2-1(+)
+
+FAMILY:249: tRNA-Gln-TTG-3
+tRNA-Gln-TTG-3-1(-)
+tRNA-Gln-TTG-3-2(-)
+tRNA-Gln-TTG-3-3(-)
+
+FAMILY:250: tRNA-Gln-TTG-4-1
+tRNA-Gln-TTG-4-1(+)
+
+FAMILY:251: tRNA-Gly-GCC-6-1
+tRNA-Gly-GCC-6-1(+)
+
+FAMILY:252: tRNA-Ile-AAT-1-1
+tRNA-Ile-AAT-1-1(+)
+
+FAMILY:253: tRNA-Ile-AAT-10-1
+tRNA-Ile-AAT-10-1(+)
+
+FAMILY:254: tRNA-Ile-AAT-12-1
+tRNA-Ile-AAT-12-1(+)
+
+FAMILY:255: tRNA-Ile-AAT-2-1
+tRNA-Ile-AAT-2-1(+)
+
+FAMILY:256: tRNA-Ile-AAT-3-1
+tRNA-Ile-AAT-3-1(-)
+
+FAMILY:257: tRNA-Ile-AAT-6-1
+tRNA-Ile-AAT-6-1(+)
+
+FAMILY:258: tRNA-Ile-AAT-7
+tRNA-Ile-AAT-7-1(-)
+tRNA-Ile-AAT-7-2(+)
+
+FAMILY:259: tRNA-Ile-AAT-8-1
+tRNA-Ile-AAT-8-1(+)
+
+FAMILY:260: tRNA-Ile-AAT-9-1
+tRNA-Ile-AAT-9-1(+)
+
+FAMILY:261: tRNA-Ile-TAT-3-1
+tRNA-Ile-TAT-3-1(+)
+
+FAMILY:262: tRNA-iMet-CAT-2-1
+tRNA-iMet-CAT-2-1(+)
+
+FAMILY:263: tRNA-Leu-AAG-3-1
+tRNA-Leu-AAG-3-1(+)
+
+FAMILY:264: tRNA-Leu-AAG-4-1
+tRNA-Leu-AAG-4-1(-)
+
+FAMILY:265: tRNA-Leu-CAA-1
+tRNA-Leu-CAA-1-1(-)
+tRNA-Leu-CAA-1-2(+)
+
+FAMILY:266: tRNA-Leu-CAA-2-1
+tRNA-Leu-CAA-2-1(-)
+
+FAMILY:267: tRNA-Leu-CAA-3-1
+tRNA-Leu-CAA-3-1(-)
+
+FAMILY:268: tRNA-Leu-TAA-1-1
+tRNA-Leu-TAA-1-1(+)
+
+FAMILY:269: tRNA-Leu-TAA-2-1
+tRNA-Leu-TAA-2-1(-)
+
+FAMILY:270: tRNA-Leu-TAA-4-1
+tRNA-Leu-TAA-4-1(-)
+
+FAMILY:271: tRNA-Leu-TAA-5-1
+tRNA-Leu-TAA-5-1(+)
+
+FAMILY:272: tRNA-Lys-TTT-13-1
+tRNA-Lys-TTT-13-1(-)
+
+FAMILY:273: tRNA-Lys-TTT-4-1
+tRNA-Lys-TTT-4-1(-)
+
+FAMILY:274: tRNA-Lys-TTT-6-1
+tRNA-Lys-TTT-6-1(-)
+
+FAMILY:275: tRNA-Lys-TTT-7-1
+tRNA-Lys-TTT-7-1(+)
+
+FAMILY:276: tRNA-Lys-TTT-9-1
+tRNA-Lys-TTT-9-1(+)
+
+FAMILY:277: tRNA-Met-CAT-3
+tRNA-Met-CAT-3-1(+)
+tRNA-Met-CAT-3-2(-)
+
+FAMILY:278: tRNA-Met-CAT-4
+tRNA-Met-CAT-4-1(-)
+tRNA-Met-CAT-4-2(+)
+tRNA-Met-CAT-4-3(+)
+
+FAMILY:279: tRNA-Met-CAT-5
+tRNA-Met-CAT-5-1(+)
+tRNA-Met-CAT-5-2(-)
+
+FAMILY:280: tRNA-Met-CAT-7-1
+tRNA-Met-CAT-7-1(-)
+
+FAMILY:281: tRNA-Phe-GAA-11-1
+tRNA-Phe-GAA-11-1(-)
+
+FAMILY:282: tRNA-Phe-GAA-3-1
+tRNA-Phe-GAA-3-1(-)
+
+FAMILY:283: tRNA-Phe-GAA-4-1
+tRNA-Phe-GAA-4-1(-)
+
+FAMILY:284: tRNA-Phe-GAA-5-1
+tRNA-Phe-GAA-5-1(+)
+
+FAMILY:285: tRNA-Phe-GAA-6-1
+tRNA-Phe-GAA-6-1(-)
+
+FAMILY:286: tRNA-Phe-GAA-7-1
+tRNA-Phe-GAA-7-1(+)
+
+FAMILY:287: tRNA-Phe-GAA-8-1
+tRNA-Phe-GAA-8-1(-)
+
+FAMILY:288: tRNA-Pro-CGG-2-1
+tRNA-Pro-CGG-2-1(+)
+
+FAMILY:289: tRNA-Ser-AGA-1-1
+tRNA-Ser-AGA-1-1(-)
+
+FAMILY:290: tRNA-Ser-AGA-3-1
+tRNA-Ser-AGA-3-1(+)
+
+FAMILY:291: tRNA-Ser-AGA-4-1
+tRNA-Ser-AGA-4-1(-)
+
+FAMILY:292: tRNA-Ser-CGA-2-1
+tRNA-Ser-CGA-2-1(+)
+
+FAMILY:293: tRNA-Ser-CGA-3-1
+tRNA-Ser-CGA-3-1(-)
+
+FAMILY:294: tRNA-Ser-GCT-1-1
+tRNA-Ser-GCT-1-1(+)
+
+FAMILY:295: tRNA-Ser-GCT-2-1
+tRNA-Ser-GCT-2-1(+)
+
+FAMILY:296: tRNA-Ser-GCT-5-1
+tRNA-Ser-GCT-5-1(+)
+
+FAMILY:297: tRNA-Ser-GCT-6-1
+tRNA-Ser-GCT-6-1(-)
+
+FAMILY:298: tRNA-Ser-TGA-2-1
+tRNA-Ser-TGA-2-1(+)
+
+FAMILY:299: tRNA-Ser-TGA-3-1
+tRNA-Ser-TGA-3-1(-)
+
+FAMILY:300: tRNA-Ser-TGA-4-1
+tRNA-Ser-TGA-4-1(-)
+
+FAMILY:301: tRNA-Thr-AGT-2
+tRNA-Thr-AGT-2-1(-)
+tRNA-Thr-AGT-2-2(-)
+
+FAMILY:302: tRNA-Thr-AGT-3-1
+tRNA-Thr-AGT-3-1(+)
+
+FAMILY:303: tRNA-Thr-AGT-4-1
+tRNA-Thr-AGT-4-1(+)
+
+FAMILY:304: tRNA-Thr-AGT-6-1
+tRNA-Thr-AGT-6-1(+)
+
+FAMILY:305: tRNA-Thr-CGT-1-1
+tRNA-Thr-CGT-1-1(-)
+
+FAMILY:306: tRNA-Thr-CGT-3-1
+tRNA-Thr-CGT-3-1(-)
+
+FAMILY:307: tRNA-Thr-CGT-5-1
+tRNA-Thr-CGT-5-1(+)
+
+FAMILY:308: tRNA-Thr-TGT-1-1
+tRNA-Thr-TGT-1-1(-)
+
+FAMILY:309: tRNA-Tyr-GTA-1-1
+tRNA-Tyr-GTA-1-1(+)
+
+FAMILY:310: tRNA-Tyr-GTA-3-1
+tRNA-Tyr-GTA-3-1(+)
+
+FAMILY:311: tRNA-Tyr-GTA-6-1
+tRNA-Tyr-GTA-6-1(+)
+
+FAMILY:312: tRNA-Tyr-GTA-8-1
+tRNA-Tyr-GTA-8-1(+)
+
+FAMILY:313: tRNA-Val-AAC-3-1
+tRNA-Val-AAC-3-1(-)
+
+FAMILY:314: tRNA-Val-AAC-4-1
+tRNA-Val-AAC-4-1(-)
+
+FAMILY:315: tRNA-Val-AAC-5-1
+tRNA-Val-AAC-5-1(+)
+
+FAMILY:316: tRNA-Val-CAC-2-1
+tRNA-Val-CAC-2-1(-)
+
+FAMILY:317: tRNA-Val-CAC-6-1
+tRNA-Val-CAC-6-1(-)
+
+FAMILY:318: tRNA-Val-CAC-7-1
+tRNA-Val-CAC-7-1(-)
+
+FAMILY:319: tRNA-Val-CAC-9-1
+tRNA-Val-CAC-9-1(+)
+
+FAMILY:320: tRNA-Val-TAC-4-1
+tRNA-Val-TAC-4-1(+)
+
+FAMILY:321: tRNA-Arg-CCT-4-1
+tRNA-Arg-CCT-4-1(+)
+
+FAMILY:322: tRNA-Cys-GCA-1-1
+tRNA-Cys-GCA-1-1(+)
+
+FAMILY:323: tRNA-Cys-GCA-10-1
+tRNA-Cys-GCA-10-1(-)
+
+FAMILY:324: tRNA-Cys-GCA-11-1
+tRNA-Cys-GCA-11-1(-)
+
+FAMILY:325: tRNA-Cys-GCA-12-1
+tRNA-Cys-GCA-12-1(-)
+
+FAMILY:326: tRNA-Cys-GCA-13-1
+tRNA-Cys-GCA-13-1(-)
+
+FAMILY:327: tRNA-Cys-GCA-15-1
+tRNA-Cys-GCA-15-1(+)
+
+FAMILY:328: tRNA-Cys-GCA-16-1
+tRNA-Cys-GCA-16-1(+)
+
+FAMILY:329: tRNA-Cys-GCA-17-1
+tRNA-Cys-GCA-17-1(-)
+
+FAMILY:330: tRNA-Cys-GCA-18-1
+tRNA-Cys-GCA-18-1(-)
+
+FAMILY:331: tRNA-Cys-GCA-19-1
+tRNA-Cys-GCA-19-1(-)
+
+FAMILY:332: tRNA-Cys-GCA-20-1
+tRNA-Cys-GCA-20-1(+)
+
+FAMILY:333: tRNA-Cys-GCA-21-1
+tRNA-Cys-GCA-21-1(+)
+
+FAMILY:334: tRNA-Cys-GCA-22-1
+tRNA-Cys-GCA-22-1(+)
+
+FAMILY:335: tRNA-Cys-GCA-23-1
+tRNA-Cys-GCA-23-1(-)
+
+FAMILY:336: tRNA-Cys-GCA-3-1
+tRNA-Cys-GCA-3-1(-)
+
+FAMILY:337: tRNA-Trp-CCA-5-1
+tRNA-Trp-CCA-5-1(+)
+
+FAMILY:338: tRNA-Glu-CTC-5-1
+tRNA-Glu-CTC-5-1(+)
+
+FAMILY:339: tRNA-Met-CAT-1-1
+tRNA-Met-CAT-1-1(-)
+
+FAMILY:340: tRNA-Tyr-GTA-9-1
+tRNA-Tyr-GTA-9-1(-)
+
+FAMILY:341: tRNA-Arg-TCG-6-1
+tRNA-Arg-TCG-6-1(+)
+
+FAMILY:342: tRNA-Asp-GTC-4-1
+tRNA-Asp-GTC-4-1(-)
+
+FAMILY:343: tRNA-iMet-CAT-3-1
+tRNA-iMet-CAT-3-1(+)
+
+FAMILY:344: tRNA-Ile-GAT-1
+tRNA-Ile-GAT-1-1(-)
+tRNA-Ile-GAT-1-2(-)
+tRNA-Ile-GAT-1-3(-)
