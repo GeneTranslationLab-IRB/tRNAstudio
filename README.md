@@ -101,5 +101,3 @@ Support
 
 If you have any questions or issues, please use Issues Section
 References.
-
-    Galili, Tal, O'Callaghan, Alan, Sidi, Jonathan, Sievert, Carson (2017). “heatmaply: an R package for creating interactive cluster heatmaps for online publishing.” Bioinformatics.
