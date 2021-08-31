@@ -2,7 +2,7 @@
 
 
 '''
-GUI Interface Integrated pipeline for the analisis of tRNA-Seq Datasets (IP-tRNA-dat)
+GUI Interface Integrated pipeline for the analisis of tRNA-Seq Datasets (tRNAstudio)
 '''
 
 
@@ -71,14 +71,13 @@ def download_Genome():
 
  
 
-
-
 def retrieve_SRR():
     '''
     This function recieves an SRR accession number and with string methods 
     creates the ftp url where the file is, and dowloads it. It uses different 
     methods depending on the operating system.
-    ''' 
+    '''
+
     lbl.config(text="Downloading your selected fastq.gz file.")
     SRR = text_Widget.get("1.0",'end-1c')
     first_digits=SRR[0:6]
@@ -94,8 +93,10 @@ def retrieve_SRR():
         print ("Unzipping fastq file....")
         os.system("gunzip " + app.fastqFolder + "/" + SRR + ".fastq.gz")
     if SRR+".fastq" in os.listdir(app.fastqFolder):
+        mb.showinfo("Message", "The sample was downloaded correctly")
         print ("The sample was downloaded correctly.")
     else:
+        mb.showinfo("Message", "The sample was not dowloaded correctly, check the ID")
         print ("The sample was not dowloaded correctly, check the ID.")
     
     os.chdir(app.scriptsFolder)
@@ -318,6 +319,7 @@ def r_analysis():
         file.write("\n")
         file.close()
     file.close()
+    print ("Performing data analysis ")
     
     subprocess.call(["Rscript", "--vanilla", "Join_results.r"])
     
