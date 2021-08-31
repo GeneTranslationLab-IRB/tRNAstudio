@@ -53,6 +53,7 @@ intron_coordinates.columns = header[:len(intron_coordinates.columns)]
 
 
 if sample in samples:
+
     print ('ANALYZING SAMPLE:'+ sample)
     sample_name=sample.split('.')[0]
     if sample.endswith(('.fa', '.fastq')):
@@ -67,7 +68,8 @@ if sample in samples:
         
         # Set working directory.
         os.chdir('../Results/'+sample_name+'/Alignment_WG/')
-
+        
+        # Processing files (sorting and indexing)
         os.system('samtools sort '+sample_name+'_WGloc_mapped.bam'+ ' -o ' +sample_name+'_WGloc_mapped_sort.bam')
         os.system('samtools index '+sample_name+'_WGloc_mapped_sort.bam')   
 		
@@ -120,3 +122,4 @@ if sample in samples:
 		# Marge fastq 
         os.system('cat '+sample_name+'_WGloc_only_trna_mature.fastq '+sample_name+'_unmapped_WGloc.fastq > '+sample_name+'_WGloc_only_trna_mature_and_unmapped.fastq')
  
+        print ('\n')

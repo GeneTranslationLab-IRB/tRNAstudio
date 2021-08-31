@@ -169,12 +169,17 @@ for(group in levels(sample_data$Condition)){
                     "\n","Reference: ", reference_coverage, "\n", nt_mods_coverage)
     
     setwd("../Results/Heatmaps")
-    
+    class(data_aa)
+    data_aa <- as.data.frame(data_aa) %>% select(-'76')
+    data_aa <- as.data.frame(data_aa) %>% select(-'75')
+    data_aa <- as.data.frame(data_aa) %>% select(-'74')
     heatmap = heatmaply(data_aa,  colors= colorRampPalette(brewer.pal(9, "OrRd")), plot_method = "plotly", limits=c(0,1),
                         Rowv = FALSE, Colv=FALSE, xlab="Position", ylab="Gene", custom_hovertext=custom_text, 
                         column_text_angle=0, dendogram=FALSE, show_dendogram=c("FALSE", "FALSE"), file=heatmap_file)
     
-    
+    data_aa_COVERAGE <- as.data.frame(data_aa_COVERAGE) %>% select(-'76')
+    data_aa_COVERAGE <- as.data.frame(data_aa_COVERAGE) %>% select(-'75')
+    data_aa_COVERAGE <- as.data.frame(data_aa_COVERAGE) %>% select(-'74')
     if(table(is.na(data_aa_COVERAGE)) != dim(data_aa_COVERAGE)[1] * dim(data_aa_COVERAGE)[2]){
       heatmap = heatmaply(data_aa_COVERAGE,  colors= colorRampPalette(brewer.pal(9, "OrRd")), plot_method = "plotly", limits=c(0,1),
                         Rowv = FALSE, Colv=FALSE, xlab="Position", ylab="Gene", custom_hovertext=custom_text_high_coverage, 

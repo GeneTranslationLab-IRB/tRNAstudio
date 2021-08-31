@@ -53,17 +53,10 @@ def CustomRemovalSoftClippedBases(sample_name, file_name, tRNA_coordinates):
 						soft_clipp=str(read.cigar[0])[1:-1].split(',')[1].replace(' ','')
 						if int(soft_clipp) == 3 and sequence[:3] == 'TGG' and readStart == tRNAStart:
 							pass
-						elif int(soft_clipp) == 2 and sequence[:2] == 'GG' and readStart == tRNAStart:
-							pass
-						elif int(soft_clipp) == 1 and sequence[:1] == 'G' and readStart == tRNAStart:
-							pass
 						elif int(soft_clipp) == 2 and sequence[:3] == 'TGG' and readStart+1 == tRNAStart:
 							pass
 						elif int(soft_clipp) == 1 and sequence[:3] == 'TGG' and readStart+2 == tRNAStart:
 							pass
-						elif int(soft_clipp) == 1 and sequence[:2] == 'GG' and readStart+1 == tRNAStart:
-							pass
-
 						else:
 							soft_clipp_seq=str(sequence[:int(soft_clipp)])
 							if soft_clipp_seq[-3:] == 'TGG' and int(soft_clipp) > 3 and readStart == tRNAStart:
@@ -108,15 +101,9 @@ def CustomRemovalSoftClippedBases(sample_name, file_name, tRNA_coordinates):
 						soft_clipp=str(read.cigar[-1])[1:-1].split(',')[1].replace(' ','')
 						if int(soft_clipp) == 3 and sequence[-3:] == 'CCA' and readEnd == tRNAEnd:
 							pass
-						elif int(soft_clipp) == 2 and sequence[-2:] == 'CC' and readEnd == tRNAEnd:
-							pass
-						elif int(soft_clipp) == 1 and sequence[-1:] == 'C' and readEnd == tRNAEnd:
-							pass
 						elif int(soft_clipp) == 2 and sequence[-3:] == 'CCA' and readEnd-1 == tRNAEnd:
 							pass
 						elif int(soft_clipp) == 1 and sequence[-3:] == 'CCA' and readEnd-2 == tRNAEnd:
-							pass
-						elif int(soft_clipp) == 1 and sequence[-2:] == 'CC' and readEnd-1 == tRNAEnd:
 							pass
 
 						else:

@@ -56,6 +56,8 @@ CustomRemovalSoftClippedBases2(sample_name,'_MGloc_mapped_')
 os.system('samtools sort '+sample_name+'_MGloc_mapped_soft_clipped_rm.bam'+ ' -o ' +sample_name+'_MGloc_mapped_soft_clipped_rm_sort.bam')
 os.system('samtools index '+sample_name+'_MGloc_mapped_soft_clipped_rm_sort.bam') 
 
-#Join the unmapped reads with the set of precursor reads.
+# Join the unmapped reads with the set of precursor reads.
 os.system('samtools fastq  ../Alignment_WG/'+sample_name+'_WGloc_only_trna_precursor_Filtered_sort.bam > '+sample_name+'_WGloc_only_trna_precursor_Filtered_sort.fastq')
 os.system('cat '+sample_name+'_WGloc_only_trna_precursor_Filtered_sort.fastq '+sample_name+'_unmapped_MGloc.fastq > '+sample_name+'_WGloc_only_trna_precursor_and_MGunmapped.fastq')
+
+print ('\n')
