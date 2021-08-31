@@ -1,5 +1,5 @@
 # You can use this file to create a conda environment for this pipeline:
-#   conda env create --name tRNA-PipelineEnv --file=environment.yml
+#   conda env create --name tRNAstudioEnv --file=environment.yml
 name: tRNAstudioEnv
 channels:
   - bioconda
