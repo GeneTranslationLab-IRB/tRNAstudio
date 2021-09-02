@@ -9,26 +9,26 @@ if(length(new.packages)){
 
 
 suppressPackageStartupMessages({
-library("Rsubread")
-library( "GenomicAlignments" )
-library( "GenomicFeatures" )
-library( "Rsamtools" )
-library("edgeR")
-library("vsn")
-library("magick")
-library("Glimma")
-library("pheatmap")
-library('tidyr')
-library('stringr')
-library(gtools)
-library(stringr)
-library(gdata)
-library(dplyr)
-library(plyr)
-library(data.table)
-library(heatmaply)
-library(gridExtra)
-library(ggplot2)
+  library("Rsubread")
+  library( "GenomicAlignments" )
+  library( "GenomicFeatures" )
+  library( "Rsamtools" )
+  library("edgeR")
+  library("vsn")
+  library("magick")
+  library("Glimma")
+  library("pheatmap")
+  library('tidyr')
+  library('stringr')
+  library(gtools)
+  library(stringr)
+  library(gdata)
+  library(dplyr)
+  library(plyr)
+  library(data.table)
+  library(heatmaply)
+  library(gridExtra)
+  library(ggplot2)
   library('RColorBrewer')
 })
 
@@ -63,7 +63,7 @@ for(aa in aas){
     positions = c("9","26","32", "34", "37","45F", "58")
   }
   else{
-    positions = c("9","26","32", "34", "37","47", "58")
+    positions = c("9","26","32", "34", "37", "58")
   }
   position_info = matrix(ncol=length(positions), nrow=1)
   colnames(position_info) = positions
@@ -92,7 +92,7 @@ for(aa in aas){
     data_tot = rbind(data_group1, data_group2)
     data_tot$Group = factor(data_tot$Group)
     p = ggplot(data = data_tot, aes(x=Corrected_pos, y=as.numeric(Modification_ratio), 
-                                group=Group, color = Group)) + geom_line() +
+                                    group=Group, color = Group)) + geom_line() +
       labs(title='Modification ratio (Relative to gene coverage)', subtitle=gene,
            x="Position", y ="Modification ratio (Relative to gene coverage)")+
       scale_fill_manual(values= c("#0000FF", "#FF0000"),
@@ -104,7 +104,6 @@ for(aa in aas){
             legend.title = element_text(size=20), plot.subtitle = element_text(size=19),
             plot.title =element_text(size=20))
     
-    p
     file_name = paste0("Modification_ratio_by_pos_", gene, ".jpeg")
     ggsave(p, file=file_name, width = 35, 
            height = 25, units = "cm", path="../Results/Modification_ratio_plots/Comparison" )
@@ -115,8 +114,8 @@ for(aa in aas){
         group1_pos<- as.data.frame(data_group1[data_group1$Corrected_pos == positions[i], ])
         group2_pos<- as.data.frame(data_group2[data_group2$Corrected_pos == positions[i], ])
         position_pos_test <- matrix(c(group1_pos$Base_coverage,group1_pos$Mod_bases,
-                                     group2_pos$Base_coverage,group2_pos$Mod_bases),
-                                   ncol=2,byrow=TRUE)
+                                      group2_pos$Base_coverage,group2_pos$Mod_bases),
+                                    ncol=2,byrow=TRUE)
         
         rownames(position_pos_test)<-groups
         colnames(position_pos_test)<-c("Coverage","Modification")
@@ -131,7 +130,7 @@ for(aa in aas){
     gene_info[,cont] = position_info
   }
   
-
+  
   indx = gene_info<0.05
   pos = rownames(gene_info)[row(gene_info)*indx]
   gene = colnames(gene_info)[col(gene_info)*indx]
@@ -158,7 +157,12 @@ unique_genes = unique(aa_info_final$gene)
 for(aa in aas){
   id = grep(aa,unique_genes)
   cont = 1
-  
+  if(aa %in% c("Ser", "Leu")){
+    positions = c("9","26","32", "34", "37","45F", "58")
+  }
+  else{
+    positions = c("9","26","32", "34", "37", "58")
+  }
   genes_aa = unique_genes[id]
   final_data = matrix(ncol=length(positions), nrow=length(genes_aa))
   rownames(final_data) = genes_aa
@@ -182,7 +186,6 @@ for(aa in aas){
                              header=T)
     data_group2 = read.table(file=paste0(dir,"/",groups[2],"_",gene, ".txt"), 
                              header=T)
-  
     info_pvalue = c()
     info_mod1= c()
     info_mod2 = c()
@@ -192,7 +195,7 @@ for(aa in aas){
     info_nt_mods1 = c()
     info_nt_mods2 = c()
     info_ref = c()
-
+    
     for(pos in positions){
       if(aa %in% c("Ser", "Leu") & pos == "47"){
         pos = "45F"
@@ -208,12 +211,12 @@ for(aa in aas){
           mod2 = values2$Modification_ratio * 100
           if(mod1 >10 | mod2>10){
             nas = FALSE
-  
+            
             log2fc = (2*(mod2-mod1)/ (mod1+mod2))
             ref = values1$Reference
             ref = substr(ref, 5,6)
             nt_mods1 = paste0("A: ", values1$A," G: ",  values1$G, " C: ", values1$C, 
-                             " T: ", values1$T)
+                              " T: ", values1$T)
             nt_mods2 = paste0("A: ", values2$A," G: ",  values2$G, " C: ", values2$C, 
                               " T: ", values2$T)
             
@@ -233,7 +236,7 @@ for(aa in aas){
             
             
           }
-          }
+        }
       }
       if(nas){
         info_pvalue = c(info_pvalue, NA)
@@ -246,8 +249,8 @@ for(aa in aas){
         info_nt_mods1 = c(info_nt_mods1, NA)
         info_nt_mods2 = c(info_nt_mods2, NA)
       }
-      }
-  
+    }
+    
     
     final_data[cont,1:ncol(final_data)] = info_log2fc
     mod1_list[cont,1:ncol(final_data)] = info_mod1
@@ -287,31 +290,31 @@ for(aa in aas){
                              "Coverage ", groups[1], ": ", cov1_list, "\n",
                              "Coverage ", groups[2], ": ", cov2_list, "\n",
                              "Reference ", ref_list, "\n",
-                              groups[1], ": ", nt_mods_list1, "\n",
-                              groups[2], ": ", nt_mods_list2, "\n",
+                             groups[1], ": ", nt_mods_list1, "\n",
+                             groups[2], ": ", nt_mods_list2, "\n",
                              "Value: ", "(",groups[2], " - ", groups[1],")", 
                              " / mean = ", log2fc_list, "\n",
                              "Adjusted pvalue: ", pvalue_list)
-
+      
       #heatmap = heatmaply(final_data,  
-       #                   colors= colorRampPalette(rev(brewer.pal(9, "RdBu"))),
-        #                  plot_method = "plotly", 
-         #                 limits=c(min(final_data, na.rm=TRUE),
-          #                         max(final_data,na.rm=TRUE)),
-           #               custom_hovertext=custom_text, Rowv = FALSE, Colv=FALSE, 
-            #              xlab="Position", ylab="Gene", column_text_angle=0, 
-             #             dendogram=FALSE, show_dendogram=c("FALSE", "FALSE"),
-              #            file=heatmap_file)
-
+      #                   colors= colorRampPalette(rev(brewer.pal(9, "RdBu"))),
+      #                  plot_method = "plotly", 
+      #                 limits=c(min(final_data, na.rm=TRUE),
+      #                         max(final_data,na.rm=TRUE)),
+      #               custom_hovertext=custom_text, Rowv = FALSE, Colv=FALSE, 
+      #              xlab="Position", ylab="Gene", column_text_angle=0, 
+      #             dendogram=FALSE, show_dendogram=c("FALSE", "FALSE"),
+      #            file=heatmap_file)
+      
       heatmap= heatmaply(final_data,  
-                          scale_fill_gradient_fun = 
-                            ggplot2::scale_fill_gradient2(low = "blue",  high = "red", 
-                                                           midpoint = 0,  limits= c(min(final_data, na.rm=TRUE),
-                                                                            max(final_data,na.rm=TRUE))),
-                          custom_hovertext=custom_text, Rowv = FALSE, Colv=FALSE, 
-                          xlab="Position", ylab="Gene", column_text_angle=0, 
-                          dendogram=FALSE, show_dendogram=c("FALSE", "FALSE"),
-                          file=heatmap_file)
+                         scale_fill_gradient_fun = 
+                           ggplot2::scale_fill_gradient2(low = "blue",  high = "red", 
+                                                         midpoint = 0,  limits= c(min(final_data, na.rm=TRUE),
+                                                                                  max(final_data,na.rm=TRUE))),
+                         custom_hovertext=custom_text, Rowv = FALSE, Colv=FALSE, 
+                         xlab="Position", ylab="Gene", column_text_angle=0, 
+                         dendogram=FALSE, show_dendogram=c("FALSE", "FALSE"),
+                         file=heatmap_file)
       
       setwd(dir_scripts)
     }
