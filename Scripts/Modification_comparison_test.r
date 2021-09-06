@@ -160,9 +160,9 @@ aa_info = aa_info[aa_info$pos!="",]
 adjusted_pvalues = p.adjust(as.numeric(aa_info$pvalue), method="bonferroni")
 
 aa_info_final = data.frame(aa_info, adjusted_pvalues)
-  
+
 #new_adjust = p.adjust(aa_info_final$pvalue[aa_info_final$pvalue<0.05], method = "bonferroni", 
-                     # n = length(positions) * number_genes)
+# n = length(positions) * number_genes)
 #aa_info_final$adjusted_pvalues[aa_info_final$pvalue<0.05] = new_adjust
 #aa_info_final = aa_info_final[aa_info_final$adjusted_pvalues < 0.05,]
 
@@ -351,7 +351,7 @@ for(aa in aas){
       
       setwd(dir_scripts)
       
-
+      
       if("matrix" %in% class(log2fc_list) ){
         pos_nine = 
           join_log2fc_pvalue_data(pos_nine, log2fc_list[,1], pvalue_list[,1])
@@ -425,8 +425,8 @@ for(aa in aas){
             join_log2fc_pvalue_data(pos_fiftyeight, log2fc_list[6],pvalue_list[6])
           if(nrow(pos_fiftyeight) > length(names_fiftyeight)){
             rownames(pos_fiftyeight) = c(names_fiftyeight, gene)
-        }
-      }  
+          }
+        }  
       }
       
     }
@@ -435,7 +435,53 @@ for(aa in aas){
 
 
 library("xlsx")
-# Write the first data set in a new workbook
+# Write the data.
+
+pos_nine = data.frame(pos_nine)
+pos_twentysix = data.frame(pos_twentysix)
+pos_thirtytwo = data.frame(pos_thirtytwo)
+pos_thirtyfour = data.frame(pos_thirtyfour)
+pos_thirtyseven = data.frame(pos_thirtyseven)
+pos_fortyfiveF = data.frame(pos_fortyfiveF)
+pos_fiftyeight = data.frame(pos_fiftyeight)
+
+
+names_columns = c("log2fc", "adj. p-value")                
+
+colnames(pos_nine) = names_columns
+colnames(pos_twentysix) = names_columns
+colnames(pos_thirtytwo) = names_columns
+colnames(pos_thirtyfour) = names_columns
+colnames(pos_thirtyseven) = names_columns  
+colnames(pos_fortyfiveF) = names_columns
+colnames(pos_fiftyeight) = names_columns  
+
+
+pos_nine$`adj. p-value` = as.numeric(pos_nine$`adj. p-value`)
+pos_twentysix$`adj. p-value` = as.numeric(pos_twentysix$`adj. p-value`)
+pos_thirtytwo$`adj. p-value` = as.numeric(pos_thirtytwo$`adj. p-value`)
+pos_thirtyfour$`adj. p-value` = as.numeric(pos_thirtyfour$`adj. p-value`)
+pos_thirtyseven$`adj. p-value` = as.numeric(pos_thirtyseven$`adj. p-value`)
+pos_fortyfiveF$`adj. p-value` = as.numeric(pos_fortyfiveF$`adj. p-value`)
+pos_fiftyeight$`adj. p-value` = as.numeric(pos_fiftyeight$`adj. p-value`)
+
+pos_nine$log2fc = as.numeric(pos_nine$log2fc)
+pos_twentysix$log2fc = as.numeric(pos_twentysix$log2fc)
+pos_thirtytwo$log2fc = as.numeric(pos_thirtytwo$log2fc)
+pos_thirtyfour$log2fc = as.numeric(pos_thirtyfour$log2fc)
+pos_thirtyseven$log2fc = as.numeric(pos_thirtyseven$log2fc)
+pos_fortyfiveF$log2fc = as.numeric(pos_fortyfiveF$log2fc)
+pos_fiftyeight$log2fc = as.numeric(pos_fiftyeight$log2fc)
+
+
+setorderv(pos_nine, c("adj. p-value", "log2fc"), 1)
+setorderv(pos_twentysix, c("adj. p-value", "log2fc"), 1)
+setorderv(pos_thirtytwo,  c("adj. p-value", "log2fc"), 1)
+setorderv(pos_thirtyfour,  c("adj. p-value", "log2fc"), 1)
+setorderv(pos_thirtyseven, c("adj. p-value", "log2fc"), 1)
+setorderv(pos_fortyfiveF, c("adj. p-value", "log2fc"), 1)
+setorderv(pos_fiftyeight,  c("adj. p-value", "log2fc"), 1)
+
 
 file_name = "../Results/R_files/Modification_comparison_results.xlsx"
 write.xlsx(pos_nine, file = file_name,
