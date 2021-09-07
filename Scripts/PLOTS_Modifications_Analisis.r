@@ -3,8 +3,7 @@
 ##Modification plots.
 
 list.of.packages <- c("gtools","gdata", "dplyr","gridExtra","data.table",
-                      "Rsamtools", "ggplot2", "devtools","stringr","plyr")
-
+                      "Rsamtools", "ggplot2", "devtools","stringr","plyr") 
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)){
   install.packages(new.packages, repos = "http://cran.us.r-project.org")
@@ -24,14 +23,9 @@ library('dplyr')
 ### TOTAL COUNTS MATRIX
 
 
-setwd(dir = "/mnt/2a44ddba-d186-4324-9e44-4aa130124d65/tRNA-Pipeline/Scripts/")
-
-
 #Variable with the group of samples to be analysed and the name of the group.
 sample_data = read.table("../Fastq_downloaded/sample_data.txt", header=T,
                          stringsAsFactors = T)
-
-
 
 groups = levels(sample_data$Condition)
 
@@ -44,7 +38,7 @@ if (!file.exists("../Results/Modification_ratio_plots")){
 
 for(group in groups){
   base_call=c()
-  group
+  
   for(sample in sample_data$ID){
     if(sample_data$Condition[sample_data$ID==sample] == group){
       base_call_new = read.delim(paste0("../Results/R_files/Base_calling/",
@@ -68,7 +62,7 @@ for(group in groups){
   fam_id <- unique(result$tRNA_fam)
   fam_id <- as.character(levels(unique(result$tRNA_fam)))
   
-  #Create a data frame to save all the results obtained in a_ref.
+  #Create a data frame to save al the results obtained in a_ref.
   all_data<-data.frame()
   
   
@@ -119,29 +113,24 @@ for(group in groups){
                                              sum,Mod.bases,X3,A,G,C,T))
       colnames(by_fam_table) <- c("Position","Consensus_tRNA_base_position","Modification_ratio","Base_coverage","Mod_bases","Reference","A","G","C","T")
       write.table(by_fam_table,file=paste0("../Results/Modification_ratio_plots/",group,"_",fam,".txt"), sep = "\t", row.names = FALSE)
-      
       df <- read.delim(paste0("../Results/Modification_ratio_plots/",group,"_",fam,".txt"),header = TRUE)
-      df <- df %>% filter(!grepl('74', Consensus_tRNA_base_position))
-      df <- df %>% filter(!grepl('75', Consensus_tRNA_base_position))
-      df <- df %>% filter(!grepl('76', Consensus_tRNA_base_position))
       
       #Plot for the modification relative to base coverage.
       plot_mod_base <- ggplot(df,aes(x=as.numeric(Position),y=as.numeric(paste(Modification_ratio)))) +
-        geom_line (size=0.6,color="#78c5dc") + 
+        geom_line (size=0.5,color="#78c5dc") + 
         ylim (0,1) +
         scale_x_discrete (limits = as.factor(df$Consensus_tRNA_base_position)) +
-        theme (axis.text.x = element_text(size=5,angle=90),axis.text.y = element_text(size=5),panel.background = element_rect(fill = "#F5F5F5",colour = "white",size = 0.5, linetype = "solid")) +
+        theme (axis.text.x = element_text(size=5,angle=90),axis.text.y = element_text(size=5)) +
+        labs (x="Consensus tRNA base position", y ="Modification ratio") +
         theme (axis.title=element_text(size=5)) +
         labs (title = fam, subtitle = "Modification Ratio (Relative to base coverage)")
-      
       #Plot for coverage.
       max_val <- max(df$Base_coverage, na.rm = TRUE)
-      
       plot_cov <- ggplot(df,aes(x=as.numeric(Position),y=as.numeric(paste(Base_coverage)))) + 
-        geom_line (size=0.8,color="#78c5dc") +
+        geom_line (size=0.5,color="#78c5dc") +
         ylim (0,max_val) +
         scale_x_discrete (limits = as.factor(df$Consensus_tRNA_base_position)) +
-        theme (axis.text.x = element_text(size=5, angle=90),axis.text.y = element_text(size=5),panel.background = element_rect(fill = "#F5F5F5",colour = "white",size = 0.5, linetype = "solid")) +
+        theme (axis.text.x = element_text(size=5, angle=90),axis.text.y = element_text(size=5)) +
         labs (x="Consensus tRNA base position", y ="Base Counts") +
         theme (axis.title=element_text(size=5)) + 
         geom_area (alpha = 0.7, fill="#d4f0f0") +
@@ -149,8 +138,6 @@ for(group in groups){
       
       #Save plots
       a<- grid.arrange(plot_mod_base, plot_cov, nrow=2)
-
-      
       ggsave(a, file=paste0("../Results/Modification_ratio_plots/",group,"_",
                             fam,".jpeg"), width = 20, height = 10, units = "cm")
       rm(a)
