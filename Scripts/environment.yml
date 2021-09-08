@@ -43,6 +43,7 @@ dependencies:
   - conda-forge::r-FactoMineR
   - conda-forge::r-htmltools
   - conda-forge::r-pheatmap
+  - conda-forge::r-xlsx
   - conda-forge::wget
 
   - pip
