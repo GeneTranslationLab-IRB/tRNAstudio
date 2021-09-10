@@ -71,6 +71,9 @@ Once the GUI is working you will have the next options:
 ## RESULTS
 
 In the results folder are generated the following folders:
+General folders with the ID of each sample.
+It contains the results of the alignment of each sample, the number of counts and the base calling.
+
 
 **Counts Plots.**
 
@@ -102,9 +105,8 @@ In this folder are contained the reports of the pipeline, a report with the char
 **R_files.**
 
 Internal files used by Rscripts to compute our analysis.
-Folders with the ID of each sample.
 
-It contains the results of the alignment of each sample, the number of counts and the base calling.
 
-Support
-If you have any questions or issues, please use Issues Section
+
+
+Support: If you have any questions or issues, please use Issues Section
