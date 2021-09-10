@@ -71,34 +71,40 @@ Once the GUI is working you will have the next options:
 ## RESULTS
 
 In the results folder are generated the following folders:
-Counts Plots.
+
+**Counts Plots.**
 
 In this folder are contained the count plots:
 - Total counts by isodecoder tRNA and by tRNA gene grouped by isoacceptor tRNA in each condition.
 - Proportion mature/precursor by isodecoder tRNA and by tRNA gene group by isoacceptor tRNA in each condition.
-DEG.
+
+**DEG.**
 
 Differential gene expression. 
 In this folder there are results of the differential gene expression analysis like the heatmaps with the gene expression between groups and files with DESeq2 and iso-tRNA-CP results.
-Heatmaps.
+
+**Heatmaps.**
 
 Heatmaps produced by "heatmaply" with the information of the modification ratio in each position of every tRNA gene.
-Modification ratio plots.
+
+**Modification ratio plots.**
 
 Plots showing the coverage and the modification ratio by position in each tRNA gene. In "By_family" folder there are a summary of the coverage by tRNA isoacceptor.
-Plots.
+
+**Plots.**
 
 Folder with general plots as the number of reads by sample, PCA, a barplot with the reads with mapping quality higher and lower than 2 MAPQ. isotRNACP folder contains plots with proportion of each gene against its isodecoder pool.
-Reports.
+
+**Reports.**
 
 In this folder are contained the reports of the pipeline, a report with the characterization for each group and one report with the comparison of the groups.
-R_files.
+
+**R_files.**
 
 Internal files used by Rscripts to compute our analysis.
 Folders with the ID of each sample.
 
 It contains the results of the alignment of each sample, the number of counts and the base calling.
-Support
 
+Support
 If you have any questions or issues, please use Issues Section
-References.
