@@ -78,10 +78,11 @@ In this folder are contained the count plots:
 - Proportion mature/precursor by isodecoder tRNA and by tRNA gene group by isoacceptor tRNA in each condition.
 DEG.
 
-Differential gene expression. In this folder there are results of the differential gene expression analysis like the heatmaps with the gene expression between groups and files with DESeq2 and iso-tRNA-CP results.
+Differential gene expression. 
+In this folder there are results of the differential gene expression analysis like the heatmaps with the gene expression between groups and files with DESeq2 and iso-tRNA-CP results.
 Heatmaps.
 
-Heatmaps produced by "heatmaply" [1] with the information of the modification ratio in each position of every tRNA gene.
+Heatmaps produced by "heatmaply" with the information of the modification ratio in each position of every tRNA gene.
 Modification ratio plots.
 
 Plots showing the coverage and the modification ratio by position in each tRNA gene. In "By_family" folder there are a summary of the coverage by tRNA isoacceptor.
