@@ -71,6 +71,7 @@ Once the GUI is working you will have the next options:
 ## RESULTS
 
 In the results folder are generated the following folders:
+
 General folders with the ID of each sample.
 It contains the results of the alignment of each sample, the number of counts and the base calling.
 
