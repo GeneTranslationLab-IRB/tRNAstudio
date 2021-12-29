@@ -26,9 +26,8 @@ then
     #Download Homebrew 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     #Download anaconda and miniconda 
+    brew install cask 
     brew install --cask anaconda
-    brew cask install miniconda
-    #install wget
     fi
 
 fi
