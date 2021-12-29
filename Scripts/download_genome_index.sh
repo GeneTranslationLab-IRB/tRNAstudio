@@ -27,3 +27,4 @@ rm -r Homo_sapiens
 #Building indexs of the "genome" from tRNA families and precursor tRNA families
 bowtie2-build mature_fam_tRNA_refgenome.fa mature_fam_tRNA_refgenome
 bowtie2-build precursor_fam_tRNA_refgenome.fa precursor_fam_tRNA_refgenome
+bowtie2-build mitochondrial_tRNA_refgenome.fa mitochondrial_tRNA_refgenome

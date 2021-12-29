@@ -164,7 +164,7 @@ def run_alignment():
 
         if 'Linux' in o_sys or 'Darwin' in o_sys:
             os.chdir(app.scriptsFolder)            
-
+           
             # Alignment Whole Genome
             os.system('python3 Aln_WG.py '+app.fastqFolder+ ' ' +sample)
 
@@ -176,7 +176,7 @@ def run_alignment():
             
             # Alignemt Mature Genome tolerating more mismatches. 
             os.system('python3 Aln_M1G.py '+ sample)
-
+            
             print ('Alignments done!'+'\n')
             sample = sample.split('.')[0]
             
@@ -278,9 +278,14 @@ def check_mapping(sample_name):
     readsPrecursor = int(subprocess.check_output('samtools view -c Final_results/'+sample_name+'_precursor_sort.bam', shell=True).decode("utf-8").strip("\n"))
     readstRNA = readsPrecursor+readsProcessed
     
-    os.chdir(app.scriptsFolder)
+    if not os.path.exists('../R_files/'):
+        os.makedirs('../R_files/') 
+
+    if not os.path.isfile('../R_files/Alignment_information.txt'):
+        fout = open("../R_files/Alignment_information.txt","a")
+        fout.write('ID\tCondition\tTotal Reads Mapped\tReads Mapped to tRNA\t% total tRNAs read\t%Processed tRNA reads\n')
     
-    fout = open("../Results/R_files/Alignment_information.txt","a")
+    fout = open("../R_files/Alignment_information.txt","a")
     
     fout.write(str(sample_name) + "\t" + str(condition) + "\t" + str(readsMapped) +
                "\t" + str(readstRNA) + "\t" + str(format(readstRNA/readsMapped, ".2f")) +
