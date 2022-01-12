@@ -95,10 +95,10 @@ quality_data <- data.frame(Analysis= character(0), Counts= numeric(0), MAPQ= cha
 
 for(sample in sample_data$ID) {
   #Precursor 
-  precursor_mapped <- scanBam(paste0("../Results/",sample,"/Final_results/",sample,"_precursor.bam"))
+  precursor_mapped <- scanBam(paste0("../Results/",sample,"/Alignments/",sample,"_precursor.bam"))
   
   #Mature reads
-  mature_mapped <- scanBam(paste0("../Results/",sample,"/Final_results/",sample,"_processed.bam"))
+  mature_mapped <- scanBam(paste0("../Results/",sample,"/Alignments/",sample,"_processed.bam"))
   
   #Number of reads 
   precursor <- length(precursor_mapped[[1]]$qname)

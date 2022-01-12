@@ -53,10 +53,10 @@ os.system('samtools sort '+sample_name+'_MG_1M_loc_mapped_soft_clipped_rm.bam'+ 
 os.system('samtools index '+sample_name+'_MG_1M_loc_mapped_soft_clipped_rm_sort.bam') 
 
 # Marge the files for mature tRNA
-os.system('samtools merge -f '+'../Final_results/'+sample_name+'_processed.bam ../Alignment_M1G/'+sample_name+'_MG_1M_loc_mapped_soft_clipped_rm_sort.bam '+'../Alignment_MG/'+sample_name+'_MGloc_mapped_soft_clipped_rm_sort.bam')
+os.system('samtools merge -f '+'../Alignments/'+sample_name+'_processed.bam ../Alignment_M1G/'+sample_name+'_MG_1M_loc_mapped_soft_clipped_rm_sort.bam '+'../Alignment_MG/'+sample_name+'_MGloc_mapped_soft_clipped_rm_sort.bam')
 
 # Processing files (sorting and indexing)
-os.system('samtools sort ../Final_results/'+sample_name+'_processed.bam '+ ' -o ' +'../Final_results/'+sample_name+'_processed_sort.bam')
-os.system('samtools index '+'../Final_results/'+sample_name+'_processed_sort.bam') 
+os.system('samtools sort ../Alignments/'+sample_name+'_processed.bam '+ ' -o ' +'../Alignments/'+sample_name+'_processed_sort.bam')
+os.system('samtools index '+'../Alignments/'+sample_name+'_processed_sort.bam') 
 
 

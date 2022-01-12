@@ -43,20 +43,22 @@ for(group in groups){
   for(sample in sample_data$ID){
     if(sample_data$Condition[sample_data$ID==sample] == group){
       trna_new = read.delim(paste0("../Results/",sample, "/Counts/",sample, 
-                              "_counts_total.txt"),row.names = NULL,header=TRUE)
+                              "_counts_total.txt"),row.names = NULL,header=F)
+      trna_new = trna_new[-1,]
       trna_total = bind_rows(trna_total, trna_new)
       
       trna_mature_new = read.delim(paste0("../Results/", sample, "/Counts/", 
-                        sample,"_counts_processed.txt"),row.names = NULL,header=TRUE)
+                        sample,"_counts_processed.txt"),row.names = NULL,header=F)
+      trna_mature_new = trna_mature_new[-1,]
       trna_mature <- bind_rows(trna_mature,trna_mature_new) 
     }
   }
   
   trna_total = trna_total[!grepl("tRNAmt", trna_total$V1),]
-  
+ 
   # Get the total number of reads.
-  trna_total$total_counts = trna_total$V2 + trna_total$V3
-  trna_mature$total_counts = trna_mature$V2 + trna_mature$V3
+  trna_total$total_counts = as.numeric(trna_total$V2) + as.numeric(trna_total$V3)
+  trna_mature$total_counts = as.numeric(trna_mature$V2) + as.numeric(trna_mature$V3)
   
   trna_total_all <- data.frame(aggregate(cbind(trna_total$total_counts), by=list(trna_total$V1), FUN=sum))
   trna_mature_all <- data.frame(aggregate(cbind(trna_mature$total_counts), by=list(trna_mature$V1), FUN=sum))

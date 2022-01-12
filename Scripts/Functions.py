@@ -299,11 +299,11 @@ def classification_mitochondrial(sample):
 	
 	nucleos = multiprocessing.cpu_count()
 	command = "bowtie2 --local -p "+ str(nucleos)
-	os.system(command + ' -N 0 -x ../../../Reference_Genomes/mitochondrial_tRNA_refgenome '+sample+'_WGloc_only_trna_mitochondrial.fastq | samtools view -bSF4 - > ../Final_results/'+sample+'_mitochondrial.bam')
-	os.system('samtools sort ../Final_results/'+sample+'_mitochondrial.bam -o ../Final_results/'+sample+'_mitochondrial_sort.bam')
-	os.system('samtools index ../Final_results/'+sample+'_mitochondrial_sort.bam')
+	os.system(command + ' -N 0 -x ../../../Reference_Genomes/mitochondrial_tRNA_refgenome '+sample+'_WGloc_only_trna_mitochondrial.fastq | samtools view -bSF4 - > ../Alignments/'+sample+'_mitochondrial.bam')
+	os.system('samtools sort ../Alignments/'+sample+'_mitochondrial.bam -o ../Alignments/'+sample+'_mitochondrial_sort.bam')
+	os.system('samtools index ../Alignments/'+sample+'_mitochondrial_sort.bam')
 
-	bamfile_mitochondrial_reads_CG = pysam.AlignmentFile('../Final_results/'+sample+'_mitochondrial_sort.bam', "rb")
+	bamfile_mitochondrial_reads_CG = pysam.AlignmentFile('../Alignments/'+sample+'_mitochondrial_sort.bam', "rb")
 	mitochondrial_reads_CG = open(sample+'_mitochondrial_CG.txt',"w")
 
 	for read in bamfile_mitochondrial_reads_CG.fetch():
@@ -337,9 +337,9 @@ def counts(sample):
 	tRNAsAnnotation = '../../../Reference_Genomes/info/tRNAsAnnotation.gtf'
 	
 	# OUTPUTS --> Counts files
-	os.system("featureCounts -t tRNAmat -a "+tRNAsAnnotation+' -o '+sample+"_counts_processed_tmp.txt ../Final_results/"+sample+"_processed_sort.bam")
-	os.system("featureCounts -t tRNApre -a "+tRNAsAnnotation+' -o '+sample+"_counts_precursor_tmp.txt ../Final_results/"+sample+"_precursor_sort.bam")
-	os.system("featureCounts -t tRNAmt -a "+tRNAsAnnotation+' -o '+sample+"_counts_mitochondrial_tmp.txt ../Final_results/"+sample+"_mitochondrial_sort.bam")
+	os.system("featureCounts -t tRNAmat -a "+tRNAsAnnotation+' -o '+sample+"_counts_processed_tmp.txt ../Alignments/"+sample+"_processed_sort.bam")
+	os.system("featureCounts -t tRNApre -a "+tRNAsAnnotation+' -o '+sample+"_counts_precursor_tmp.txt ../Alignments/"+sample+"_precursor_sort.bam")
+	os.system("featureCounts -t tRNAmt -a "+tRNAsAnnotation+' -o '+sample+"_counts_mitochondrial_tmp.txt ../Alignments/"+sample+"_mitochondrial_sort.bam")
 
 	# Read count files
 	processed = pd.read_csv(sample+"_counts_processed_tmp.txt", comment='#', sep = '\t')
@@ -388,12 +388,13 @@ def mapping_quality(sample):
 	fam = ast.literal_eval(fam)
 	
 	os.chdir('../Results/'+sample+'/Counts/')
-
+	headerList = ['tRNA_ID', 'MAPQ > 2', 'MAPQ ≤ 2']
+	
 	# MAPQ analisys -- > mitochondrial 
 	mitochondrialCounts = pd.read_csv(sample+"_counts_mitochondrial_tmp.txt", comment='#', sep = '\t', header = None)
 	for index, row in mitochondrialCounts.iterrows():
 		tRNA_ID = row[0]
-		os.system('samtools view ../Final_results/'+sample+'_mitochondrial_sort.bam '+tRNA_ID+' | cut -f1 > '+tRNA_ID+'_IDs.txt')
+		os.system('samtools view ../Alignments/'+sample+'_mitochondrial_sort.bam '+tRNA_ID+' | cut -f1 > '+tRNA_ID+'_IDs.txt')
 		os.system('picard FilterSamReads I=../Alignment_WG/'+sample+'_WGloc_mitochondrial_filtered_sort.bam O='+sample+'_'+tRNA_ID+'.bam READ_LIST_FILE='+tRNA_ID+'_IDs.txt FILTER=includeReadList >/dev/null 2>&1')
 		
 		#Filter the reads with mapq  only include reads with mapping quality >= INT [0]. MAPQ >2 "GOOD MAPPING QUALITY READS"
@@ -410,7 +411,7 @@ def mapping_quality(sample):
 	
 	for index, row in precursorCounts.iterrows():
 		tRNA_ID = row[0]
-		PrecReadsMappedMAPQ = int(subprocess.check_output('samtools view -c -bSq 3 ../Final_results/'+sample+'_precursor_sort.bam '+tRNA_ID, shell=True).decode("utf-8").strip("\n"))
+		PrecReadsMappedMAPQ = int(subprocess.check_output('samtools view -c -bSq 3 ../Alignments/'+sample+'_precursor_sort.bam '+tRNA_ID, shell=True).decode("utf-8").strip("\n"))
 		precursorCounts.loc[precursorCounts[0] == tRNA_ID , 2] = str(PrecReadsMappedMAPQ)
 	
 	precursorCounts['BadMAPQ'] = precursorCounts[1].astype(int) - precursorCounts[2].astype(int)
@@ -422,7 +423,7 @@ def mapping_quality(sample):
 	
 	for index, row in processedCounts.iterrows():
 		tRNA_ID = row[0]
-		ProReadsMappedMAPQ = int(subprocess.check_output('samtools view -c -bSq 3 ../Final_results/'+sample+'_processed_sort.bam '+tRNA_ID, shell=True).decode("utf-8").strip("\n"))
+		ProReadsMappedMAPQ = int(subprocess.check_output('samtools view -c -bSq 3 ../Alignments/'+sample+'_processed_sort.bam '+tRNA_ID, shell=True).decode("utf-8").strip("\n"))
 		processedCounts.loc[processedCounts[0] == tRNA_ID , 2] = str(ProReadsMappedMAPQ)
 	
 	processedCounts['BadMAPQ'] = processedCounts[1].astype(int) - processedCounts[2].astype(int)
@@ -454,8 +455,17 @@ def mapping_quality(sample):
 	totalCounts.to_csv(sample+"_counts_total.txt", sep='\t', index = False, header = False)
 	os.system('rm *tmp*')
 	os.system("cat "+sample+"_counts_mitochondrial.txt >> "+sample+"_counts_total.txt")
+	
 
-
+	headerList = ['tRNA_ID', 'CountsMAPQ>2', 'CountsMAPQ≤2']
+	file = pd.read_csv(sample+"_counts_mitochondrial.txt", sep='\t',header=None)
+	file.to_csv(sample+"_counts_mitochondrial.txt", header=headerList, index=False, sep='\t')
+	file = pd.read_csv(sample+"_counts_total.txt", sep='\t', header=None)
+	file.to_csv(sample+"_counts_total.txt", header=headerList, index=False, sep='\t')
+	file = pd.read_csv(sample+"_counts_processed.txt", sep='\t', header=None)
+	file.to_csv(sample+"_counts_processed.txt", header=headerList, index=False, sep='\t')
+	file = pd.read_csv(sample+"_counts_precursor.txt", sep='\t', header=None)
+	file.to_csv(sample+"_counts_precursor.txt", header=headerList, index=False, sep='\t')
 
 
 def pileup(sample):
@@ -530,7 +540,7 @@ def pileup(sample):
 	tRNA_total.write('TRNA-POS'+'\t'+'A'+'\t'+'C'+'\t'+'G'+'\t'+'T'+'\t'+'REF-COUNTS'+'\n')
 
 	# Input files (mature/processed and precursor)
-	files=['../Final_results/'+sample+'_processed_sort.bam','../Final_results/'+sample+'_precursor_sort.bam']
+	files=['../Alignments/'+sample+'_processed_sort.bam','../Alignments/'+sample+'_precursor_sort.bam']
 	
 	# Determine file type
 	for file in files:
@@ -677,6 +687,18 @@ def pileup(sample):
 						
 
 						tRNA_total.write(trna+':'+str(pos[e])+':REF-'+ref_nuc_seq+':'+pos_ref[e]+'\t'+values+'\t'+'0'+'\n')
+	
+
+	base_calls = pd.read_csv(sample+"_base_calls_total.txt", sep='\t')
+	aggregation_functions = {'A': 'sum','C': 'sum','G': 'sum', 'T': 'sum', 'REF-COUNTS': 'sum'}
+	base_calls_join = base_calls.groupby(base_calls['TRNA-POS']).aggregate(aggregation_functions)
+	os.system('rm *total*')
+	base_calls_join.to_csv(sample+"_base_calls_total.txt", sep='\t')
+	os.system('rm *processed*')
+	os.system('rm *precursor*')
+
+	
+
 	
 
 

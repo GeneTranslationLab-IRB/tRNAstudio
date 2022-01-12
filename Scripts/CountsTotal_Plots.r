@@ -14,7 +14,6 @@ suppressPackageStartupMessages({
 
 options(scipen=999)
 options(warn=-1)
-
 #Variable with the group of samples to be analyzed and the name of the group.
 sample_data = read.delim("../Fastq_downloaded/sample_data.txt", header=T)
 
@@ -35,19 +34,19 @@ for(group in groups){
   for(sample in sample_data$ID){
     if(sample_data$Condition[sample_data$ID==sample] == group){
       trna_new = read.delim(paste0("../Results/",sample, "/Counts/", sample,
-        "_counts_total.txt"),row.names = NULL,header=F)
+        "_counts_total.txt"),row.names = NULL,header=TRUE)
       mitoc_tRNA_new = read.delim(paste0("../Results/", sample, "/Counts/",sample,
-                                     "_counts_mitochondrial.txt"),row.names = NULL,header=F)
+                                     "_counts_mitochondrial.txt"),row.names = NULL,header=TRUE)
       mitoc_tRNA_total = bind_rows(mitoc_tRNA_total, mitoc_tRNA_new)
       trna_total = bind_rows(trna_total, trna_new)
     }
   }
   # remove tRNAmt from totaltRNA
-  trna_total = trna_total[!grepl("tRNAmt", trna_total$V1),]
+  trna_total = trna_total[!grepl("tRNAmt", trna_total$tRNA_ID),]
 
   #Marge results.
-  trna_total_all <- data.frame(aggregate(cbind(trna_total$V2, trna_total$V3),
-                                         by=list(trna_total$V1), FUN=sum))
+  trna_total_all <- data.frame(aggregate(cbind(trna_total$CountsMAPQ.2, trna_total$CountsMAPQ.2.1),
+                                         by=list(trna_total$tRNA_ID), FUN=sum))
   trna_total <- data.frame(
     trna_total_all,do.call(rbind,strsplit(as.character(trna_total_all$Group.1),
                                           "-")))
@@ -63,8 +62,8 @@ for(group in groups){
   trna_counts = rbind(good_counts, bad_counts)
   
   tRNAmt <- data.frame(
-    aggregate(cbind(mitoc_tRNA_total$V2, mitoc_tRNA_total$V3), 
-              by=list(mitoc_tRNA_total$V1), FUN=sum))
+    aggregate(cbind(mitoc_tRNA_total$CountsMAPQ.2, mitoc_tRNA_total$CountsMAPQ.2.1), 
+              by=list(mitoc_tRNA_total$tRNA_ID), FUN=sum))
   tRNAmt <- data.frame(
     tRNAmt,do.call(rbind,strsplit(as.character(tRNAmt$Group.1),"-")))
   tRNAmt$X2 = factor(tRNAmt$X2)
@@ -121,7 +120,7 @@ for(group in groups){
   ggsave(plot=p, filename=paste0("../Results/Counts_Plots/Total/",group,"_by_Isodecoder.jpeg"), width = 20, height = 10, units = "cm")
   trna_total_by_anticodon = data.frame(trna_total_by_anticodon, Condition = group)
   colnames(trna_total_by_anticodon) = c("Codon","MAPQ", "Counts", "Condition")
-  
+
   isodecoder_tot = rbind(isodecoder_tot, trna_total_by_anticodon)
   
   #Plots by aminoacid 

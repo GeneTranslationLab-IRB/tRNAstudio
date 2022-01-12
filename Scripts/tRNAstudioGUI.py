@@ -1,8 +1,7 @@
-
-
+#!/usr/bin/env python3
 
 '''
-GUI  Integrated Pipeline for the analisis of tRNA-Seq Datasets (tRNAstudio)
+Pipeline for the analisis of tRNA-Seq Datasets (tRNAstudio GUI)
 '''
 
 
@@ -10,10 +9,6 @@ GUI  Integrated Pipeline for the analisis of tRNA-Seq Datasets (tRNAstudio)
 print ('\n'+'############# tRNAstudio ###############'+'\n')
 
 # Built-in/Generic Imports #
-
-import warnings
-warnings.filterwarnings("ignore", category=RuntimeWarning) 
-
 import sys
 import os
 import platform
@@ -30,6 +25,8 @@ from tkinter import messagebox as mb
 from time import time
 import multiprocessing
 import pandas as pd
+import warnings
+warnings.filterwarnings("ignore", category=RuntimeWarning)
 
 # Import functions #
 from Functions import counts
@@ -57,7 +54,8 @@ lbl=tkinter.Label(app, text="")
 # Functions definitions
 def download_Genome():
     '''
-    This function calls download_genome_index.sh to download the Human Genome (hg38).
+    This function calls download_genome_index.sh to download the Human Genome (hg38) 
+    and builds the index for the reference files.
     '''
     lbl.config(text="Downloading and extracting reference genome. This takes a while and freezes the app, don't close it!")
 
@@ -73,7 +71,8 @@ def download_Genome():
 
 def retrieve_SRR():
     '''
-    This function recieves an SRR and dowloads it.
+    This function dowloads sequencing reads in fastq format from NCBI's Sequence Read 
+    Archive (SRA).
     '''
 
     lbl.config(text="Downloading your selected fastq.gz file.")
@@ -94,8 +93,8 @@ def retrieve_SRR():
 
 def create_text():
     '''
-    This function will open a .txt with the sample information, 
-    user will add sample specifications.
+    This function will open a .txt with the sample information (fastq files in Fastq_dowloaded), 
+    user will add sample specifications/meatadata.
     '''
     
     sourceFolder = app.sourceFolder
@@ -106,6 +105,7 @@ def create_text():
             os.system("rm sample_data_raw.txt")
         files = os.listdir(os.getcwd())
         files = [x for x in files if not x.startswith("._")]
+        files = [x for x in files if ".fa" in x]
 
         
     sample_data = open("sample_data_raw.txt", "w")
@@ -127,7 +127,7 @@ def create_text():
 def create_text2():
     '''
     This function will open a .txt with the sample information, 
-    user will add sample specifications.
+    user will add sample specifications/metadata.
     '''
     sourceFolder=app.sourceFolder
     os.chdir(sourceFolder+"/Fastq_downloaded")
@@ -164,7 +164,7 @@ def run_alignment():
 
         if 'Linux' in o_sys or 'Darwin' in o_sys:
             os.chdir(app.scriptsFolder)            
-           
+            
             # Alignment Whole Genome
             os.system('python3 Aln_WG.py '+app.fastqFolder+ ' ' +sample)
 
@@ -183,11 +183,11 @@ def run_alignment():
             print ('Checking mapping results ...')
             os.chdir(app.scriptsFolder)
             check_mapping(sample)
-           
+            
             print ('Obtaining counts...')
             os.chdir(app.scriptsFolder)
             counts(sample)
-                    
+           
             print ('Analyzing mapping quality (MAPQ)...')
             os.chdir(app.scriptsFolder)
             mapping_quality(sample)
@@ -195,14 +195,14 @@ def run_alignment():
             print ('Obtaining pileup format ...')
             os.chdir(app.scriptsFolder)
             pileup(sample)
-
+            
             # Prepare samples for R analysis
             r_preparation(sample)
             
             print ('\n'+'Analysis of sample '+sample+' done !'+'\n')
 
             #Remove temp files
-            #remove_alignments(sample)
+            remove_alignments(sample)
 
     os.chdir(app.scriptsFolder)
     print("Execution time of the alignments: ", (time() - time_init) / 60, "minutes." )
@@ -212,7 +212,7 @@ def run_alignment():
 
 def check_input_file():
     '''
-    This function will check the .txt file containing the samples information,
+    This function will check the .txt file containing the metadata,
     and create a new file with an specific format for data processing (unic ids
     for PE data...). It also includes the merging PE fastq file.
     '''
@@ -264,6 +264,11 @@ def check_input_file():
 
 
 def check_mapping(sample_name):
+    
+    '''
+    Function to summaryze general mapping results
+    '''
+
     sample_data = open("../Fastq_downloaded/sample_data.txt", "r").readlines()
     
     for i in range(len(sample_data)):
@@ -274,8 +279,8 @@ def check_mapping(sample_name):
     os.chdir('../Results/'+ sample_name)
         
     readsMapped = int(subprocess.check_output('samtools view -c Alignment_WG/'+sample_name+'_WGloc_mapped_sort.bam', shell=True).decode("utf-8").strip("\n"))
-    readsProcessed = int(subprocess.check_output('samtools view -c Final_results/'+sample_name+'_processed.bam', shell=True).decode("utf-8").strip("\n"))
-    readsPrecursor = int(subprocess.check_output('samtools view -c Final_results/'+sample_name+'_precursor_sort.bam', shell=True).decode("utf-8").strip("\n"))
+    readsProcessed = int(subprocess.check_output('samtools view -c Alignments/'+sample_name+'_processed.bam', shell=True).decode("utf-8").strip("\n"))
+    readsPrecursor = int(subprocess.check_output('samtools view -c Alignments/'+sample_name+'_precursor_sort.bam', shell=True).decode("utf-8").strip("\n"))
     readstRNA = readsPrecursor+readsProcessed
     
     if not os.path.exists('../R_files/'):
@@ -295,7 +300,7 @@ def check_mapping(sample_name):
 
 def remove_alignments(sample):
     """
-    This function remove the aligments files.
+    This function removes the temporary (tmp) aligment files.
     """
     sample = sample.split('.')[0]
     os.chdir("../Results")
@@ -311,8 +316,7 @@ def remove_alignments(sample):
 
 def r_preparation(sample):
     '''
-    This script takes all the counts step result files and joins them
-    in a single file in order to analyse them in R
+    Files setup for R analysis
     '''
 
     sample=sample.split('.')[0]
@@ -403,13 +407,13 @@ def r_analysis():
     file.close()
 
     data = pd.read_csv('../Fastq_downloaded/sample_data.txt', sep = '\t')
-    print ("Performing data analysis: "+'\n')
+    print ("Running data analysis: "+'\n')
     print (data)
 
     subprocess.call(["Rscript", "--vanilla", "Join_Results.r"])
     subprocess.call(["Rscript", "--vanilla", "General_Plots.r"])
     subprocess.call(["Rscript", "--vanilla", "CountsTotal_Plots.r"])
-    subprocess.call(["Rscript", "--vanilla", "CountsProcessedPrecursor_Pots.r"])
+    subprocess.call(["Rscript", "--vanilla", "CountsProcessedPrecursor_Plots.r"])
     subprocess.call(["Rscript", "--vanilla", "ModificationsCoverageAnalysis_Plots.r"])
     subprocess.call(["Rscript", "--vanilla", "ModificationsAnalysis_Heatmaps.r"])
     subprocess.call(["Rscript", "--vanilla", "ModificationsComparison.r"])
@@ -440,12 +444,14 @@ myFont4 = tkFont.Font(family="Calibri", size=13)
 myFont5= tkFont.Font(family="Calibri", size=11)
 myFont6= tkFont.Font(family="Calibri", size=10)
 
+
+
 if "Darwin" in o_sys:
     text1=tkinter.Label(text="SET UP", width=10,height=1, bg="#F7F7F7")
     text1.place(x=110, y=60)
     text1.config(font='Calibri 14 bold')
 
-    programs_Button=tkinter.Button(tab1, text='Download'+'\n' +'Human Genome (hg38)', width=14 , height=2,command=download_Genome, highlightbackground='#a9dbd2')
+    programs_Button=tkinter.Button(tab1, text='Download'+'\n' +'Human Genome (hg38)', width=17, height=2,command=download_Genome, highlightbackground='#a9dbd2')
     programs_Button.place(x=110, y=50)
     programs_Button.config(font=myFont3)
     
@@ -469,7 +475,7 @@ if "Darwin" in o_sys:
     text_Widget.bind("<FocusOut>", default)
     text_Widget.place(x=330, y=145)
 
-    download_Button=tkinter.Button(tab1, text='Download Sample', width=10, height=2, command=retrieve_SRR, highlightbackground='#a9dbd2')
+    download_Button=tkinter.Button(tab1, text='Download Sample', width=14, height=2, command=retrieve_SRR, highlightbackground='#a9dbd2')
     download_Button.place(x=300, y=50)
     download_Button.config(font=myFont3)
 
@@ -485,11 +491,11 @@ if "Darwin" in o_sys:
     text4.place(x=135, y=260)
     text4.config(font='Calibri 12 bold')
 
-    submit_button = tkinter.Button(tab1, text="Run tRNA Alignments", width = 14, height = 2, command=run_alignment, highlightbackground='#6899aa')
+    submit_button = tkinter.Button(tab1, text="Run tRNA Alignments", width = 16, height = 2, command=run_alignment, highlightbackground='#6899aa')
     submit_button.place(x=280, y=245)
     submit_button.config(font=myFont2)
     
-    open_text = tkinter.Button(tab1, text='Select and label samples'+'\n'+'for tRNA alignment', width=14, height=2,command=create_text,highlightbackground='#a9dbd2')
+    open_text = tkinter.Button(tab1, text='Select and label samples'+'\n'+'for tRNA alignment', width=17, height=2,command=create_text,highlightbackground='#a9dbd2')
     open_text.place(x=110, y = 250)
     open_text.config(font=myFont5)
     
@@ -497,12 +503,12 @@ if "Darwin" in o_sys:
     text1.place(x=135, y=350)
     text1.config(font='Calibri 12 bold')
 
-    b_countsAnalysis=tkinter.Button(tab1, text='Run Data Analysis', width=14, height=2, command=r_analysis, highlightbackground='#6899aa')
+    b_countsAnalysis=tkinter.Button(tab1, text='Run Data Analysis', width=16, height=2, command=r_analysis, highlightbackground='#6899aa')
     b_countsAnalysis.place(x=280, y= 335)
     b_countsAnalysis.width=250
     b_countsAnalysis.config(font=myFont2)
 
-    open_text = tkinter.Button(tab1, text='Select samples'+'\n'+'for data analysis', width=14, height=2,command=create_text2,highlightbackground='#a9dbd2')
+    open_text = tkinter.Button(tab1, text='Select samples'+'\n'+'for data analysis', width=17, height=2,command=create_text2,highlightbackground='#a9dbd2')
     open_text.place(x=110, y = 340)
     open_text.config(font=myFont5)
 

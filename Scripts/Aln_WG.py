@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 '''
 This script performs the first step of the pipeline 
@@ -57,8 +58,8 @@ intron_coordinates.columns = header[:len(intron_coordinates.columns)]
 if not os.path.exists('../Results/'+sample_name+'/Alignment_WG/'):
             os.makedirs('../Results/'+sample_name+'/Alignment_WG/')  
 
-if not os.path.exists('../Results/'+sample_name+'/Final_results/'):
-            os.makedirs('../Results/'+sample_name+'/Final_results/')    
+if not os.path.exists('../Results/'+sample_name+'/Alignments/'):
+            os.makedirs('../Results/'+sample_name+'/Alignments/')    
 
 # Bowtie2 command
 command = "bowtie2 --local -p "+ str(nucleos)

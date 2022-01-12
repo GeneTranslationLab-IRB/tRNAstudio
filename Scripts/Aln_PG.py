@@ -75,12 +75,12 @@ os.system('samtools sort '+sample_name+'_PGloc_mapped_filtered_soft_clipped_rm.b
 os.system('samtools index '+sample_name+'_PGloc_mapped_filtered_soft_clipped_rm_sort.bam') 
 
 # Adding the file to the final result folder
-os.system('cp -R '+sample_name+'_PGloc_mapped_filtered_soft_clipped_rm_sort.bam ../Final_results/') 
-os.rename('../Final_results/'+sample_name+'_PGloc_mapped_filtered_soft_clipped_rm_sort.bam', '../Final_results/'+sample_name+'_precursor.bam')
+os.system('cp -R '+sample_name+'_PGloc_mapped_filtered_soft_clipped_rm_sort.bam ../Alignments/') 
+os.rename('../Alignments/'+sample_name+'_PGloc_mapped_filtered_soft_clipped_rm_sort.bam', '../Alignments/'+sample_name+'_precursor.bam')
 
 # Processing files (sorting and indexing)
-os.system('samtools sort '+'../Final_results/'+sample_name+'_precursor.bam'+ ' -o ' +'../Final_results/'+sample_name+'_precursor_sort.bam')
-os.system('samtools index '+'../Final_results/'+sample_name+'_precursor_sort.bam')
+os.system('samtools sort '+'../Alignments/'+sample_name+'_precursor.bam'+ ' -o ' +'../Alignments/'+sample_name+'_precursor_sort.bam')
+os.system('samtools index '+'../Alignments/'+sample_name+'_precursor_sort.bam')
 
 
 os.system('samtools fastq '+sample_name+'_mature_mapped_filtered.bam > '+sample_name+'_mature_mapped_filtered.fastq')
