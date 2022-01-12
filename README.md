@@ -60,7 +60,7 @@ Then run the following command to run the GUI:
 Once the GUI is running the user will have the following options:
 
 <p align="center">
-  <img src="https://github.com/GeneTranslationLab-IRB/tRNAstudio/blob/main/tRNAstudioGUI.jpg" width="500" height="530"/>
+  <img src="https://github.com/GeneTranslationLab-IRB/tRNAstudio/blob/main/img/tRNAstudioGUI.jpg" width="500" height="530"/>
 </p>
 
 - **Download Human Genome (hg38).**  This button downloads the human genome Hg38 from UCSC, and indexes the reference files saved in the "Reference_Genomes" folder. This process takes some time and a pop-up dialog will inform the user that the process is. No user interaction needed. This process will have to be done only once (provided that the user does not manually delete this downloaded file).
@@ -74,7 +74,7 @@ Once the GUI is running the user will have the following options:
 <br /> correspond to the Forward R1 and the other one to the Reverse R2. The user has to indicate in this column which file is the Forward R1 (write down "Fwr") and which one is the Reverse R2 (write down "Rev"). 
 <br /> &nbsp;&nbsp;&nbsp;**Column 5** mergeFileID. If the sample is PE, Forward and Reverse files will be automatically merged into one file before running the pipeline. Therefore, in this case the user will have to select a unique name for the merged files (without blank spaces). In this column, the same chosen name for the merged file has to be indicated in both Forward and Reverse files. <br /> <sup> **Note:** if the dataset is SE, the user does not have to fill columns 4 and 5 of the .txt file. </sup> <br /> <sup> **Note:** In each row of the .txt file, the information of the columns must not contain blank spaces, and must be separated by 1 tabulator (i.e. write down the information and click "tab" to move to the next column in the row). </sup>
 <p align="center">
-<br /> <img src="https://github.com/GeneTranslationLab-IRB/tRNAstudio/blob/main/sample_data.jpg" width="360" height="240"/> </p>
+<br /> <img src="https://github.com/GeneTranslationLab-IRB/tRNAstudio/blob/main/img/sample_data.jpg" width="360" height="240"/> </p>
 </p>
 <br /> <br /> Once finishing providing the required information in each column save the changes and close the file. DO NOT press "ENTER" after completing the last column of the file as this will incorporate an additional blank row in the .txt file that will be interpreted as an error. 
 
