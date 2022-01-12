@@ -321,7 +321,7 @@ def classification_mitochondrial(sample):
 
 def counts(sample):
 	'''Function used to obtain precursor, processed, mitochondrial 
-	and the total number of counts  for each tRNA'''
+	and the total number of counts  for each tRNA gene'''
 	
 	# Families IDs
 	fam = open('../Reference_Genomes/info/tRNAsID.txt','r').readlines()
@@ -381,7 +381,7 @@ def counts(sample):
 
 def mapping_quality(sample):
 	'''Function used to obtain precursor, processed, mitochondrial 
-	and the total number of counts  for each tRNA'''
+	and the total number of counts by the mapping quality (MAPQ) for each tRNA gene'''
 	
 	fam = open('../Reference_Genomes/info/tRNAsID.txt','r').readlines()
 	fam = str(fam).replace('["','').replace('"]','')
