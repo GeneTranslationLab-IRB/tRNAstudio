@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#### This script removes soft clipped bases without removing the CCA tail present in some reads as soft clipped bases ######
+#### tRNAstudio functions ######
 
 ###############################################################################
 # Built-in/Generic Imports and Modules #
