@@ -58,11 +58,10 @@ def download_Genome():
     and builds the index for the reference files.
     '''
     lbl.config(text="Downloading and extracting reference genome. This takes a while and freezes the app, don't close it!")
-
-    if 'Linux' in o_sys or 'Darwin' in o_sys:
-        os.system('bash download_genome_index.sh')
-        
-    if "genome.4.bt2" and "precursor_tRNA_refgenome.4.bt2" and "mature_fam_tRNA_refgenome.4.bt2" in os.listdir(app.sourceFolder+"Reference_Genomes/"):
+    print ('Downloading Human Reference Genome (hg38), and building the genome indexes... ')
+    os.system('bash download_genome_index.sh')
+    
+    if "genome.4.bt2" and "precursor_tRNA_refgenome.4.bt2" and "mature_fam_tRNA_refgenome.4.bt2" and "mitochondrial_tRNA_refgenome.4.bt2" in os.listdir(app.sourceFolder+"Reference_Genomes/"):
         mb.showinfo("Message", "The genome was downloaded correctly.")
     else:
         mb.showinfo("Message", "The genome was NOT downloaded correctly!!")
