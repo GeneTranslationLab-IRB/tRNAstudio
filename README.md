@@ -57,10 +57,11 @@ Then run the following command to run the GUI:
 
 ```python3 tRNAstudioGUI.py```
 
-Once the GUI is running the user will have the following options:
+Once the GUI is running the user will have the following options (Fig.1):
 
 <p align="center">
   <img src="https://github.com/GeneTranslationLab-IRB/tRNAstudio/blob/main/img/tRNAstudioGUI.jpg" width="500" height="530"/>
+    <p align="center">Figure 1 - tRNAstudio graphical user interface (GUI)</p>
 </p>
 
 - **Download Human Genome (hg38).**  This button downloads the human genome Hg38 from UCSC, and indexes the reference files saved in the "Reference_Genomes" folder. This process takes some time and a pop-up dialog will inform the user that the process is. No user interaction needed. This process will have to be done only once (provided that the user does not manually delete this downloaded file).
