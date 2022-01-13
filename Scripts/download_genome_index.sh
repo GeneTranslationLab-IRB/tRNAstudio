@@ -3,7 +3,6 @@
 #Changing the directory to download to Reference_Genomes
 
 cd ..
-mkdir Reference_Genomes
 cd Reference_Genomes
 #Downloading the file from illumina and uncompressing it
 wget http://igenomes.illumina.com.s3-website-us-east-1.amazonaws.com/Homo_sapiens/UCSC/hg38/Homo_sapiens_UCSC_hg38.tar.gz
