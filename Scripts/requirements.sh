@@ -27,7 +27,7 @@ then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     #Download wget
     brew install wget
-    #Download anaconda file for Linux
+    #Download anaconda file for MAC
     wget https://repo.anaconda.com/archive/Anaconda3-2020.07-MacOSX-x86_64.sh
     #Checking the integrity of the file
     sha256sum Anaconda3-2020.07-MacOSX-x86_64.sh
