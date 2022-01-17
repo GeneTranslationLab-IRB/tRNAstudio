@@ -48,7 +48,7 @@ Once the GUI is running the user will have the following options (Fig.1):
     <p align="center">Figure 1. tRNAstudio graphical user interface (GUI)</p>
 </p>
 
-<sup> **Note:** The pipeline is designed to run one process at a time, once that you click one of the buttons you have to wait until it finishes in order to start a new process  </sup>
+<sup> **Note:** The pipeline is designed to run one process at a time, once that you click one of the buttons you have to wait until it finishes in order to start a new process.  </sup>
 
 - **Download Human Genome (hg38).**  This button downloads the human genome Hg38 from UCSC, and indexes the reference files saved in the "Reference_Genomes" folder. This process takes some time and a pop-up dialog will inform the user when the process is finished. No user interaction needed. This process will have to be done only once (provided that the user does not manually delete this downloaded file).
 
