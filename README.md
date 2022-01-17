@@ -10,22 +10,6 @@ tRNAstudio is a tool designed to analyze small RNA-seq datasets (single-end or p
 
 **Operating system:** Mac (OS X El Capitan or higher) or Linux.  
 
-**Dependencies**:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Python 3.x  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R 4.1.0  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conda  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bowtie2  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sra-tools  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pear  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subread  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;samtools  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bedtools  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gedit/TextEdit  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;picard  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wget  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Python packages: pysamstats, pysam, tkinter, pandas , biopython  
-
-
 
 
 ## HOW TO USE IT
