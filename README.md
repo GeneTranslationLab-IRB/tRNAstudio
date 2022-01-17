@@ -152,7 +152,7 @@ Genomes.
 
 Once all reference genome files have been generated, they need to be indexed using bowtie2-build.
 
-Next, extract the following information (see below) from the generated genomes and create independent reference files with the following names (to create this files use as reference the files contained in the "Reference_Genomes/info" folder:
+Next, extract the following information (see below) from the generated genomes and create independent reference files with the following names (to create this files use as reference the files contained in the "Reference_Genomes/info" folder):
 
 
 tRNAsCoordinates.bed: .bed file containing the coordinates for nuclear tRNA gene plus 50 nucleotides flanking regions upstream and downstream of the gene, and mitochondrial tRNA genes.
