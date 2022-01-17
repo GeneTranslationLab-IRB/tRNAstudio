@@ -15,11 +15,11 @@ tRNAstudio is a tool designed to analyze small RNA-seq datasets (single-end or p
 ## HOW TO USE IT
 
 **Download the GitHub repository (tRNAstudio):**
-1. Clone the repository or download the zip file (click on the green button "code" at the bottom of the page). 
+1. Click on the green button "code" at the top of the page and download the zip file.
 2. Unzip the downloaded folder and open the "tRNAstudio-main" folder. 
 3. For Linux Users: Open the "Scripts" folder, click the right button of the mouse (anywhere within that folder) and select "Open in a terminal". 
 <br /> For Mac Users: Click the "Scripts" folder with the right button followed by “Services” and select “New Terminal at Folder.”
-<br /> <br /> Is always necessary to run the pipeline from the "Scripts" folder!
+<br /> <br /> It is always necessary to run the pipeline from the "Scripts" folder!
 
 **Download dependencies:** 
 
@@ -29,8 +29,8 @@ Run this command on the terminal.
 
 `bash requirements.sh`
 
-This command first installs Conda that requires downloading the installation file from the internet. Read and accept the Anaconda User License Agreement on the terminal. Press "ENTER" to go through the license terms until the question "Do you accept the license terms? [yes|no] appears on the terminal, answer yes and press "ENTER". Press "ENTER" to confirm the location of the downloaded files. To the question "Do you wish the installer to initialize Anaconda3 by running conda init? [yes|no] answer "no" and press "ENTER". Enter your user password and type "y" when the terminal asks for it.
-The script will then create an environment inside Conda with all the software and packages required to run tRNAstudio. Some of these software may ask for the user password and confirmation in order to install the modules; therefore the user must be attentive to these instances and supply this information if required. You are now ready to use the GUI!  
+This command first installs Conda that requires downloading the installation file from the internet. Read and accept the Anaconda User License Agreement on the terminal. Press "ENTER" to go through the license terms until reaching the question "Do you accept the license terms? [yes|no], answer yes and press "ENTER". Press "ENTER" to confirm the location of the downloaded files. To the question "Do you wish the installer to initialize Anaconda3 by running conda init? [yes|no] answer "no" and press "ENTER". If needed, Enter your user password and type "y" when the terminal asks for it.
+The script will then create an environment inside Conda with all the software and packages required to run tRNAstudio. Some of these software may ask for the user password and confirmation in order to install the modules; therefore the user must be attentive to these instances and supply this information if required. Once the installation is done, close the terminal and reopen it again from the scripts folder as described above. Now you are now ready to use the GUI!  
 
 **Use the GUI:**  
 Activate the conda environment by running the following command on the terminal:
@@ -47,6 +47,8 @@ Once the GUI is running the user will have the following options (Fig.1):
   <img src="https://github.com/GeneTranslationLab-IRB/tRNAstudio/blob/main/img/tRNAstudioGUI.jpg" width="500" height="530"/>
     <p align="center">Figure 1. tRNAstudio graphical user interface (GUI)</p>
 </p>
+
+<sup> **Note:** The pipeline is designed to run one process at a time, once that you click one of the buttons you have to wait until it finishes in order to start a new process  </sup>
 
 - **Download Human Genome (hg38).**  This button downloads the human genome Hg38 from UCSC, and indexes the reference files saved in the "Reference_Genomes" folder. This process takes some time and a pop-up dialog will inform the user when the process is finished. No user interaction needed. This process will have to be done only once (provided that the user does not manually delete this downloaded file).
 
