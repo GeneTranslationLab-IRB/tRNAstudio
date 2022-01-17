@@ -16,6 +16,7 @@ then
     #Running the .sh script
     bash Anaconda3-2020.07-Linux-x86_64.sh
     #Compiling from source
+    export PATH=~/anaconda3/bin:$PATH
     source ~/.bashrc
     rm Anaconda3-2020.07-Linux-x86_64.sh
     fi
@@ -35,6 +36,7 @@ then
     bash Anaconda3-2020.07-MacOSX-x86_64.sh
     #Compiling from source
     export PATH=~/anaconda3/bin:$PATH
+    source ~/.bashrc
     rm Anaconda3-2020.07-MacOSX-x86_64.sh
     fi
 
