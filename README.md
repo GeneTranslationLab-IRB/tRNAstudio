@@ -45,7 +45,7 @@ Run this command on the terminal.
 
 `bash requirements.sh`
 
-This command first installs Conda that requires downloading the installation file from the internet. Read and accept the Anaconda User License Agreement on the terminal. Press "ENTER" to go through the license terms until the question "Do you accept the license terms? [yes|no] appears on the terminal, answer yes and press "ENTER". Press "ENTER" to confirm the location of the downloaded files. To the question "Do you wish the installer to initialize Anaconda3 by running conda init? [yes|no] answer "yes" and press "ENTER". Enter your user password and type "y" when the terminal asks for it.
+This command first installs Conda that requires downloading the installation file from the internet. Read and accept the Anaconda User License Agreement on the terminal. Press "ENTER" to go through the license terms until the question "Do you accept the license terms? [yes|no] appears on the terminal, answer yes and press "ENTER". Press "ENTER" to confirm the location of the downloaded files. To the question "Do you wish the installer to initialize Anaconda3 by running conda init? [yes|no] answer "no" and press "ENTER". Enter your user password and type "y" when the terminal asks for it.
 The script will then create an environment inside Conda with all the software and packages required to run tRNAstudio. Some of these software may ask for the user password and confirmation in order to install the modules; therefore the user must be attentive to these instances and supply this information if required. You are now ready to use the GUI!  
 
 **Use the GUI:**  
