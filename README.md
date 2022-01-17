@@ -8,7 +8,7 @@ tRNAstudio is a tool designed to analyze small RNA-seq datasets (single-end or p
 
 ## REQUIREMENTS
 
-**Operative system:** Mac (OS X El Capitan or higher) or Linux.  
+**Operating system:** Mac (OS X El Capitan or higher) or Linux.  
 
 **Dependencies**:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Python 3.x  
