@@ -34,7 +34,7 @@ then
     #Running the .sh script
     bash Anaconda3-2020.07-MacOSX-x86_64.sh
     #Compiling from source
-    source ~/.bashrc
+    export PATH=~/anaconda3/bin:$PATH
     rm Anaconda3-2020.07-MacOSX-x86_64.sh
     fi
 
