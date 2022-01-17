@@ -120,7 +120,7 @@ Folder with barplots for the total number of reads mapped to tRNAs, proportion o
     - "Coverage_Plots": plots showing the coverage for each tRNA gene family (images grouped by isoacceptor).
 
 - **DGE.**
-Differential gene expression. 
+Differential gene expression analysis. 
 This folder contains the numerical results of the differential gene expression analysis (e.g. counts used for generating gene expression heatmaps, files with DESeq2 and iso-tRNA-CP results, etc.).
 
 
