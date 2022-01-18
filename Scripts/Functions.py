@@ -395,10 +395,13 @@ def mapping_quality(sample):
 	for index, row in mitochondrialCounts.iterrows():
 		tRNA_ID = row[0]
 		os.system('samtools view ../Alignments/'+sample+'_mitochondrial_sort.bam '+tRNA_ID+' | cut -f1 > '+tRNA_ID+'_IDs.txt')
-		os.system('picard FilterSamReads I=../Alignment_WG/'+sample+'_WGloc_mitochondrial_filtered_sort.bam O='+sample+'_'+tRNA_ID+'.bam READ_LIST_FILE='+tRNA_ID+'_IDs.txt FILTER=includeReadList >/dev/null 2>&1')
+		if os.stat(tRNA_ID+'_IDs.txt').st_size == 0:
+			MitoReadsMappedMAPQ = 0
+		else:
+			os.system('picard FilterSamReads I=../Alignment_WG/'+sample+'_WGloc_mitochondrial_filtered_sort.bam O='+sample+'_'+tRNA_ID+'.bam READ_LIST_FILE='+tRNA_ID+'_IDs.txt FILTER=includeReadList >/dev/null 2>&1')
 		
-		#Filter the reads with mapq  only include reads with mapping quality >= INT [0]. MAPQ >2 "GOOD MAPPING QUALITY READS"
-		MitoReadsMappedMAPQ = int(subprocess.check_output('samtools view -c -bSq 3 '+sample+'_'+tRNA_ID+'.bam', shell=True).decode("utf-8").strip("\n"))
+			#Filter the reads with mapq  only include reads with mapping quality >= INT [0]. MAPQ >2 "GOOD MAPPING QUALITY READS"
+			MitoReadsMappedMAPQ = int(subprocess.check_output('samtools view -c -bSq 3 '+sample+'_'+tRNA_ID+'.bam', shell=True).decode("utf-8").strip("\n"))
 		os.system('rm *'+tRNA_ID+'*')
 		mitochondrialCounts.loc[mitochondrialCounts[0] == tRNA_ID , 2] = str(MitoReadsMappedMAPQ)
 
