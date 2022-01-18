@@ -108,7 +108,7 @@ def create_text():
 
         
     sample_data = open("sample_data_raw.txt", "w")
-    sample_data.write("ID" + "\t" + "Condition" + "\t" + "PE_SE" + "\t" + "Frw_Rev" + "\t" + "mergeFileID" + "\n")
+    sample_data.write("ID" + "\t" + "Condition" + "\t" + "PE_SE" + "\t" + "Fwd_Rev" + "\t" + "mergeFileID" + "\n")
     
     for i in range(len(files)-1):
         sample_data.write(files[i][:-6] + "\t" + "\n")
