@@ -1,7 +1,5 @@
 #! /usr/bin/Rscript
 
-
-
 suppressPackageStartupMessages({
 library('knitr')
 library('Rsamtools')
