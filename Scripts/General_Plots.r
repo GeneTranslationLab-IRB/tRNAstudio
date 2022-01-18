@@ -1,7 +1,5 @@
 #! /usr/bin/Rscript
 
-# PIPELINE FOR GENERAL COUNTS PLOTS 
-
 suppressPackageStartupMessages({
 library("knitr")
 library('Rsamtools')
