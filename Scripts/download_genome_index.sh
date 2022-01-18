@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #Changing the directory to download to Reference_Genomes
-
 cd ..
 cd Reference_Genomes
 #Downloading the file from illumina and uncompressing it
