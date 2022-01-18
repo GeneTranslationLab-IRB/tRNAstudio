@@ -5,7 +5,7 @@ This script performs the first step of the pipeline
 - Alignment against the whole genome
 - Select reads mapping to tRNA genes
 - Removal of soft clipped bases 
-- Classification between precursor and processed/mature reads.
+- Classification between precursor processed/mature and mitochondrial tRNA reads.
 '''
 
 ###############################################################################
