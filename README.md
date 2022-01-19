@@ -29,7 +29,7 @@ Run this command on the terminal.
 
 `bash requirements.sh`
 
-This command first installs Conda that requires downloading the installation file from the internet. 
+This command automatically installs Conda (an open source package management system). Follow the next steps in order to complete the installation. 
 
 1. Read and accept the Anaconda User License Agreement on the terminal. Press "ENTER" to go through the license terms until reaching the question "Do you accept the license terms? [yes|no], answer **"yes"** and press "ENTER". 
 2. Press "ENTER" to confirm the location of the downloaded files. 
