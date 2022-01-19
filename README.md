@@ -19,7 +19,7 @@ tRNAstudio is a tool designed to analyze small RNA-seq datasets (single-end or p
 2. Unzip the downloaded folder and open the "tRNAstudio-main" folder. (The folder can be moved to another directory, make sure that the new directory/location does not contain a folder with a name that has blank spaces)
 3. For Linux Users: Click the "Scripts" folder with the right button and select "Open in a terminal". 
 <br /> For Mac Users: Click the "Scripts" folder with the right button followed by “Services” and select “New Terminal at Folder.”
-<br /> <br /> It is always necessary to run the pipeline from the "Scripts" folder!
+<br /> <br /> <sup> **Note:**  It is always necessary to run the pipeline from the "Scripts" folder!  </sup>
 
 **Download dependencies:** 
 
