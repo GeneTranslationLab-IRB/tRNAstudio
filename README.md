@@ -39,7 +39,7 @@ This command automatically installs Conda (an open source package management sys
 
 **Use the GUI:**  
 
-Two commands are always needed in order to run tRNAstudio.
+The next two commands are always needed in order to run tRNAstudio (remember to run the commands from the "Scripts" folder).
 
 First, activate the conda environment by running the following command on the terminal:
 
