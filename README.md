@@ -38,7 +38,10 @@ This command automatically installs Conda (an open source package management sys
 5. Once the installation is done, close the terminal and reopen it again from the scripts folder as described above. Now you are  ready to use the tRNAstudio GUI!  
 
 **Use the GUI:**  
-Activate the conda environment by running the following command on the terminal:
+
+Two commands are always needed in order to run tRNAstudio.
+
+First, activate the conda environment by running the following command on the terminal:
 
 ```conda activate tRNAstudioEnv```
 
