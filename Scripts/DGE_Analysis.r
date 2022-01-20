@@ -1,5 +1,7 @@
 #! /usr/bin/Rscript
 
+# PIPELINE FOR DIFFERENTIAL EXPRESION ANALYSIS
+
 # Packages 
 suppressPackageStartupMessages({
 library(Rsubread)
@@ -115,7 +117,7 @@ for(condition in conditions){
     pheatmap(tRNAmt, cluster_rows=T, show_rownames=T, show_colnames = T,
              cluster_cols=T,fontsize_row=8, clustering_method="ward.D")
     resDESeq2_data <- as.data.frame(tRNAmt)
-    file_heatmap_txt = paste0("../Results/DGE/Heatmap_mitochondrials_DESeq2.txt")
+    file_heatmap_txt = paste0("../Results/DGE/Heatmap_mitochondrial_DESeq2.txt")
     write.table(resDESeq2_data, file = file_heatmap_txt, sep = "\t",
                 row.names = TRUE, col.names = NA, quote=FALSE)
     dev.off()
@@ -162,7 +164,7 @@ for(condition in conditions){
     pheatmap(group_mitochondrials, cluster_rows=T, show_rownames=T, show_colnames = T,
              cluster_cols=F,fontsize_row=8, clustering_method="ward.D")
     resDESeq2_data_mean <- as.data.frame(group_citosolics)
-    f_heatmap_groups_jpeg = paste0("../Results/DGE/Heatmap_groups_mitochondrials_DESeq2.txt")
+    f_heatmap_groups_jpeg = paste0("../Results/DGE/Heatmap_groups_mitochondrial_DESeq2.txt")
     write.table(resDESeq2_data_mean, file = f_heatmap_groups_jpeg, sep = "\t",
                 row.names = TRUE, col.names = NA, quote = FALSE)
     dev.off()
