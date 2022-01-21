@@ -23,7 +23,7 @@ tRNAstudio is a tool designed to analyze small RNA-seq datasets (single-end or p
 
 **Download dependencies:** 
 
-<sup> **Note:** This step is only done on the first time the pipeline is being installed. </sup>
+This step is only done on the first time the pipeline is being installed. 
 
 Run this command on the terminal.
 
@@ -58,6 +58,8 @@ Once the GUI is running the user will have the following options (Fig.1):
 
 <sup> **Note:** The pipeline is designed to run one process at a time, once that you click one of the buttons you have to wait until it finishes in order to start a new process.  </sup>
 
+<sup> **Note:** The user can view the progress of each step in the terminal  </sup>
+
 - **Download Human Genome (hg38).**  This button downloads the human genome Hg38 from UCSC, and builds the indexes saved in the "Reference_Genomes" folder. This process takes some time (can last 2 hours) and a pop-up dialog will inform the user when the process is finished. No user interaction needed. This process will have to be done only once (provided that the user does not manually delete this downloaded file).
 
 - **Download sample.** This button downloads the .fastq files from the Gene Expression Omnibus (GEO) using its Run Accession ID. Run Accession IDs are those with the prefixes SRR…, ERR…, or DRR… (e.g.ERR705691). Enter the Run Accession ID (without blank spaces or tabulators) and then press the "Download sample" button. Once the .fastq file is downloaded, it will be automatically unzipped and stored in the "Fastq_downloaded'' folder. A message will notify the user that this process was correctly achieved. The user can then download additional samples (i.e. other Run Accession IDs) following the same procedure. <br /> <sup> **Note:** If the user already has the desired .fastq files in their computer (e.g. their own in-house datasets or datasets obtained upon manual downloading from other repositories), these files should be placed inside the "Fastq_downloaded" folder and will become accessible to be analyzed by tRNAstudio. </sup>
@@ -78,6 +80,8 @@ Once the GUI is running the user will have the following options (Fig.1):
 - **Run tRNA Alignments.** This button executes the alignment pipeline implemented in tRNAstudio. This process can last several hours and requires a lot of computational power so we recommend not performing other demanding processes while the pipeline is running. The user will be notified with a pop-up dialogue when this process is finished.
 
 - **Select samples for data analysis.** This button opens the previously saved .txt file with the sample information, allowing the user to select which samples to analyze. If the file is modified, save changes (Control + S) and close it. 
+<sup> **Note:** Remember that tRNAstudio is designed to analyze two conditions </sup>
+
   
 - **Run Data Analysis.** This button computes all the parameters that tRNAstudio can assess (e.g. tRNA quantification, modification analysis for each group, differential gene expression analysis between the different conditions, etc.). Press this button after the alignments are done and after the samples that are to be analyzed have been selected. This step is also time-consuming. The user will be notified with a pop-up dialogue when this process is finished.
 
