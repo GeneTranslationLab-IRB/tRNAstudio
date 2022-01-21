@@ -118,13 +118,13 @@ Folder with barplots for the total number of reads mapped to tRNAs in all condit
 - **Modification_Coverage.**
     This folder contains .txt files and plots for the analysis of tRNA modifications and sequence coverage. It contains 4 subfolders:
     - "Modification_Coverage_Plots": line charts showing the sequence coverage and the modification ratio by position for each tRNA gene family. In addition, the .txt files with the data used to generate the plots is included in this folder. 
-    - "Modification_Heatmaps_Plots": heatmaps showing the modification ratio by position in each tRNA gene family.
-    - "Modification_Comparison_Plots": line charts showing the modification ratio by position in each tRNA gene family by condition.
+    - "Modification_Heatmaps_Plots": heatmaps showing the modification ratio at selected positions for each tRNA gene family.
+    - "Modification_Comparison_Plots": line charts showing the modification ratio by position in each tRNA gene family by condition. Consider this data in the context of gene coverage; as low gene coverage may give misleading results. 
     - "Coverage_Plots": plots showing the coverage for each tRNA gene family (images grouped by isoacceptor).
 
 - **DGE.**
 Differential gene expression analysis. 
-This folder contains the numerical results of the differential gene expression analysis (e.g. counts used for generating gene expression heatmaps, files with DESeq2 and iso-tRNA-CP results, etc.).
+This folder contains the numerical results of the differential gene expression analysis (e.g. counts used for generating gene expression heatmaps, files with DESeq2 and iso-tRNA-CP results, etc.). An interactive .html summary is provided with the results of DESeq2 and ISO-tRNA-CP for each condition and for the comparison between the conditions.
 
 
 - **Reports.**
