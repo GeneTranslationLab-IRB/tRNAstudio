@@ -111,12 +111,12 @@ Folder with barplots for the total number of reads mapped to tRNAs in all condit
 
 - **Counts_Plots.**
     This folder contains 3 subfolders:
-    - "Total": plots showing the total number of reads mapped to tRNAs by isoacceptor, isodecoder and tRNA gene family level for each condition.
-    - "Processed_vs_precursor": plots showing the proportion of reads derived from processed tRNA and pre-tRNA by isoacceptor, isodecoder and tRNA gene family level for each condition.
-    - "Proportion_by_isodecoder": plots showing the proportion of each tRNA gene family against its isodecoder pool (isodecoder-specific tRNA gene contribution profile (iso-tRNA-CP))
+    - "Total": plots showing the total number of reads mapped to tRNAs by isoacceptor, isodecoder and tRNA gene family for each condition.
+    - "Processed_vs_precursor": plots showing the proportion of reads derived from processed tRNA and pre-tRNA by isoacceptor, isodecoder and tRNA gene family  for each condition.
+    - "Proportion_by_isodecoder": plots showing the proportion of reads mapping to each tRNA gene family within their isodecoder set.
 
 - **Modification_Coverage.**
-    This folder contains .txt files and plots for the analysis of tRNA modifications and sequence coverage. It contains 3 subfolders:
+    This folder contains .txt files and plots for the analysis of tRNA modifications and sequence coverage. It contains 4 subfolders:
     - "Modification_Coverage_Plots": line charts showing the sequence coverage and the modification ratio by position for each tRNA gene family. In addition, the .txt files with the data used to generate the plots is included in this folder. 
     - "Modification_Heatmaps_Plots": heatmaps showing the modification ratio by position in each tRNA gene family.
     - "Modification_Comparison_Plots": line charts showing the modification ratio by position in each tRNA gene family by condition.
