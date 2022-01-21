@@ -88,7 +88,7 @@ Once the GUI is running the user will have the following options (Fig.1):
 
 
 ## RESULTS
-<sup> **Note:** We recommend to save the next folders: General_Plots, Counts_Plots, Modification_Coverage, DGE and Reports, on another directory named with a specific project name. </sup>
+<sup> **Note:** We recommend to save the next folders: **General_Plots, Counts_Plots, Modification_Coverage, DGE and Reports**, on another directory named with a specific project name. Do not move **R_files or Folders named after the ID of each sample** from the Results folder </sup>
 
 The following folders are generated inside the "Results" folder:
 
@@ -104,10 +104,10 @@ The following folders are generated inside the "Results" folder:
     - "Base_Calls": .txt file with the number of reads with a given base at each tRNA position (base calling) for each tRNA gene.
 
 - **R_files.**
-Internal files used by tRNAstudio to compute the analysis.
+Internal files used by tRNAstudio to compute the analysis. This folder should be managed only by experienced bioinformaticians. 
 
 - **General_Plots.**
-Folder with barplots for the total number of reads mapped to tRNAs, proportion of the total number of reads mapped to tRNAs by mapping quality and Principal Component Analysis (PCA) plots. 
+Folder with barplots for the total number of reads mapped to tRNAs in all conditions and separated by condition, proportion of the total number of reads mapped to tRNAs by mapping quality in all conditions and separated by condition and Principal Component Analysis (PCA) plot. 
 
 - **Counts_Plots.**
     This folder contains 3 subfolders:
