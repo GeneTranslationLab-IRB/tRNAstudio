@@ -65,7 +65,7 @@ Once the GUI is running the user will have the following options (Fig.1):
 - **Download sample.** This button downloads the .fastq files from the Gene Expression Omnibus (GEO) using its Run Accession ID. Run Accession IDs are those with the prefixes SRR…, ERR…, or DRR… (e.g.ERR705691). Enter the Run Accession ID (without blank spaces or tabulators) and then press the "Download sample" button. Once the .fastq file is downloaded, it will be automatically unzipped and stored in the "Fastq_downloaded'' folder. A message will notify the user that this process was correctly achieved. The user can then download additional samples (i.e. other Run Accession IDs) following the same procedure. <br /> <sup> **Note:** If the user already has the desired .fastq files in their computer (e.g. their own in-house datasets or datasets obtained upon manual downloading from other repositories), these files should be placed inside the "Fastq_downloaded" folder and will become accessible to be analyzed by tRNAstudio. </sup>
 
 - **Select and label samples for tRNA alignment.**  This button opens a .txt file with a text editor that shows the sample's ID contained in the "Fastq_downloaded'' folder (**Column 1**) and empty columns that MUST be filled by the user (columns might be misaligned given that in the .txt file they are defined by tabulators): <br />
-<br /> &nbsp;&nbsp;&nbsp;**Column 2**: Condition. Indicate the group to which each sample belongs (e.g. Control or Treated).
+<br /> &nbsp;&nbsp;&nbsp;**Column 2**: Condition. Indicate the group to which each sample belongs (e.g. Control or Treated). Do not use only numerical values to indicate the condition.
 <br /> &nbsp;&nbsp;&nbsp;**Column 3**: PE_SE. Specify if the sample is paired-end (write down "PE") or single-end (write down "SE").
 <br /> &nbsp;&nbsp;&nbsp;**Column 4**: Fwd_Rev. If the sample is PE, the user will have two files per each sample downloaded. One of these samples will 
 <br /> correspond to the Forward R1 and the other one to the Reverse R2. The user has to indicate in this column which file is the Forward R1 (write down "Fwd") and which one is the Reverse R2 (write down "Rev"). 
@@ -79,7 +79,7 @@ Once the GUI is running the user will have the following options (Fig.1):
 
 - **Run tRNA Alignments.** This button executes the alignment pipeline implemented in tRNAstudio. This process can last several hours and requires a lot of computational power so we recommend not performing other demanding processes while the pipeline is running. The user will be notified with a pop-up dialogue when this process is finished.
 
-- **Select samples for data analysis.** This button opens the previously saved .txt file with the sample information, allowing the user to select which samples to analyze (e.g. delet samples tha are not required for the data analysis). If the file is modified, save changes (Control + S) and close it.
+- **Select samples for data analysis.** This button opens the previously saved .txt file with the sample information, allowing the user to select which samples to analyze (e.g. delet samples tha are not required for the data analysis) and to ndicate the group to which each sample belongs (e.g. Control or Treated). Do not use only numerical values to indicate the condition. If the file is modified, save changes (Control + S) and close it.
  
    <sup> **Note:** Remember that tRNAstudio is designed to analyze and compare two conditions. </sup>
 
