@@ -79,25 +79,29 @@ Once the GUI is running the user will have the following options (Fig.1):
 
 - **Run tRNA Alignments.** This button executes the alignment pipeline implemented in tRNAstudio. This process can last several hours and requires a lot of computational power so we recommend not performing other demanding processes while the pipeline is running. The user will be notified with a pop-up dialogue when this process is finished.
 
-- **Select samples for data analysis.** This button opens the previously saved .txt file with the sample information, allowing the user to select which samples to analyze. If the file is modified, save changes (Control + S) and close it.
+- **Select samples for data analysis.** This button opens the previously saved .txt file with the sample information, allowing the user to select which samples to analyze (e.g. delet samples tha are not required for the data analysis). If the file is modified, save changes (Control + S) and close it.
  
-   <sup> **Note:** Remember that tRNAstudio is designed to analyze two conditions. </sup>
+   <sup> **Note:** Remember that tRNAstudio is designed to analyze and compare two conditions. </sup>
 
   
 - **Run Data Analysis.** This button computes all the parameters that tRNAstudio can assess (e.g. tRNA quantification, modification analysis for each group, differential gene expression analysis between the different conditions, etc.). Press this button after the alignments are done and after the samples that are to be analyzed have been selected. This step is also time-consuming. The user will be notified with a pop-up dialogue when this process is finished.
 
 
 ## RESULTS
+<sup> **Note:** We recommend to save the next folders: General_Plots, Counts_Plots, Modification_Coverage, DGE and Reports, on another directory named with a specific project name. </sup>
 
 The following folders are generated inside the "Results" folder:
 
 - **Folders named after the ID of each sample.**
+
+   We recommend to browse this folder in order to perform custom analysis.
+    
     This folder contains 3 subfolder:
 
     - "Alignments": .bam files that contain sequence alignment data for processed, precursor and mitochondrial tRNAs. It also contains sorted and indexed .bam files needed in the case that the user wants to use visualization tools such as the Integrative Genomics Viewer (IGV).
 
     - "Counts": .txt files with the counts for processed, precursor and mitochondrial tRNAs. Each txt file contains 3 columns [tRNA ID] [counts with a MAPQ > 2] [counts with a MAPQ ≤ 2].
-    - "Base_Calls": txt file with the number of reads with a given base at each tRNA position (base calling) for each tRNA gene.
+    - "Base_Calls": .txt file with the number of reads with a given base at each tRNA position (base calling) for each tRNA gene.
 
 - **R_files.**
 Internal files used by tRNAstudio to compute the analysis.
@@ -132,7 +136,7 @@ This folder contains a report with the characterization for each group and one r
 
 tRNAstudio is designed for the analyses of human datasets, however, it can be adapted to analyze datasets from other species. 
 
-First, a database with the sequences of the tRNAs (nuclear and mitochondrial tRNA genes if needed) for the species of interest need to be generated. To do so, tRNA sequences can be downloaded from specific tRNA databases (eg GtRNAdb, mitotRNAdb). Make sure that the obtained sequences contain the following information:
+First, a database with the sequences of the tRNAs (nuclear and mitochondrial tRNA genes if needed) for the species of interest need to be generated. To do so, tRNA sequences can be downloaded from specific tRNA databases (eg. GtRNAdb, mitotRNAdb). Make sure that the obtained sequences contain the following information:
 
 - tRNA gene name (tRNA ID).
 - Sequence.
