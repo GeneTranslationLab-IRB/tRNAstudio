@@ -72,12 +72,12 @@ Once the GUI is running the user will have the following options (Fig.1):
 <br /> <img src="https://github.com/GeneTranslationLab-IRB/tRNAstudio/blob/main/img/sample_data.jpg" alt="Girl in a jacket" width="360" height="260"/> </p>
     <p align="center">Figure 2. File containing sample data</p>
 </p>
-<br /> <br /> Once finishing providing the required information in each column save the changes and close the file. DO NOT press "ENTER" after completing the last column of the file as this will incorporate an additional blank row in the .txt file that will be interpreted as an error. 
+<br /> <br /> Once finishing providing the required information in each column save the changes (Control + S) and close the file. DO NOT press "ENTER" after completing the last column of the file as this will incorporate an additional blank row in the .txt file that will be interpreted as an error. 
 
 
 - **Run tRNA Alignments.** This button executes the alignment pipeline implemented in tRNAstudio. This process can last several hours and requires a lot of computational power so we recommend not performing other demanding processes while the pipeline is running. The user will be notified with a pop-up dialogue when this process is finished.
 
-- **Select samples for data analysis.** This button opens the previously saved .txt file with the sample information, allowing the user to edit the file and select which samples to analyze. If the file is modified, save changes and close it. 
+- **Select samples for data analysis.** This button opens the previously saved .txt file with the sample information, allowing the user to select which samples to analyze. If the file is modified, save changes (Control + S) and close it. 
   
 - **Run Data Analysis.** This button computes all the parameters that tRNAstudio can assess (e.g. tRNA quantification, modification analysis for each group, differential gene expression analysis between the different conditions, etc.). Press this button after the alignments are done and after the samples that are to be analyzed have been selected. This step is also time-consuming. The user will be notified with a pop-up dialogue when this process is finished.
 
