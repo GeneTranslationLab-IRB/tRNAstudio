@@ -1,7 +1,5 @@
 #! /usr/bin/Rscript
 
-# PIPELINE FOR DIFFERENTIAL EXPRESION ANALYSIS
-
 # Packages 
 suppressPackageStartupMessages({
 library(Rsubread)
