@@ -124,7 +124,7 @@ Folder with barplots for the total number of reads mapped to tRNAs in all condit
 
 - **DGE.**
 Differential gene expression analysis. 
-This folder contains the numerical results of the differential gene expression analysis (e.g. counts used for generating gene expression heatmaps, files with DESeq2 and iso-tRNA-CP results, etc.). An interactive .html summary is provided with the results of DESeq2 and ISO-tRNA-CP.
+This folder contains the numerical results of the differential gene expression analysis (e.g. counts used for generating gene expression heatmaps, files with DESeq2 and iso-tRNA-CP results, etc.). It inludes images in two different formats; jpeg and pdf, for better quality images. An interactive .html summary is provided with the results of DESeq2 and ISO-tRNA-CP. It inludes images are provided in two different formats in jpeg and pdf (provides better quality images). 
 
 
 - **Reports.**
