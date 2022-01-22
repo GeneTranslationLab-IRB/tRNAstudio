@@ -160,7 +160,7 @@ aa_info_final = data.frame(aa_info, adjusted_pvalues)
 #aa_info_final = aa_info_final[aa_info_final$adjusted_pvalues < 0.05,]
 
 
-write.table(aa_info_final, file = "../Results/R_files/Modification_test.txt", 
+write.table(aa_info_final, file = "../Results/Modification_Coverage/Modification_Comparison_Plots/Modification_Statistics.txt", 
             quote=FALSE, row.names = F)
 
 #real_genes = substring(aa_info_final$gene, 1, nchar(aa_info_final$gene)-4)
@@ -476,7 +476,7 @@ setorderv(pos_fortyfiveF, c("adj. p-value", "log2fc"), 1)
 setorderv(pos_fiftyeight,  c("adj. p-value", "log2fc"), 1)
 
 
-file_name = "../Results/R_files/Modification_comparison_results.xlsx"
+file_name = "../Results/Modification_Coverage/Modification_Comparison_Plots/Modification_comparison_results.xlsx"
 write.xlsx(pos_nine, file = file_name,
            sheetName = "9", append = TRUE)
 write.xlsx(pos_twentysix, file = file_name,

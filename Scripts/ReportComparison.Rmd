@@ -42,7 +42,7 @@ knitr::include_graphics(file3)
 ```
 
 
-## Mature ratio.
+## Processed tRNA ratio.
 
 ### Comparison between groups.
 
@@ -95,7 +95,7 @@ knitr::include_graphics(file52)
 ```
 
 
-## Analysis of all tRNA genes.
+## Analysis of nuclear-encoded tRNA genes.
 
 ```{r MD plot DESeq2, echo=FALSE, out.width = '100%'}
 md_plot_deseq = paste0("../DGE/DESeq2_MD-plot_all_genes.html")
@@ -123,9 +123,9 @@ file9 = paste0("../Results/DGE/Heatmap_groups_isotRNACP.jpeg")
 knitr::include_graphics(file9) 
 ```
 
-## Heatmap of mitochondrial tRNAs or mitochondrial tRNA-lookalike nuclear sequences.
+## Analysis of mitochondrial tRNA genes or mitochondrial tRNA-lookalike nuclear sequences.
 
-```{r Heatmap groups iso2, echo=FALSE, out.width = '100%'}
+```{r Heatmap groups iso2, echo=FALSE, out.width = '70%'}
 file99 = paste0("../Results/DGE/Heatmap_groups_mitochondrial_DESeq2.jpeg")
 knitr::include_graphics(file99) 
 ```
@@ -145,7 +145,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Arg"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -158,7 +157,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Asn"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -171,7 +169,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Asp"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -184,7 +181,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Cys"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -197,7 +193,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Gln"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -210,7 +205,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Glu"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -223,7 +217,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Gly"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -236,7 +229,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "His"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -249,7 +241,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Ile"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -262,7 +253,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Leu"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -275,7 +265,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Lysine"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -288,7 +277,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Met"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -301,7 +289,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "iMet"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -314,7 +301,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Phe"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -327,7 +313,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Pro"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -340,7 +325,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "SeC"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -353,7 +337,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Ser"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -366,7 +349,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Thr"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -379,7 +361,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Trp"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -392,7 +373,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Tyr"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -405,7 +385,6 @@ if(!file.exists(file)){
   text = paste0("There is no significant modification on ", aa, " genes")
   print(text)
 }
-
 aa = "Val"
 heatmap_url_mod = paste0("../Modification_Coverage/Modification_Heatmaps_Plots/Comparison_", aa, ".html")
 ```
@@ -419,4 +398,3 @@ if(!file.exists(file)){
   print(text)
 }
 ```
-

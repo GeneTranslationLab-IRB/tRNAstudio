@@ -1,5 +1,7 @@
 #! /usr/bin/Rscript
 
+
+
 suppressPackageStartupMessages({
 library('knitr')
 library('Rsamtools')
@@ -125,7 +127,7 @@ for(group in groups){
       scale_fill_manual("", values = c("Processed" = "#bddef0", "Precursor" = "#7180a7"))+
       ylim (0,1) + 
       labs (x = "tRNA family", y = "Proportion") +
-      labs (title = "pre-tRNA vs processed tRNA", subtitle = e) #+ scale_fill_discrete(name = "", labels = c("pre-tRNA","processed tRNA"))
+      labs (title = "precursor tRNA vs processed tRNA", subtitle = e) #+ scale_fill_discrete(name = "", labels = c("pre-tRNA","processed tRNA"))
     ggsave (plot=p, filename=paste0("../Results/Counts_Plots/Processed_vs_Precursor/By_tRNA_family/",group,"_",e,"_by_family.jpeg"), width = 20, height = 10, units = "cm")
   }
   
@@ -167,7 +169,7 @@ for(group in groups){
     theme (panel.background = element_rect(fill = "snow2",colour = "snow2",
                 size = 0.5, linetype = "solid"),
            legend.position = "top") +
-    labs (title = "pre-tRNA vs processed tRNA", subtitle = "Isodecoder") +
+    labs (title = "precursor tRNA vs processed tRNA", subtitle = "Isodecoder") +
     scale_fill_manual("", values = c("Processed" = "#bddef0", "Precursor" = "#7180a7"))
   
   ggsave(plot=p, filename=paste0("../Results/Counts_Plots/Processed_vs_Precursor/",
@@ -207,7 +209,7 @@ for(group in groups){
           legend.position = "top") + 
     ylim (0,1) + 
     labs (x = "tRNA isoacceptor", y = "Proportion") + 
-    labs (title = "pre-tRNA vs processed tRNA", subtitle = "Isoacceptor") + 
+    labs (title = "precursor tRNA vs processed tRNA", subtitle = "Isoacceptor") + 
     scale_fill_manual("", values = c("Processed" = "#bddef0", "Precursor" = "#7180a7"))
   ggsave(plot=p, filename=paste0("../Results/Counts_Plots/Processed_vs_Precursor/",
                                  group,"_by_Isoacceptor.jpeg"), width = 20, 
@@ -230,11 +232,11 @@ for(e in aa){
            axis.text.y = element_text(color="black")) + 
     ylim (0,1) + 
 
-    labs (x = "tRNA gene", y = "Processed ratio") + 
+    labs (x = "tRNA gene", y = "processed tRNA ratio") + 
     theme (panel.background = element_rect(fill = "snow2",colour = "snow2",
                                            size = 0.5, linetype = "solid"),
            legend.position = "top") +
-    labs (title = "Processed ratio")
+    labs (title = "processed tRNA ratio")
   ggsave (plot=p, filename=paste0(
     "../Results/Counts_Plots/Processed_vs_Precursor/By_tRNA_family/Comparison/Comparison_"
     ,e,"_by_family.jpeg"), width = 20, height = 10, units = "cm")
@@ -253,11 +255,11 @@ p <- ggplot(plot_data_isoaceptors, aes(y=mature_ratio, x=aa, fill=group)) +
          axis.text.y = element_text(color="black")) + 
   ylim (0,1) + 
   
-  labs (x = "tRNA Isoaceptors", y = "Processed ratio") + 
+  labs (x = "tRNA Isoaceptors", y = "processed tRNA ratio") + 
   theme (panel.background = element_rect(fill = "snow2",colour = "snow2",
                                          size = 0.5, linetype = "solid"),
          legend.position = "top") +
-  labs (title = "Processed ratio")
+  labs (title = "processed tRNA ratio")
 file_name = "../Results/Counts_Plots/Processed_vs_Precursor/Comparison_by_isoacceptor.jpeg"
 ggsave (plot=p, filename=file_name, width = 20, height = 10, units = "cm")
 
@@ -278,11 +280,11 @@ p <- ggplot(plot_data_groups, aes(y=mature_ratio, x=group, fill=group)) +
          axis.text.y = element_text(color="black")) + 
   ylim (0,1) + 
   
-  labs (x = "Condition", y = "Processed ratio") + 
+  labs (x = "Condition", y = "processed tRNA ratio") + 
   theme (panel.background = element_rect(fill = "snow2",colour = "snow2",
                                          size = 0.5, linetype = "solid"),
          legend.position="none") +
-  labs (title = "Processed ratio")
+  labs (title = "processed tRNA ratio")
 
 file_name = "../Results/Counts_Plots/Processed_vs_Precursor/Comparison_by_group.jpeg"
 ggsave (plot=p, filename=file_name, width = 20, height = 10, units = "cm")

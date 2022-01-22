@@ -112,8 +112,8 @@ for(condition in conditions){
     tRNAmt = data[grepl("tRNAmt", rownames(data)),]
     citosolics = data[!grepl("tRNAmt", rownames(data)),]
     
-    file_heatmap_jpeg = paste0("../Results/DGE/Heatmap_mitochondrial_DESeq2.jpg")
-    jpeg(file_heatmap_jpeg)
+    file_heatmap_pdf = paste0("../Results/DGE/Heatmap_mitochondrial_DESeq2.pdf")
+    pdf(file_heatmap_pdf)
     pheatmap(tRNAmt, cluster_rows=T, show_rownames=T, show_colnames = T,
              cluster_cols=T,fontsize_row=8, clustering_method="ward.D")
     resDESeq2_data <- as.data.frame(tRNAmt)
@@ -121,17 +121,30 @@ for(condition in conditions){
     write.table(resDESeq2_data, file = file_heatmap_txt, sep = "\t",
                 row.names = TRUE, col.names = NA, quote=FALSE)
     dev.off()
-    
-    file_heatmap_jpeg = paste0("../Results/DGE/Heatmap_", condition, "_DESeq2.jpeg")
+
+    file_heatmap_jpeg = paste0("../Results/DGE/Heatmap_mitochondrial_DESeq2.jpeg")
     jpeg(file_heatmap_jpeg)
-    pheatmap(citosolics, cluster_rows=T, show_rownames=show_rownames, show_colnames = T,
+    pheatmap(tRNAmt, cluster_rows=T, show_rownames=T, show_colnames = T,
              cluster_cols=T,fontsize_row=8, clustering_method="ward.D")
+    dev.off()
+    
+    
+    file_heatmap_pdf = paste0("../Results/DGE/Heatmap_", condition, "_DESeq2.pdf")
+    pdf(file_heatmap_pdf)
+    pheatmap(citosolics, cluster_rows=T, show_rownames=T, show_colnames = T,
+             cluster_cols=T,fontsize_row=0.5, clustering_method="ward.D")
     resDESeq2_data <- as.data.frame(citosolics)
     file_heatmap_txt = paste0("../Results/DGE/Heatmap_", condition,"_DESeq2.txt")
     write.table(resDESeq2_data, file = file_heatmap_txt, sep = "\t",
                 row.names = TRUE, col.names = NA, quote=FALSE)
     dev.off()
     
+    file_heatmap_jpeg = paste0("../Results/DGE/Heatmap_", condition, "_DESeq2.jpeg")
+    jpeg(file_heatmap_jpeg)
+    pheatmap(citosolics, cluster_rows=T, show_rownames=T, show_colnames = T,
+             cluster_cols=T,fontsize_row=0.5, clustering_method="ward.D")
+    dev.off()
+
     # per groups
     data_group = data.frame(0)
     for(group in levels(sample_data$Condition)){
@@ -146,35 +159,50 @@ for(condition in conditions){
     group_citosolics = data_group[!grepl("tRNAmt", rownames(data_group)),]
     group_mitochondrials = data_group[grepl("tRNAmt", rownames(data_group)),]
     
-    f_heatmap_groups_jpeg = paste0("../Results/DGE/Heatmap_groups_", 
-                                   condition, "_DESeq2.jpeg")
-    jpeg(f_heatmap_groups_jpeg)
-    pheatmap(group_citosolics, cluster_rows=T, show_rownames=show_rownames, show_colnames = T,
-             cluster_cols=F,fontsize_row=8, clustering_method="ward.D")
+    f_heatmap_groups_pdf = paste0("../Results/DGE/Heatmap_groups_",condition, "_DESeq2.pdf")
+    pdf(f_heatmap_groups_pdf)
+    pheatmap(group_citosolics, cluster_rows=T, show_rownames=T, show_colnames = T,
+             cluster_cols=F,fontsize_row=0.5, clustering_method="ward.D")
     resDESeq2_data_mean <- as.data.frame(group_citosolics)
-    f_heatmap_groups_jpeg = paste0("../Results/DGE/Heatmap_groups", 
+    f_heatmap_groups_pdf = paste0("../Results/DGE/Heatmap_groups", 
                                    condition, "_DESeq2.txt")
-    write.table(resDESeq2_data_mean, file = f_heatmap_groups_jpeg, sep = "\t",
+    write.table(resDESeq2_data_mean, file = f_heatmap_groups_pdf, sep = "\t",
                 row.names = TRUE, col.names = NA, quote = FALSE)
     dev.off()
-  
+
+    f_heatmap_groups_jpeg = paste0("../Results/DGE/Heatmap_groups_",condition, "_DESeq2.jpeg")
+    jpeg(f_heatmap_groups_jpeg)
+    pheatmap(group_citosolics, cluster_rows=T, show_rownames=T, show_colnames = T,
+             cluster_cols=F,fontsize_row=0.5, clustering_method="ward.D")
+
+    dev.off()
+
     # mitochondrials
+    f_heatmap_groups_pdf = paste0("../Results/DGE/Heatmap_groups_mitochondrial_DESeq2.pdf")
+    pdf(f_heatmap_groups_pdf)
+    pheatmap(group_mitochondrials, cluster_rows=T, show_rownames=T, show_colnames = T,
+             cluster_cols=F,fontsize_row=8, clustering_method="ward.D")
+    resDESeq2_data_mean <- as.data.frame(group_citosolics)
+    f_heatmap_groups_pdf = paste0("../Results/DGE/Heatmap_groups_mitochondrial_DESeq2.txt")
+    write.table(resDESeq2_data_mean, file = f_heatmap_groups_pdf, sep = "\t",
+                row.names = TRUE, col.names = NA, quote = FALSE)
+    dev.off()
+    
     f_heatmap_groups_jpeg = paste0("../Results/DGE/Heatmap_groups_mitochondrial_DESeq2.jpeg")
     jpeg(f_heatmap_groups_jpeg)
     pheatmap(group_mitochondrials, cluster_rows=T, show_rownames=T, show_colnames = T,
              cluster_cols=F,fontsize_row=8, clustering_method="ward.D")
-    resDESeq2_data_mean <- as.data.frame(group_citosolics)
-    f_heatmap_groups_jpeg = paste0("../Results/DGE/Heatmap_groups_mitochondrial_DESeq2.txt")
-    write.table(resDESeq2_data_mean, file = f_heatmap_groups_jpeg, sep = "\t",
-                row.names = TRUE, col.names = NA, quote = FALSE)
+
     dev.off()
-    
+
+
+
     }
   else{
-    file_heatmap_jpeg = paste0("../Results/DGE/Heatmap_", condition, "_DESeq2.jpeg")
-    jpeg(file_heatmap_jpeg)
+    file_heatmap_pdf = paste0("../Results/DGE/Heatmap_", condition, "_DESeq2.pdf")
+    pdf(file_heatmap_pdf)
     
-    pheatmap(assay(ntd), cluster_rows=T, show_rownames=show_rownames, show_colnames = T,
+    pheatmap(assay(ntd), cluster_rows=T, show_rownames=T, show_colnames = T,
              cluster_cols=T,fontsize_row=8, clustering_method="ward.D")
     resDESeq2_data <- as.data.frame(assay(ntd))
     file_heatmap_txt = paste0("../Results/DGE/Heatmap_", condition, "_DESeq2.txt")
@@ -182,6 +210,14 @@ for(condition in conditions){
                 row.names = TRUE, col.names = NA, quote=FALSE)
     dev.off()
     
+    file_heatmap_jpeg = paste0("../Results/DGE/Heatmap_", condition, "_DESeq2.jpeg")
+    jpeg(file_heatmap_jpeg)
+    pheatmap(assay(ntd), cluster_rows=T, show_rownames=T, show_colnames = T,
+             cluster_cols=T,fontsize_row=8, clustering_method="ward.D")
+    dev.off()
+
+
+
     data_group = data.frame(0)
     for(group in levels(sample_data$Condition)){
       samples = which(sample_data$ID %in% (sample_data$ID[
@@ -191,18 +227,26 @@ for(condition in conditions){
     }
     data_group = data_group[,c(2:ncol(data_group))]
     colnames(data_group) = levels(sample_data$Condition)
-    f_heatmap_groups_jpeg = paste0("../Results/DGE/Heatmap_groups_", 
-                                   condition, "_DESeq2.jpeg")
-    jpeg(f_heatmap_groups_jpeg)
+    f_heatmap_groups_pdf = paste0("../Results/DGE/Heatmap_groups_", condition, "_DESeq2.pdf")
+    pdf(f_heatmap_groups_pdf)
     
-    pheatmap(data_group, cluster_rows=T, show_rownames=show_rownames, show_colnames = T,
+    pheatmap(data_group, cluster_rows=T, show_rownames=T, show_colnames = T,
              cluster_cols=F,fontsize_row=8, clustering_method="ward.D")
     resDESeq2_data_mean <- as.data.frame(data_group)
-    f_heatmap_groups_jpeg = paste0("../Results/DGE/Heatmap_groups", 
+    f_heatmap_groups_pdf = paste0("../Results/DGE/Heatmap_groups", 
                                    condition, "_DESeq2.txt")
-    write.table(resDESeq2_data_mean, file =f_heatmap_groups_jpeg, sep = "\t",
+    write.table(resDESeq2_data_mean, file =f_heatmap_groups_pdf, sep = "\t",
                 row.names = TRUE, col.names = NA, quote = FALSE)
     dev.off()
+
+    f_heatmap_groups_jpeg = paste0("../Results/DGE/Heatmap_groups_", condition, "_DESeq2.jpeg")
+    jpeg(f_heatmap_groups_jpeg)
+    pheatmap(data_group, cluster_rows=T, show_rownames=T, show_colnames = T,
+             cluster_cols=F,fontsize_row=8, clustering_method="ward.D")
+    dev.off()
+
+
+
   }
   ## Data visualization. Glimma.
   status <- as.numeric(resDESeq2$padj < .05)
@@ -330,14 +374,14 @@ for(aa in unique_aa){
                                          size = 0.5, linetype = "solid"),
           strip.text.x = element_text(face="bold")) + 
     facet_grid(~Cod, scales="free", space="free")
-  file_name = paste0("../Results/Counts_Plots/Proportion_by_isodecoder/Plots_iso_", aa, ".jpeg")
+  file_name = paste0("../Results/Counts_Plots/Proportion_by_isodecoder/Plots_iso_", aa, ".pdf")
   ggsave(plot=p, filename=file_name,
          width = 20, height = 10, units = "cm")
   
 }
 
 # Heatmap total
-jpeg("../Results/DGE/Heatmap_total_isotRNACP.jpeg")
+pdf("../Results/DGE/Heatmap_total_isotRNACP.pdf")
 p = pheatmap(proportions, cluster_rows=T, show_rownames=T, show_colnames = T,
              cluster_cols=F,fontsize_row=0.5, clustering_method="ward.D")
 res_data_mean <- as.data.frame(proportions)
@@ -345,6 +389,10 @@ write.table(proportions, file = "../Results/DGE/Heatmap_total_isotRNACP.txt", se
             row.names = TRUE, col.names = NA)
 dev.off()
 
+pdf("../Results/DGE/Heatmap_total_isotRNACP.jpeg")
+p = pheatmap(proportions, cluster_rows=T, show_rownames=T, show_colnames = T,
+             cluster_cols=F,fontsize_row=0.5, clustering_method="ward.D")
+dev.off()
 
 #Heatmap group
 mean_group1 = apply(proportions,1, function(x) mean(x[group1]))
@@ -354,12 +402,18 @@ diff_expr = mean_group1 - mean_group2
 mean_data = data.frame(mean_group1, mean_group2)
 colnames(mean_data) = c(levels(sample_data$Condition))[1:2]
 
-jpeg("../Results/DGE/Heatmap_groups_isotRNACP.jpeg")
+pdf("../Results/DGE/Heatmap_groups_isotRNACP.pdf")
 p = pheatmap(mean_data, cluster_rows=T, show_rownames=T, show_colnames = T,
              cluster_cols=F,fontsize_row=0.5, clustering_method="ward.D")
 res_data_mean <- as.data.frame(mean_data)
 write.table(res_data_mean, file = "../Results/DGE/Heatmap_groups_isotRNACP.txt", sep = "\t",
             row.names = TRUE, col.names = NA)
+dev.off()
+
+
+jpeg("../Results/DGE/Heatmap_groups_isotRNACP.jpeg")
+p = pheatmap(mean_data, cluster_rows=T, show_rownames=T, show_colnames = T,
+             cluster_cols=F,fontsize_row=0.5, clustering_method="ward.D")
 dev.off()
 
 #Differentially expressed genes.
