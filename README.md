@@ -34,7 +34,7 @@ This command automatically installs Conda (an open source package management sys
 1. Read and accept the Anaconda User License Agreement on the terminal. Press "ENTER" to go through the license terms until reaching the question "Do you accept the license terms? [yes|no], answer **"yes"** and press "ENTER". 
 2. Press "ENTER" to confirm the location of the downloaded files. 
 3. To the question "Do you wish the installer to initialize Anaconda3 by running conda init? [yes|no] answer **"no"** and press "ENTER". If needed, Enter your user password and type "y" when the terminal asks for it.
-4. The script will then create an environment inside Conda with all the software and packages required to run tRNAstudio. Some of these software may ask for the user password and confirmation in order to install the modules; therefore the user must be attentive to these instances and supply this information if required. 
+4. The script will then create an environment inside Conda with all the software and packages required to run tRNAstudio. Some of these software may ask for the user password or confirmation in order to install the modules; therefore the user must be attentive to these instances and supply this information if required. 
 5. Once the installation is done, close the terminal and reopen it again from the scripts folder as described above. Now you are  ready to use the tRNAstudio GUI!  
 
 **Use the GUI:**  
