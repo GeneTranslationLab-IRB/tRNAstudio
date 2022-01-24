@@ -43,7 +43,7 @@ The next two commands are always needed in order to run tRNAstudio (remember to 
 
 First, activate the conda environment by running the following command on the terminal:
 
-```source activate tRNAstudioEnv```
+```conda activate tRNAstudioEnv```
 
 Then run the following command to run the GUI:
 
