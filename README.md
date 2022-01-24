@@ -30,7 +30,27 @@ Run this command on the terminal.
 `bash requirements.sh`
 
 This command automatically installs Conda (an open source package management system). Follow the next steps in order to complete the installation. 
+0. Only for mac users: Checking for `sudo` access (which may request your password)...
+Password: 
+==> Checking for `sudo` access (which may request your password)...
+Password:
+==> You are using macOS 10.12.
+==> We (and Apple) do not provide support for this old version.
+This installation may not succeed.
+After installation, you will encounter build failures with some formulae.
+Please create pull requests instead of asking for help on Homebrew's GitHub,
+Twitter or any other official channels. You are responsible for resolving any
+issues you experience while you are running this old version.
 
+==> This script will install:
+/usr/local/bin/brew
+/usr/local/share/doc/homebrew
+/usr/local/share/man/man1/brew.1
+/usr/local/share/zsh/site-functions/_brew
+/usr/local/etc/bash_completion.d/brew
+/usr/local/Homebrew
+
+Press RETURN to continue or any other key to abort:
 1. Read and accept the Anaconda User License Agreement on the terminal. Press "ENTER" to go through the license terms until reaching the question "Do you accept the license terms? [yes|no], answer **"yes"** and press "ENTER". 
 2. Press "ENTER" to confirm the location of the downloaded files. 
 3. To the question "Do you wish the installer to initialize Anaconda3 by running conda init? [yes|no] answer **"no"** and press "ENTER". If needed, Enter your user password and type "y" when the terminal asks for it.
