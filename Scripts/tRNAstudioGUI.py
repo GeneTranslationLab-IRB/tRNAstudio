@@ -98,30 +98,36 @@ def create_text():
     
     sourceFolder = app.sourceFolder
     os.chdir(sourceFolder+"/Fastq_downloaded")
-    files = os.listdir(os.getcwd())
-    if "sample_data_raw.txt" in files:
-        if "Linux" in o_sys or "Darwin" in o_sys:
-            os.system("rm sample_data_raw.txt")
-        files = os.listdir(os.getcwd())
-        files = [x for x in files if not x.startswith("._")]
-        files = [x for x in files if ".fa" in x]
-
-        
-    sample_data = open("sample_data_raw.txt", "w")
-    sample_data.write("ID" + "\t" + "Condition" + "\t" + "PE_SE" + "\t" + "Fwd_Rev" + "\t" + "mergeFileID" + "\n")
+	
+    if not any(fname.endswith('.fastq') for fname in os.listdir(os.getcwd())):
+    	mb.showinfo("Message", "First download the fastq files or add the fastq files needed for the analysis on the Fastq_downloaded folder.")
+    	print ("First download the fastq files or add the fastq files needed for the analysis on the Fastq_downloaded folder.")
     
-    for i in range(len(files)-1):
-        sample_data.write(files[i][:-6] + "\t" + "\n")
-    sample_data.write(files[-1][:-6] + "\t")
-    sample_data.close()
-    
-    if "Linux" in o_sys:
-        os.system('gedit sample_data_raw.txt')
-    if "Darwin" in o_sys:
-        os.system('open -a TextEdit sample_data_raw.txt')
+    else:
+	    files = os.listdir(os.getcwd())
+	    if "sample_data_raw.txt" in files:
+		if "Linux" in o_sys or "Darwin" in o_sys:
+		    os.system("rm sample_data_raw.txt")
+		files = os.listdir(os.getcwd())
+		files = [x for x in files if not x.startswith("._")]
+		files = [x for x in files if ".fa" in x]
 
-    scriptsFolder=app.scriptsFolder       
-    os.chdir(scriptsFolder)
+
+	    sample_data = open("sample_data_raw.txt", "w")
+	    sample_data.write("ID" + "\t" + "Condition" + "\t" + "PE_SE" + "\t" + "Fwd_Rev" + "\t" + "mergeFileID" + "\n")
+
+	    for i in range(len(files)-1):
+		sample_data.write(files[i][:-6] + "\t" + "\n")
+	    sample_data.write(files[-1][:-6] + "\t")
+	    sample_data.close()
+
+	    if "Linux" in o_sys:
+		os.system('gedit sample_data_raw.txt')
+	    if "Darwin" in o_sys:
+		os.system('open -a TextEdit sample_data_raw.txt')
+
+	    scriptsFolder=app.scriptsFolder       
+	    os.chdir(scriptsFolder)
 
 def create_text2():
     '''
