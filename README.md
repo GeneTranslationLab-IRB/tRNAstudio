@@ -79,7 +79,7 @@ Once the GUI is running the user will have the following options (Fig.1):
 
 - **Run tRNA Alignments.** This button executes the alignment pipeline implemented in tRNAstudio. This process can last several hours and requires a lot of computational power so we recommend not performing other demanding processes while the pipeline is running. The user will be notified with a pop-up dialogue when this process is finished.
 
-- **Select samples for data analysis.** This button opens the previously saved .txt file with the sample information, allowing the user to select which samples to analyze (e.g. delet samples tha are not required for the data analysis) and to ndicate the group to which each sample belongs (e.g. Control or Treated). Do not use only numerical values to indicate the condition. If the file is modified, save changes (Control + S) and close it.
+- **Select samples for data analysis.** This button opens the previously saved .txt file with the sample information, allowing the user to select which samples to analyze (e.g. delete samples that are not required for  data analysis) and to indicate the group to which each sample belongs (e.g. Control or Treated). Do not use only numerical values to indicate the condition. If the file is modified, save changes (Control + S) and close it.
  
    <sup> **Note:** Remember that tRNAstudio is designed to analyze and compare two conditions. </sup>
 
