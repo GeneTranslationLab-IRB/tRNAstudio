@@ -58,7 +58,7 @@ Once the GUI is running the user will have the following options (Fig.1):
 
 <sup> **Note:** The pipeline is designed to run one process at a time, once that you click one of the buttons you have to wait until it finishes in order to start a new process.  </sup>
 
-<sup> **Note:** The user can view the progress of each step in the terminal  </sup>
+<sup> **Note:** The user can view the progress of each step in the terminal.  </sup>
 
 - **Download Human Genome (hg38).**  This button downloads the human genome Hg38 from UCSC, and builds the indexes saved in the "Reference_Genomes" folder. This process takes some time (can last 2 hours) and a pop-up dialog will inform the user when the process is finished. No user interaction needed. This process will have to be done only once (provided that the user does not manually delete this downloaded file).
 
