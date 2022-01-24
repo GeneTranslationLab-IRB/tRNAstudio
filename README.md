@@ -71,7 +71,7 @@ Once the GUI is running the user will have the following options (Fig.1):
 <br /> correspond to the Forward R1 and the other one to the Reverse R2. The user has to indicate in this column which file is the Forward R1 (write down "Fwd") and which one is the Reverse R2 (write down "Rev"). 
 <br /> &nbsp;&nbsp;&nbsp;**Column 5**: mergeFileID. If the sample is PE, Forward and Reverse files will be automatically merged into one file before running the pipeline. Therefore, in this case the user will have to select a unique name for the merged files (without blank spaces). In this column, the same chosen name for the merged file has to be indicated in both Forward and Reverse files. <br /> <sup> **Note:** if the dataset is SE, the user does not have to fill columns 4 and 5 of the .txt file. </sup> <br /> <sup> **Note:** In each row of the .txt file (Fig. 2), the information of the columns must not contain blank spaces, and must be separated by 1 tabulator (i.e. write down the information and click "tab" to move to the next column in the row). </sup>
 <p align="center">
-<br /> <img src="https://github.com/GeneTranslationLab-IRB/tRNAstudio/blob/main/img/sample_data.jpg" alt="Girl in a jacket" width="360" height="260"/> </p>
+<br /> <img src="https://github.com/GeneTranslationLab-IRB/tRNAstudio/blob/main/img/sample_data.jpg" alt="" width="360" height="260"/> </p>
     <p align="center">Figure 2. File containing sample data</p>
 </p>
 <br /> <br /> Once finishing providing the required information in each column save the changes (Control + S) and close the file. DO NOT press "ENTER" after completing the last column of the file as this will incorporate an additional blank row in the .txt file that will be interpreted as an error. 
@@ -100,7 +100,7 @@ The following folders are generated inside the "Results" folder:
 
     - "Alignments": .bam files that contain sequence alignment data for processed, precursor and mitochondrial tRNAs. It also contains sorted and indexed .bam files needed in the case that the user wants to use visualization tools such as the Integrative Genomics Viewer (IGV).
 
-    - "Counts": .txt files with the counts for processed, precursor and mitochondrial tRNAs. Each txt file contains 3 columns [tRNA ID] [counts with a MAPQ > 2] [counts with a MAPQ ≤ 2].
+    - "Counts": .txt files with the counts for processed, precursor and mitochondrial tRNAs. Each .txt file contains 3 columns [tRNA ID] [counts with a MAPQ > 2] [counts with a MAPQ ≤ 2].
     - "Base_Calls": .txt file with the number of reads with a given base at each tRNA position (base calling) for each tRNA gene.
 
 - **R_files.**
@@ -124,7 +124,7 @@ Folder with barplots for the total number of reads mapped to tRNAs in all condit
 
 - **DGE.**
 Differential gene expression analysis. 
-This folder contains the numerical results of the differential gene expression analysis (e.g. counts used for generating gene expression heatmaps, files with DESeq2 and iso-tRNA-CP results, etc.). It inludes images in two different formats; jpeg and pdf, for better quality images. An interactive .html summary is provided with the results of DESeq2 and ISO-tRNA-CP. It inludes images are provided in two different formats in jpeg and pdf (provides better quality images). 
+This folder contains the numerical results of the differential gene expression analysis (e.g. counts used for generating gene expression heatmaps, files with DESeq2 and iso-tRNA-CP results, etc.). It includes images in two different formats; .jpeg and .pdf, for better quality images. An interactive .html summary is provided with the results of DESeq2 and ISO-tRNA-CP.
 
 
 - **Reports.**
