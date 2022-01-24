@@ -128,7 +128,7 @@ This folder contains the numerical results of the differential gene expression a
 
 
 - **Reports.**
-This folder contains a report (interactive .html) with the characterization for each group and one report with the comparison of the groups.
+This folder contains a report (interactive .html) with the characterization for each group and one report with the comparison between the two groups. Inside the report you have links (Titles in blue) with additional information on some of the analysis.  
 
 ## ADAPTING tRNAstudio TO ANALYZE DATASETS FROM NON-HUMAN SPECIES. 
 
