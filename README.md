@@ -44,7 +44,7 @@ The next two commands are always needed in order to run tRNAstudio (remember to 
 First, activate the conda environment by running the following command on the terminal:
 
 ```conda activate tRNAstudioEnv```
-
+ CommandNotFoundError: Your shell has not been properly configured to use ‘conda activate’ 
 Then run the following command to run the GUI:
 
 ```python3 tRNAstudioGUI.py```
