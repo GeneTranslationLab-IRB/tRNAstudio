@@ -387,7 +387,7 @@ write.table(proportions, file = "../Results/DGE/Heatmap_total_isotRNACP.txt", se
             row.names = TRUE, col.names = NA)
 dev.off()
 
-pdf("../Results/DGE/Heatmap_total_isotRNACP.jpeg")
+jpeg("../Results/DGE/Heatmap_total_isotRNACP.jpeg")
 p = pheatmap(proportions, cluster_rows=T, show_rownames=T, show_colnames = T,
              cluster_cols=F,fontsize_row=0.5, clustering_method="ward.D")
 dev.off()
