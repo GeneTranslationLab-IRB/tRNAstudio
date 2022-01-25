@@ -41,7 +41,7 @@ press "ENTER". And again, press "ENTER" to continue.
 
 The next **two commands** are always needed in order to run tRNAstudio (remember to run the commands from the "Scripts" folder).
 
-**Command to activate the environment**
+<sup> **Command to activate the environment** </sup>
 
 First, activate the conda environment by running the following command on the terminal:
 
@@ -51,7 +51,7 @@ If this error apears "CommandNotFoundError: Your shell has not been properly con
 
 ```source activate tRNAstudioEnv```
 
-**Command to run the GUI**
+<sup> **Command to run the GUI** <sup>
 
 Then run the following command to run the GUI:
 
