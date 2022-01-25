@@ -28,6 +28,7 @@ This step is only done on the first time the pipeline is being installed.
 Run this command on the terminal.
 
 `bash requirements.sh`
+
 This command automatically installs Conda (an open source package management system). Follow the next steps in order to complete the installation. 
 
 0. This step is only for Mac users: First, it can ask for your password "Checking for `sudo` access (which may request your password)... Password:". Writhe your password and press "ENTER". And again, press "ENTER" to continue.
