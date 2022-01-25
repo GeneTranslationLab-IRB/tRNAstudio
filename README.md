@@ -47,7 +47,7 @@ First, activate the conda environment by running the following command on the te
 
 ```conda activate tRNAstudioEnv```
 
-If this error apears "CommandNotFoundError: Your shell has not been properly configured to use ‘conda activate’...". Activate the environment using:
+If this error appears "CommandNotFoundError: Your shell has not been properly configured to use ‘conda activate’...". Activate the environment using:
 
 ```source activate tRNAstudioEnv```
 
