@@ -28,29 +28,9 @@ This step is only done on the first time the pipeline is being installed.
 Run this command on the terminal.
 
 `bash requirements.sh`
-
 This command automatically installs Conda (an open source package management system). Follow the next steps in order to complete the installation. 
-0. Only for mac users: Checking for `sudo` access (which may request your password)...
-Password: 
-==> Checking for `sudo` access (which may request your password)...
-Password:
-==> You are using macOS 10.12.
-==> We (and Apple) do not provide support for this old version.
-This installation may not succeed.
-After installation, you will encounter build failures with some formulae.
-Please create pull requests instead of asking for help on Homebrew's GitHub,
-Twitter or any other official channels. You are responsible for resolving any
-issues you experience while you are running this old version.
-
-==> This script will install:
-/usr/local/bin/brew
-/usr/local/share/doc/homebrew
-/usr/local/share/man/man1/brew.1
-/usr/local/share/zsh/site-functions/_brew
-/usr/local/etc/bash_completion.d/brew
-/usr/local/Homebrew
-
-Press RETURN to continue or any other key to abort:
+0. This step is only for mac users: First, it can ask for your password "Checking for `sudo` access (which may request your password)... Password:". Writhe your password and 
+press "ENTER". And again, press "ENTER" to continue.
 1. Read and accept the Anaconda User License Agreement on the terminal. Press "ENTER" to go through the license terms until reaching the question "Do you accept the license terms? [yes|no], answer **"yes"** and press "ENTER". 
 2. Press "ENTER" to confirm the location of the downloaded files. 
 3. To the question "Do you wish the installer to initialize Anaconda3 by running conda init? [yes|no] answer **"no"** and press "ENTER". If needed, Enter your user password and type "y" when the terminal asks for it.
@@ -59,14 +39,19 @@ Press RETURN to continue or any other key to abort:
 
 **Use the GUI:**  
 
-The next two commands are always needed in order to run tRNAstudio (remember to run the commands from the "Scripts" folder).
+The next **two commands** are always needed in order to run tRNAstudio (remember to run the commands from the "Scripts" folder).
 
+**Command to activate the environment**
 First, activate the conda environment by running the following command on the terminal:
 
 ```conda activate tRNAstudioEnv```
- CommandNotFoundError: Your shell has not been properly configured to use ‘conda activate’ 
+
+If this error apears "CommandNotFoundError: Your shell has not been properly configured to use ‘conda activate’...". Activate the environment using:
+
+```source activate tRNAstudioEnv```
+
+**Command to run the GUI**
 Then run the following command to run the GUI:
-source activate tRNAstudioEnv
 
 ```python3 tRNAstudioGUI.py```
 
