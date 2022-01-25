@@ -31,7 +31,7 @@ Run this command on the terminal.
 
 This command automatically installs Conda (an open source package management system). Follow the next steps in order to complete the installation. 
 
-0. This step is only for Mac users: First, it can ask for your password "Checking for sudo access (which may request your password)... Password:". Writhe your password and press "ENTER". And again, press "ENTER" to continue.
+0. This step is only for Mac users: First, it can ask for your password "Checking for sudo access (which may request your password)... Password:". Writhe your password and press "ENTER". And press "ENTER" to continue.
 1. Read and accept the Anaconda User License Agreement on the terminal. Press "ENTER" to go through the license terms until reaching the question "Do you accept the license terms? [yes|no], answer **"yes"** and press "ENTER". 
 2. Press "ENTER" to confirm the location of the downloaded files. 
 3. To the question "Do you wish the installer to initialize Anaconda3 by running conda init? [yes|no] answer **"no"** and press "ENTER". If needed, Enter your user password and type "y" when the terminal asks for it.
